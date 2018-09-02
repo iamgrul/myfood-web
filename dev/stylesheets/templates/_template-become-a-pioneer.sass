@@ -1,0 +1,100 @@
+#pioneer-company-intro
+  .detail-card
+    &__picto
+      color: $red
+      margin-bottom: 85px
+      margin-top: 20px
+    &__desc
+      min-height: 44rem
+  +breakpoint(sm)
+    .detail-card
+      &__picto
+        margin-bottom: 50px
+        margin-top: 10px
+      &__desc
+        min-height: 0
+
+
+#pioneer-individual-intro
+  .grid-l
+    margin: 0 90rem 0 130rem
+  .left-part
+    padding-right: 30rem
+  .right-part
+    text-align: right
+    .img-c
+      display: inline-block
+      width: 360rem
+      height: 190rem
+  +breakpoint(sm)
+    .grid-l
+      margin: 0 30px
+    .right-part
+      text-align: center
+      .img-c
+        max-width: 100%
+        height: 180px
+
+#pioneer-strength
+  position: relative
+  padding: 90rem 0
+  .back-rect
+    &__rect
+      top: 0rem
+      left: -90rem
+      right: 0
+      bottom: 0
+  .grid-l
+    margin-left: 130rem
+    margin-right: 90rem
+    &__demi
+      margin-bottom: 60rem
+      &:nth-child(even)
+        padding-left: 15rem
+      &:nth-child(odd)
+        clear: both
+        padding-right: 15rem
+  +breakpoint(sm)
+    padding: 50px 0
+    .grid-l
+      margin: 0 30px
+      &__demi
+        &:nth-child(even), &:nth-child(odd)
+          padding-right: 0
+          padding-left: 0
+
+
+#pioneer-greenhouses
+  .detail-card
+    &__desc
+      min-height: 44rem
+
+#pioneer-medias-slideshow
+  position: relative
+  padding: 90rem 0
+  .back-rect
+    &__rect
+      top: 0rem
+      left: -90rem
+      right: 0
+      bottom: 0
+  .medias-slideshow
+    z-index: 30
+  +breakpoint(sm)
+    padding: 50px 0 30px
+
+//FIX WITH BO
+.page-c.become-a-pioneer-individual
+  #pioneer-company-intro
+    display: none
+.page-c.become-a-pioneer-company
+  #pioneer-individual-intro
+    display: none
+
+
+#template-become-pioneer
+  +breakpoint(sm)
+    .slideshow
+      .slideshow__container__slide__content__title
+        line-height: 1
+        margin: 50px 0

@@ -1,0 +1,19 @@
+#template-update-browser
+  .cover-simple
+    height: calc(100vh - 90rem)
+    margin-bottom: 0
+    &__container
+      padding-top: 175rem
+    .title--tab
+      text-align: center
+      color: $grey
+      margin-top: 40rem
+
+    +breakpoint(sm)
+      height: calc(100vh - 60rem)
+      .title--tab
+        text-align: left
+
+      .cover-simple
+        &__container
+          padding-top: 135rem

@@ -1,0 +1,49 @@
+#shop-products-tabs
+  .dual-tab__medias
+    &:after
+      height: auto
+      bottom: -90rem
+      z-index: 0
+  +breakpoint(lg-md)
+    .dual-tab__medias
+      &__layout
+        img
+          max-height: 90%
+#shop-products-list
+  position: relative
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: -90rem
+      bottom: -90rem
+      left: -90rem
+      right: 0
+
+  .products-box-list
+    margin-left: 130rem
+    margin-right: 130rem
+    .card--product
+      width: auto
+      margin-bottom: 28rem
+    .grid-l
+      margin: 0 -14rem
+      &__third
+        padding: 0 14rem
+
+  +breakpoint(laptop)
+    .products-box-list
+      margin-left: 60px
+      margin-right: 60px
+
+  +breakpoint(md)
+    .products-box-list
+      .grid-l
+        &__third
+          width: 50%
+
+  +breakpoint(sm)
+    .products-box-list
+      .grid-l
+        &__third
+          width: auto

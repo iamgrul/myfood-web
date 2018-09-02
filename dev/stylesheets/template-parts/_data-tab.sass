@@ -1,0 +1,142 @@
+.data-tab-c
+  position: relative
+  +breakpoint(lg-md)
+    padding-right: 90px
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 30px
+      left: auto
+      width: 30px
+      display: block
+      background-image: linear-gradient(to right, transparent, $white)
+      z-index: 10
+  +breakpoint(sm)
+    padding-right: 0
+    &:after
+      right: 0
+.data-tab
+  text-align: center
+  margin-right: 90rem
+  margin-left: 50rem
+  +breakpoint(lg-md)
+    overflow-x: scroll
+    padding-top: 20px
+    width: 100%
+    padding-right: 30px
+    margin-right: 0
+    .data-tab__pictos, .data-tab__body
+      width: 1000px
+    &--city
+     .data-tab__pictos, .data-tab__body
+        width: 600px
+
+  +breakpoint(sm)
+    margin-left: 0
+    margin-right: 0
+
+  b
+    font-family: $aktiv
+  sup
+    text-transform: uppercase
+    font-size: 60%
+    vertical-align: top
+  &__pictos
+    padding-bottom: 20rem
+    table
+      tr
+        height: 72rem
+        td
+          border: 0 !important
+          i
+            position: relative
+            font-size: 40px
+            +rotation-circle-small-dark
+
+  &__body
+    border-top: 1px solid rgba($black-text, .12)
+    border-bottom: 1px solid rgba($black-text, .12)
+    border-right: 1px solid rgba($black-text, .12)
+    border-radius: 0 20px 20px 0
+
+  table
+    thead
+      border-bottom: 1px solid rgba($black-text, .12)
+      tr
+        height: 120rem
+        line-height: 120rem
+        td
+          vertical-align: middle
+          line-height: 1
+          &:first-child
+            text-align: center
+            p
+              padding-left: 0
+              i
+                vertical-align: middle
+                font-size: 30px
+                margin-right: 0rem
+
+  table
+    width: 100%
+    tr
+      border-bottom: 1px solid rgba($black-text, .12)
+      height: 50rem
+      line-height: 50rem
+      &:first-child
+        td
+          .title--card-sm
+            color: $black-text
+            padding: 4rem 0 20rem
+          .mention--small
+            padding: 0 12rem
+            color: $grey
+            line-height: 15rem
+      &:last-child
+        border-bottom: 0
+      td
+        border-right: 1px solid rgba($black-text, .12)
+        i
+          font-size: 35px
+          vertical-align: middle
+        p
+          padding-left: 20rem
+        &:first-child
+          text-align: left
+          width: 260rem
+        &:nth-child(2)
+          color: $color-tab-1
+        &:nth-child(3)
+          color: $color-tab-2
+        &:nth-child(4)
+          color: $color-tab-3
+        &:nth-child(5)
+          color: $color-tab-4
+        &:nth-child(n+6)
+          color: $color-tab-last
+        &:last-child
+          border-right: 0
+          color: $color-tab-last
+
+    tfoot
+      tr
+        border-top: 1px solid rgba($black-text, .12)
+        height: 120rem
+        line-height: 120rem
+        &:first-child
+          td
+            vertical-align: top
+            line-height: 1
+            .title--card-sm
+              color: $black-text
+              padding: 30rem 0 10rem
+            &:first-child
+              vertical-align: middle
+              text-align: center
+              p
+                padding-left: 0
+                i
+                  font-size: 30px
+                  margin-right: 0rem

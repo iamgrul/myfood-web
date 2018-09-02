@@ -1,0 +1,152 @@
+#community-hub-introduction
+  position: relative
+  padding-bottom: 180rem
+  margin-bottom: 0
+
+  .community-hub-introduction
+
+    &__title
+      margin-bottom: 40rem
+
+    &__text
+      width: 55%
+      padding-left: 135rem
+
+  +breakpoint(sm)
+    padding-bottom: 50rem
+
+    .community-hub-introduction
+      &__text
+        width: 100%
+        padding: 0 30rem
+
+#community-hub-blog
+  position: relative
+  padding-right: 90rem
+  padding-top: 78rem
+
+  margin-top: 90rem
+
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      bottom: 0
+      top: 0
+      left: -90rem
+      right: 0
+
+  +breakpoint(laptop)
+    padding-left: 30rem
+    padding-right: 30rem
+
+  +breakpoint(sm)
+    padding: 30rem
+
+#community-hub-webinar
+  position: relative
+  padding-bottom: 180rem
+  margin-bottom: 0
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      bottom: 0
+      height: 300px
+      left: -90rem
+      right: 0
+  .title--l
+    margin-bottom: 40rem
+  .right-part
+    padding-left: 30rem
+    padding-right: 130rem
+    padding-top: 24rem
+    .img-c
+      height: 600rem
+  .left-part
+    .common-text
+      padding-left: 130rem
+      padding-right: 60rem
+
+  +breakpoint(laptop)
+    .back-rect__rect
+      height: 90px
+    .right-part
+      padding-left: 30px
+      width: 40%
+      padding-right: 30px
+      .img-c
+        height: 300px
+    .left-part
+      width: 60%
+      .common-text
+        padding-right: 30px
+
+  +breakpoint(sm)
+    padding-bottom: 50px
+    .left-part
+      width: auto
+      float: none
+      .common-text
+        padding: 0 30px
+    .right-part
+      margin-right: 0
+      width: auto
+    .back-rect__rect
+      height: 200px
+
+
+#community-hub-see
+  position: relative
+  margin-bottom: 0
+  padding-bottom: 90rem
+
+  .back-rect__rect
+    top: 0
+    left: -90rem
+    right: 0
+    bottom: 0
+
+  .left-part
+    padding-left: 130rem
+    .common-text
+      max-width: 360rem
+  .pictos-list
+    padding-top: 30rem
+
+  +breakpoint(md)
+    .left-part
+      padding: 0 30px
+      .common-text
+        max-width: 100%
+
+  +breakpoint(xs)
+    .pictos-list
+      &__picto
+        margin-right: 10px
+        .icon-desk
+          font-size: 80px
+        .icon-tablet
+          font-size: 80px
+        .icon-mobile
+          font-size: 60px
+
+
+#community-hub-iframe
+  position: relative
+  margin-bottom: 0
+  padding-bottom: 90rem
+
+  .back-rect__rect
+    top: 0
+    left: -90rem
+    right: 0
+    bottom: 0
+
+  iframe
+    position: relative
+    z-index: 30
+    padding-right: 90rem
+  +breakpoint(sm)
+    iframe
+      padding-right: 0

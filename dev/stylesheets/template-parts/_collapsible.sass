@@ -1,0 +1,82 @@
+.collapsible
+  background: $white
+  overflow: hidden
+  border-radius: 20px
+  margin-bottom: 90rem
+  +box-shadow
+  &__top
+    padding: 70rem
+  &__title
+    width: calc(100% - 100rem)
+    display: inline-block
+    vertical-align: middle
+    +breakpoint(laptop)
+      width: calc(100% - 100px)
+
+    .title__content
+      display: inline-block
+      vertical-align: middle
+      color: $green
+      max-width: 450rem
+    .prefix
+      @extend .title__content__number
+      padding-left: 0
+      position: relative
+      display: inline-block
+      vertical-align: middle
+      color: $black-text
+      margin-right: 40rem
+      &:after
+        display: none
+  &__button
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    .icon-cross
+      transition: .5s
+
+  &__body
+    position: relative
+    overflow: hidden
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 1px
+      background: rgba($black-text, .12)
+      transition: .5s
+    .common-text
+      padding: 70rem 70rem 55rem
+  &.collapsed
+    .collapsible
+      &__button
+        .icon-cross
+          transform: rotate(-135deg)
+      &__body
+        height: 0
+        &:after
+          transform: scaleX(0)
+
+  +breakpoint(sm)
+    margin-bottom: 50rem
+    &__top
+      padding: 30rem
+      text-align: center
+    &__title
+      width: auto
+      .title__content
+        display: inline
+      .prefix
+        display: block
+        margin-right: 0
+        margin-bottom: 15px
+        vertical-align: top
+    &__button
+      display: block
+      margin: 35px auto 20px
+    &__body
+      .common-text
+        padding: 20px

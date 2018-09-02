@@ -1,0 +1,47 @@
+#blog-sticky
+  text-align: center
+  .back-rect
+    &__rect
+      width: 37%
+      left: -90rem
+      top: -91rem
+      bottom: 0
+  .news-card--sticky
+    position: relative
+    z-index: 20
+    display: inline-block
+    text-align: left
+    margin-left: -175rem
+    margin-bottom: 0
+  +breakpoint(sm)
+    margin-bottom: 0
+    .back-rect
+      display: none
+    .news-card--sticky
+      margin-left: 0
+
+
+
+#blog-news-list
+  position: relative
+  margin-bottom: 0
+  padding-bottom: 130rem
+  .back-rect
+    &__rect
+      width: auto
+      left: -90rem
+      right: -90rem
+      top: 230rem
+      bottom: 0
+  .grid-l-news
+    position: relative
+    display: table
+    margin: auto
+  +breakpoint(sm)
+    padding-bottom: 50px
+    .back-rect
+      &__rect
+        top: -50px
+    .grid-l-news
+      display: block
+      padding: 0 30px

@@ -1,0 +1,226 @@
+.community-post
+  background-color: white
+  border-radius: 20px
+  padding: 25rem 30rem 0 30rem
+
+  width: calc(50% - 10rem)
+  margin-top: 20rem
+
+  &.right-part
+    margin-left: 10rem
+
+  &.left-part
+    margin-right: 10rem
+
+  .inl
+    display: inline-block
+    vertical-align: middle
+
+  &__infos
+    font-size: 0
+    height: 37rem
+    line-height: 37rem
+    margin-bottom: 43rem
+
+  &__avatar
+    height: 37rem
+    line-height: 37rem
+    width: 37rem
+    border-radius: 100%
+    text-align: center
+    background-color: $beige
+
+    .icon-profile
+      vertical-align: middle
+      color: $green
+      font-size: 30rem
+      display: inline-block
+
+
+  &__user
+    width: calc(100% - 37rem - 65rem)
+    text-align: left
+    font-size: initial
+    padding-left: 18rem
+
+
+    .name
+      color: $black
+      vertical-align: middle
+      font-weight: 700
+      line-height: 37rem
+
+    .section
+      color: $green
+      vertical-align: middle
+      font-weight: 700
+      line-height: 37rem
+
+      &:before
+        content: "\e903"
+        display: inline-block
+        margin-right: 5rem
+        font-family: $icons !important
+        transform: translateY(3rem)
+        font-size: 20rem
+
+  &__hour
+    width: 65rem
+    text-align: right
+
+  &__contents
+    padding: 0 20rem
+
+  &__description-container
+    margin-bottom: 50rem
+
+  &__image-container
+    position: relative
+    width: 100%
+    height: 288rem
+    margin-bottom: 50rem
+
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)
+      z-index: 1
+
+  &__infos-img
+    position: absolute
+    top: auto
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 37rem
+    z-index: 2
+
+    .date
+      color: white
+      font-weight: 700
+      margin-bottom: 5rem
+
+    .nbPhotos
+      color: white
+      font-family: $aktiv
+      font-size: 11rem
+
+
+  &__comments
+    padding: 35rem 0
+    position: relative
+    font-size: 0
+
+    &:after
+      content: ''
+      width: calc(100% + 60rem)
+      left: -30rem
+      top: 0
+      height: 1px
+      background-color: rgba($black-text, 0.12)
+      position: absolute
+
+  &__myfood-logo
+    width: 35rem
+    height: 35rem
+    line-height: 30rem
+    text-align: center
+    border-radius: 100%
+    background-color: $beige
+
+    img
+      width: 60%
+      display: inline-block
+      vertical-align: middle
+
+
+  &__fake-input
+    color: #cacaca
+    width: calc(100% - 72rem - 35rem)
+    padding: 0 17rem
+    font-size: initial
+    font-weight: 700
+
+  &__numbers
+    font-size: 0
+
+    p
+      width: 36rem
+      height: 36rem
+      line-height: 36rem
+      font-size: initial
+      border-radius: 100%
+      color: #cacaca
+      text-align: center
+
+      &.green
+        background-color: $green
+        color: white
+
+
+
+  +breakpoint(sm)
+    width: 100%
+
+    &.right-part, &.left-part
+      float: none
+      margin-left: 0
+      margin-right: 0
+      display: block
+      margin-top: 30rem
+
+    &__infos
+      height: auto
+      padding-top: 45rem
+      position: relative
+
+    &__hour
+      position: absolute
+      top: 0
+      right: 0
+      display: block
+      transform: translateY(4rem)
+
+    &__avatar
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+
+    &__user
+      width: 100%
+      padding-left: 0
+
+      .name
+        margin-right: 6rem
+        line-height: initial
+
+      .section
+        transform: translateX(-6rem)
+        line-height: initial
+        vertical-align: top
+        display: block
+
+    &__contents
+      padding-left: 0
+      padding-right: 0
+
+    &__infos-img
+      padding: 20px
+
+    &__fake-input
+      width: calc(100% - 35rem)
+
+    &__numbers
+      display: none !important

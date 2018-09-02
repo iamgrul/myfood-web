@@ -1,0 +1,36 @@
+.page-search__section
+  position: relative
+  padding-top: 90rem
+  margin-bottom: 0
+  padding-bottom: 90rem
+
+  &:nth-child(even)
+    .back-rect
+      display: none
+  &__title
+    padding-left: 130rem
+    margin-bottom: 90rem
+    .mention
+      display: inline-block
+      vertical-align: top
+      margin-left: 10px
+  .back-rect__rect
+    left: -90rem
+    top: 0
+    right: 0
+    bottom: 0
+  .post-list
+    padding-left: 130rem
+    .post-box
+      margin-bottom: 90rem
+  .page-list
+    max-width: 700rem
+
+  +breakpoint(sm)
+    padding-top: 50px
+    padding-bottom: 50px
+    &__title
+      padding-left: 30px
+      margin-bottom: 50px
+    .post-list
+      padding: 0 20px

@@ -1,0 +1,123 @@
+.cover-simple
+  position: relative
+  &__filter-blog
+    margin: 100rem auto 0 auto !important
+    .selector--mobile
+      display: none
+    .selector--desk
+      display: block
+  &__container
+    padding-bottom: 100rem
+    padding-top: 110rem
+  &__subtitle
+    margin-bottom: 70rem
+  .back-rect
+    &__rect--full
+      top: 0
+      bottom: 0
+      left: -90rem
+      right: 0
+  &--image
+    margin-bottom: 0
+    .back-rect
+      &__rect
+        bottom: 100rem
+    .cover-simple
+      &__container
+        margin-left: 45rem
+        padding-top: 70rem
+        padding-bottom: 60rem
+        &__img
+          border-radius: 20px
+          transform: translate3D(0,0,0)
+          overflow: hidden
+          max-width: 720rem
+          height: 400rem
+          margin: auto
+  &__back-button
+    position: absolute
+    left: -45rem
+    margin-top: -7rem
+    top: 50%
+    z-index: 20
+    +breakpoint(laptop)
+      left: 60px
+    &.hv
+      .arrow-button
+        transition: .5s
+        i
+          transition: .3s
+      &:hover
+        .arrow-button
+          color: $green
+          i
+            color: $green
+            transform: translateX(-4px) scaleX(-1)
+
+  +breakpoint(sm)
+    &__filter-blog
+      margin: 50px auto 0 auto !important
+      .selector--mobile
+        display: block
+      .selector--desk
+        display: none
+    &__container
+      padding-bottom: 50px
+      padding-top: 50px
+      padding-left: 30px
+      padding-right: 30px
+    &__subtitle
+      margin-bottom: 15px
+    &--image
+      .back-rect__rect
+        top: 0
+        bottom: 50%
+        left: 0
+        right: 0
+      .cover-simple
+        &__container
+          margin-left: 0
+          padding-top: 70px
+          padding-bottom: 30px
+          &__img
+            height: 260rem
+        &__back-button
+          top: 30px
+          left: 0
+          right: 0
+          text-align: center
+
+
+.simple-top
+  margin-left: 130rem
+  margin-right: 130rem
+  padding: 90rem 0
+  &--with-filter
+    .simple-top
+      &__title
+        padding-right: 230rem
+  &__container
+    position: relative
+    padding-left: 90rem
+  &__subtitle
+    margin-bottom: 60rem
+  &__title
+    margin-bottom: 0
+  &__filter
+    position: absolute
+    right: 0
+    bottom: 15rem
+    .selector
+      min-width: 200px
+  +breakpoint(lg-md)
+    margin-left: 0px
+  +breakpoint(sm)
+    margin: 0
+    padding-top: 0
+    &__container
+      padding-bottom: 50px
+      padding-top: 50px
+      padding-left: 30px
+      padding-right: 30px
+    &__subtitle
+      margin-bottom: 15px

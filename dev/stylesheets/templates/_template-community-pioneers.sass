@@ -1,0 +1,121 @@
+#community-pioneers-introduction
+  position: relative
+  padding-bottom: 180rem
+  margin-bottom: 0
+  .back-rect
+    margin-left: 45rem
+    &__rect
+      bottom: 0
+      left: calc(50% + 88rem)
+      +breakpoint(laptop)
+        left: calc(50% + 88px)
+
+      right: -90rem
+      top: 330rem
+
+  .title--l
+    margin-bottom: 100rem
+  .grid-l
+    margin-right: 90rem
+    margin-left: 130rem
+    &.masked
+      .right-part,.left-part
+        +from-bottom-fade-out
+      &.unmasked
+        .right-part
+          +from-bottom-fade-in
+        .left-part
+          +from-bottom-fade-in(.3s)
+
+
+
+  .right-part
+    padding-left: 90rem
+    position: relative
+    .circle--m
+      right: 0
+      top: 0
+    .circle--xl
+      left: 90rem
+      bottom: 0
+    .img-c
+      height: 400rem
+
+  .left-part
+    .common-text
+      padding-right: 20rem
+
+  +breakpoint(sm)
+    padding-bottom: 50px
+    .back-rect
+      display: none
+    .title--l
+      margin-bottom: 50px
+    .grid-l
+      margin: 0
+      padding: 0 30px 50px
+    .right-part
+      padding-left: 0
+      .img-c
+        height: 220px
+
+  +breakpoint(md)
+    .right-part
+      .circle--xl
+        left: 0
+
+#community-pioneers-pioneers
+  position: relative
+  .back-rect
+    margin-left: 45rem
+    &__rect
+      bottom: 80rem
+      left: calc(50% + 88rem)
+      +breakpoint(laptop)
+        left: calc(50% + 88px)
+      right: -90rem
+      top: -1rem
+  +breakpoint(sm)
+    .back-rect
+      display: none
+
+
+
+#community-pioneers-push
+  position: relative
+  padding-bottom: 90rem
+  .back-rect
+    &__rect
+      bottom: -90rem
+      left: -90rem
+      right: -90rem
+      top: 50%
+  +breakpoint(sm)
+    padding-bottom: 0px
+
+
+#community-pioneers-slideshow
+  position: relative
+  .back-rect
+    &__rect
+      bottom: -90rem
+      left: -90rem
+      right: -90rem
+      top: -1rem
+  +breakpoint(sm)
+    margin-bottom: 0
+
+#community-pioneers-contributions
+  position: relative
+  padding-top: 90rem
+  .back-rect
+    &__rect
+      bottom: 0rem
+      left: -90rem
+      right: -90rem
+      top: -1rem
+  .green-push
+    position: relative
+    z-index: 30
+  +breakpoint(sm)
+    padding-top: 50px

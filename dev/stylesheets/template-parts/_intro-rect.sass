@@ -1,0 +1,52 @@
+$card-h: 380rem
+
+.intro__rect
+  position: relative
+  height: $card-h
+  line-height: $card-h
+  text-align: center
+
+  +breakpoint(sm)
+    margin-bottom: 65rem
+
+  .back-rect__rect
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+  &__content
+    line-height: 1
+    vertical-align: middle
+    display: inline-block
+    width: auto
+
+    .icon-heart
+      +vertical-align
+      margin-left: 26rem
+      margin-right: 63rem
+      width: auto
+      color: $red
+      font-size: 28px
+      +breakpoint(sm)
+        display: block
+        margin: 0
+        height: 68rem
+        line-height: 68rem
+        margin-bottom: 37rem
+
+    .title
+      +vertical-align
+      width: 390rem
+      text-align: left
+
+      +breakpoint(sm)
+        padding: 0 30rem
+        display: block
+        width: 100%
+        text-align: center
+
+  .icon-c__circle
+    position: relative
+    &--center
+      +rotation-circle-dark

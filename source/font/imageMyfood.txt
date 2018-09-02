@@ -1,0 +1,15 @@
+Production Unit Options
+
+icon-original
+icon-production
+icon-seasons
+icon-autonomy
+icon-signature
+
+Gardening Type
+
+icon-aerospring 
+
+icon-perma -> [[[Permaculture Bed]]]
+icon-zipgrow -> [[[Zipgrow Tower]]]
+icon-perma  -> [[[Permaculture Bed]]]

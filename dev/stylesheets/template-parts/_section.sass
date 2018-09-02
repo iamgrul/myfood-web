@@ -1,0 +1,118 @@
+.page-c
+  padding: $header-height $body-margin 0
+  position: relative
+  display: block
+  &__section
+    margin-bottom: 90rem
+    &--bottom
+      position: relative
+      padding-bottom: 140rem
+      margin-bottom: 0
+      &__content
+        .grid-l__demi
+        text-align: center
+        .push-card
+          display: inline-block
+          text-align: left
+      .back-rect
+        &__rect
+          background: $beige-bg
+          position: absolute
+          top: -300rem
+          left: -90rem
+          right: 50%
+          bottom: 0
+    &--ml
+      margin-left: 130rem
+      padding-left: 80rem
+      margin-right: 90rem
+
+    &--dbl-layout
+      padding-bottom: 90rem
+      &__grid
+        margin-left: auto
+        margin-right: auto
+      .left-part
+        .common-text
+          margin-left: 130rem
+          max-width: 320rem
+        .card--points-list
+          margin-top: 100rem
+          max-width: 450rem
+          padding: 40rem 0 40rem 90rem
+          .bullet-point
+            &:after
+              display: none
+      .right-part
+        position: relative
+        text-align: center
+        padding: 100rem 0
+        .back-rect
+          &__rect
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+          &__img
+            height: 640rem
+            width: auto
+            margin: auto
+            display: block
+      .layout
+        position: relative
+        display: inline-block
+        &__point
+          position: absolute
+          z-index: 10
+          &.masked
+            opacity: 0
+            transform: scale(0)
+            &.unmasked
+              opacity: 1
+              transform: scale(1)
+              transition: .9s ease-in-out
+              @for $i from 1 through 10
+                &:nth-child(#{$i})
+                  transition-delay: .2s * ($i+2)
+
+
+  +breakpoint(laptop)
+    padding-left: 0
+
+  +breakpoint(sm)
+    padding: 60px 0 0
+    &__section
+      margin-bottom: 50rem
+      &--ml
+        margin: 0 30px
+        padding: 0
+      &--bottom
+        margin-bottom: 0
+        padding-bottom: 50px
+        .back-rect
+          display: none
+        &__content
+          padding: 0 30px
+          .push-card
+            display: block
+      &--dbl-layout
+        padding-bottom: 0
+        .left-part
+          padding: 0 30px
+          .common-text
+            margin-left: 0
+          .card--points-list
+            margin-top: 50px
+            max-width: 100%
+            padding: 30px
+            +minbreakpoint(xs)
+              max-width: 400px
+              margin-left: auto
+              margin-right: auto
+        .right-part
+          padding: 30px
+          .layout
+            &__img
+              max-width: 100%
+              height: auto
+

@@ -1,0 +1,142 @@
+#single-product
+  position: relative
+  .woocommerce-message
+    margin-bottom: 0
+    margin-left: 0rem
+    margin-right: 90rem
+    z-index: 30
+  &.variable-product
+    #product-introduction
+      .dual-tab
+        .single-price
+          @extend .title--tab-m
+          color: $black-text
+  +breakpoint(sm)
+    .woocommerce-message
+      margin-right: 0
+
+
+#product-introduction
+  .share-box
+    position: absolute
+    left: -45rem
+    top: 50%
+    margin-top: -70rem
+    z-index: 20
+  .dual-tab__navigation
+    z-index: 20
+  .dual-tab
+    .selector
+      margin-bottom: 30px
+    .price
+      @extend .title--ml
+      color: $green
+    .quantity
+      display: none !important
+    .single_add_to_cart_button
+      opacity: 0
+      position: absolute
+      top: -1000px
+      z-index: -1
+      width: 0
+      height: 0
+      z-index: 0
+    .dual-tab__content__cta
+      cursor: pointer
+      .points-button
+        float: right
+        margin-top: 35rem
+        margin-right: 45rem
+    .dual-tab__medias
+      &__layout
+        padding-top: 0
+        padding-bottom: 0
+        padding-left: 50rem
+        padding-right: 50rem
+        &__image
+          line-height: 500rem
+          .simple-product & img
+            border-radius: 20px
+          img
+            vertical-align: middle
+            display: inline-block
+            max-width: 100%
+            max-height: 100%
+            width: auto
+            height: auto
+  +breakpoint(sm)
+    .dual-tab
+      &__content
+        &__term
+          text-align: center
+          margin-bottom: 10px
+        &__title
+          text-align: center
+        &__price
+          padding-top: 10px
+          text-align: center
+          margin-bottom: 20px
+      .dual-tab__medias
+        &__layout
+          height: auto
+          &__image
+            height: 350px
+            line-height: 350px
+      .variations
+        text-align: center
+        .selector
+          display: block
+          max-width: 200px
+          margin: 0px auto 20px
+          text-align: left
+      .single-price
+        text-align: center
+        margin-bottom: 30px
+
+#product-presentation
+  .contents-tabs
+    .selector--mobile
+      display: none
+  +breakpoint(sm)
+    .contents-tabs
+      &__head
+        margin-bottom: 50px
+      .tabs-selector.multiple
+        display: none
+      .selector--mobile
+        display: block
+
+#product-modules
+  position: relative
+  .back-rect__rect
+    top: -91rem
+    left: -90rem
+    bottom: 0
+    right: 0
+  .card__module__img
+    img
+      max-width: 100%
+
+#product-services
+  position: relative
+  .back-rect__rect
+    left: -90rem
+    top: -91rem
+    bottom: 0
+    right: 0
+
+#product-pushes
+  padding-top: 30rem
+  margin-bottom: 130rem
+  padding-bottom: 120rem
+  +breakpoint(sm)
+    padding-bottom: 50px
+    margin-bottom: 0px
+
+#product-medias-slideshow
+  position: relative
+  z-index: 10
+
+
+#product-nav
+  margin-bottom: 0

@@ -1,0 +1,182 @@
+#home-products
+  .dual-tab__navigation
+    position: relative
+    z-index: 20
+
+  +breakpoint(sm)
+    +minbreakpoint(xs)
+      .dual-tab__content__quote
+        max-width: 300px
+
+#home-pioneer
+  position: relative
+  padding-top: 90rem
+  margin-bottom: 115rem
+  z-index: 20
+  .title__container-anim
+    overflow: hidden
+  .back-rect
+    margin-left: 45rem
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: -90rem
+      right: -90rem
+      bottom: 79rem
+      width: calc(42% + 90rem)
+      +breakpoint(laptop)
+        width: calc(42% + 90px)
+  .grid-l__medium
+    margin-top: -15rem
+  .line-mention
+    max-width: 280rem
+
+  +breakpoint(laptop)
+    .back-rect__rect
+      width: calc(42% + 110px)
+    .grid-l__medium
+      padding-left: 0
+      margin-top: 0
+
+  +breakpoint(sm)
+    margin-bottom: 25px
+    padding-top: 0
+    .back-rect
+      margin-left: 0
+      &__rect
+        width: 100%
+        top: -50px
+        right: 0
+
+
+#home-mission
+  position: relative
+  padding-bottom: 170rem
+  padding-top: 90rem
+
+  .back-rect
+    left: -90rem
+    top: -240rem
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+  .points-list
+    padding-left: 130rem
+    padding-right: 30rem
+    max-width: 750rem
+  .grid-l__medium
+    padding-left: 45rem
+  .mission-picture
+    height: 400rem
+  .top-part
+    .grid-l__medium
+      margin-top: -40rem
+      line-height: 160rem
+    .line-mention
+      max-width: 280rem
+      display: inline-block
+      line-height: 1
+      vertical-align: middle
+  +breakpoint(laptop)
+    .points-list
+      padding-left: 90px
+  +breakpoint(sm)
+    padding-top: 0
+    padding-bottom: 50px
+    .grid-l
+      padding-top: 300px
+      position: relative
+    .img-part
+      position: absolute
+      top: 0
+      left: 30px
+      right: 30px
+      padding-left: 0
+      padding-right: 0
+      .img-c
+        height: 280px
+    .points-list
+      padding-left: 30px
+      padding-right: 30px
+      margin-top: 50px
+    .top-part
+      padding-top: 0
+      .grid-l__medium
+        padding-right: 30px
+        padding: 0
+        line-height: 1
+
+#home-lifestyle
+  position: relative
+  z-index: 20
+  margin-bottom: 90rem
+  +breakpoint(sm)
+    margin-bottom: 0
+
+#home-blog
+  position: relative
+  padding-top: 140px
+  text-align: center
+  .news-card--sticky
+    position: relative
+    z-index: 20
+    display: inline-block
+    text-align: left
+    margin-left: -175rem
+  .grid-l-news
+    display: table
+    margin: auto
+    .news-card
+      text-align: left
+      margin-bottom: 0
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: 0
+      bottom: 0
+      left: -90rem
+      width: 420rem
+      &--bottom
+        left: -90rem
+        bottom: -90rem
+        right: 0
+        top: auto
+        height: 430rem
+        width: auto
+
+  .button-container
+    .cbutton
+      display: table
+      margin: 80rem auto
+
+  +breakpoint(sm)
+    padding-top: 50px
+    .back-rect
+      display: none
+    .grid-l-news
+      display: none
+    .news-card--sticky
+      margin: 0 auto
+
+
+#home-network
+  position: relative
+  padding-top: 90rem
+  padding-bottom: 170rem
+  margin-bottom: 0
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: 0
+      bottom: 0
+      left: -90rem
+      right: 0
+  +breakpoint(sm)
+    padding-bottom: 0
+

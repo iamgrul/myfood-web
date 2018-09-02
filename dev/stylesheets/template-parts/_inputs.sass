@@ -1,0 +1,158 @@
+.selector
+  &__label
+    @extend .mention--small
+    color: $grey
+    +green-point-before
+    &:before
+      margin-right: 5rem
+  &__container
+    border-radius: 20px
+    border: 1px solid rgba($black, .12)
+    position: relative
+  &__icon
+    position: absolute
+    right: 2px
+    top: 8px
+    transform: rotate(90deg)
+    font-weight: bold
+    color: $green
+    z-index: 1
+    font-size: 22px
+  &__select, select
+    padding: 11px 20px 8px 10px
+    font-family: $aktiv
+    font-size: 13px
+    color: $green
+    width: 100%
+    cursor: pointer
+    position: relative
+    z-index: 10
+  &--red
+    select
+      color: $red
+    .selector
+      &__label
+        &:before
+          background: $red
+      &__icon, &__select
+        color: $red
+
+.selector--mobile
+  display: block
+  position: relative
+  margin: 0 30px
+  border-radius: 20px
+  border: 1px solid rgba($black, .12)
+  overflow: hidden
+  max-width: 300px
+  &__selection
+    color: $green
+    text-transform: uppercase
+    font-family: $open-bold
+    font-size: 11px
+    display: block
+    padding: 0px 10px 0 20px
+    line-height: 30px
+    +after-clear
+    .icon-arrow
+      padding-top: 7px
+      font-size: 24px
+      transform: rotate(90deg)
+      display: inline-block
+      float: right
+      vertical-align: middle
+  &__list
+    overflow: hidden
+    height: 0
+  &__li
+    color: $grey
+    text-transform: uppercase
+    font-family: $open-bold
+    font-size: 11px
+    padding: 5px 20px 0
+    line-height: 30px
+    &:first-child
+      border-top: 1px solid rgba($black, .12)
+
+
+.selector--desk
+  display: block
+  text-align: center
+  font-size: 0
+  padding: 0 90px
+
+  &__li
+    display: inline-block
+    vertical-align: middle
+    color: $green
+    text-transform: uppercase
+    font-family: $open-bold
+    font-size: 11px
+    line-height: 30px
+    border: 1px solid rgba($black, .12)
+    +after-clear
+    padding: 0 20rem
+    margin-left: 20rem
+    border-radius: 20rem
+    margin-top: 20rem
+    transition: all 0.25s ease-out
+    cursor: pointer
+
+    &:first-child
+      margin-left: 0
+
+    &--active
+      background-color: $green
+      color: white
+      border-color: $green
+
+      .icon
+        .h, .v
+          background-color: white !important
+
+        .v
+          height: 0 !important
+
+    &:hover
+      background-color: $green
+      color: white
+      border-color: $green
+      padding-left: 30rem
+      .icon
+        margin-left: 0
+
+    .icon
+      width: 10px
+      height: 10px
+      display: inline-block
+      vertical-align: middle
+      margin-left: 10rem
+      position: relative
+      transform: translateY(-1px)
+
+      transition: all 0.25s ease-out
+
+      .v
+        display: block
+        height: 100%
+        width: 1.5px
+        background-color: $green
+        position: absolute
+        top: 0
+        transform: translateX(-50%)
+        left: 50%
+
+      .h
+        display: block
+        width: 100%
+        height: 1.5px
+        background-color: $green
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+
+
+
+
+

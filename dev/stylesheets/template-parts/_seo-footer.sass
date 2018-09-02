@@ -1,0 +1,65 @@
+.seo-footer
+  background: $black
+  margin: 0 0 0 -90rem
+  padding: 55rem 130rem
+  position: relative
+  z-index: 30
+  $root: &
+  &__top
+    position: relative
+  &__title
+    color: $beige
+    display: inline-block
+    vertical-align: top
+    width: 300rem
+    padding-right: 80rem
+  &__excerpt
+    color: $beige
+    display: inline-block
+    vertical-align: top
+    max-width: calc( 100% - 310rem )
+    +breakpoint(laptop)
+      max-width: calc( 100% - 310px)
+
+    line-height: 30rem
+    padding-right: 130rem
+  &__button
+    position: absolute
+    right: -80rem
+    top: 50%
+    margin-top: -45px
+    transform: rotate(135deg)
+    transition: .4s
+    cursor: pointer
+    #{$root}.collapsed &
+      transform: rotate(0deg)
+  &__body
+    overflow: hidden
+    height: 0
+    &__content
+      padding-left: 302rem
+      padding-top: 50rem
+      color: $beige
+
+  +breakpoint(sm)
+    $root: &
+    margin: 0
+    padding: 50px 30px
+    text-align: center
+    &__title
+      width: auto
+      display: block
+      padding-right: 0
+      margin-bottom: 30px
+    &__excerpt
+      max-width: none
+      display: block
+      padding-right: 0
+    &__button
+      position: relative
+      display: block
+      right: auto
+      margin: 20px auto 0
+    &__body
+      &__content
+        padding: 30px 0

@@ -1,0 +1,187 @@
+#concept-sgh-introduction
+  position: relative
+  padding-bottom: 180rem
+  margin-bottom: 0
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      bottom: 0
+      height: 300px
+      left: -90rem
+      right: 0
+  .title--l
+    margin-bottom: 40rem
+  .right-part
+    padding-left: 30rem
+    padding-right: 130rem
+    padding-top: 24rem
+    .img-c
+      height: 600rem
+  .left-part
+    .common-text
+      padding-left: 130rem
+      padding-right: 60rem
+
+  +breakpoint(laptop)
+    .back-rect__rect
+      height: 90px
+    .right-part
+      padding-left: 30px
+      width: 40%
+      padding-right: 30px
+      .img-c
+        height: 300px
+    .left-part
+      width: 60%
+      .common-text
+        padding-right: 30px
+
+  +breakpoint(sm)
+    padding-bottom: 50px
+    .left-part
+      width: auto
+      float: none
+      .common-text
+        padding: 0 30px
+    .right-part
+      margin-right: 0
+      width: auto
+    .back-rect__rect
+      height: 200px
+
+
+
+#concept-sgh-sizes
+  position: relative
+  margin-bottom: 128rem
+
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: 0
+      height: 200rem
+      left: -90rem
+      right: 0
+  +breakpoint(sm)
+    margin-bottom: 90rem
+    .sizes-tabs
+      margin: 0
+      &__head
+        position: relative
+        &__tab
+          border-radius: 0
+          .layout-card__main
+
+
+//#concept-sgh-technics
+//  position: relative
+//  .grid-l
+//    max-width: 1000px
+//    margin: auto
+
+
+#concept-sgh-custom
+  padding-top: 90rem
+  padding-bottom: 90rem
+  position: relative
+
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: -10px
+      left: -90rem
+      right: 0
+      bottom: 0
+  .top-part
+    .title--l
+      margin-bottom: 15rem
+      position: relative
+      z-index: 20
+    .grid-l__medium
+      margin-top: -40rem
+      line-height: 160rem
+      .line-mention
+        max-width: 280rem
+        display: inline-block
+        line-height: 1
+        vertical-align: middle
+
+  +breakpoint(laptop)
+    padding-top: 80rem
+
+  +breakpoint(sm)
+    padding-bottom: 50rem
+    padding-top: 50rem
+    .top-part
+      .grid-l__medium
+        margin-top: 0
+        line-height: 1
+
+
+#concept-sgh-push
+  padding-top: 80rem
+  +breakpoint(sm)
+    padding-top: 50px
+    .large-push
+      padding: 70px 0px
+
+#concept-sgh-hub
+  position: relative
+  margin-top: 155rem
+  .back-rect
+    &__rect
+      background: $beige-bg
+      position: absolute
+      top: -280rem
+      left: 30%
+      right: 0
+      height: 500rem
+
+  .img-part
+    text-align: right
+    .crop-img
+      display: inline-block
+      width: 420rem
+      height: 540rem
+
+  .content-part
+    padding-left: 60rem
+    padding-right: 130rem
+    padding-bottom: 60rem
+    position: relative
+    &:after
+      content: ""
+      display: block
+      background: $beige-bg
+      position: absolute
+      left: 0
+      right: 0
+      height: 100%
+      bottom: 0
+      top: 0
+      z-index: -1
+    .title
+      position: relative
+      z-index: 10
+      margin-bottom: 55rem
+    .common-text
+      position: relative
+      z-index: 10
+  +breakpoint(laptop)
+    .pictos-list
+      padding-right: 0
+
+  +breakpoint(sm)
+    margin-top: 0
+    .back-rect
+      display: none
+    .img-part
+      margin-bottom: 0
+      .crop-img
+        width: 100vw
+        height: 80vw
+    .content-part
+      padding: 50px 30px

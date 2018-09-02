@@ -1,0 +1,933 @@
+.products-tabs
+  &__head
+    padding-left: 135rem
+  .selector--mobile
+    display: none
+  &__body
+    &__tab
+      margin-top: 90rem
+      margin-left: 45rem
+      display: none
+  &.masked
+    .products-tabs
+      &__body
+        position: relative
+        &:after, &:before
+          content: ""
+          position: absolute
+          top: 0
+          height: 100%
+          background: $beige-dark
+          z-index: 30
+          transition: .8s ease-in-out
+        &:after
+          left: -90rem
+          width: calc(64% + 45rem)
+          +breakpoint(laptop)
+            width: calc(64% + 45px)
+
+        &:before
+          right: 0
+          width: calc(36% + 45rem)
+          +breakpoint(laptop)
+            width: calc(36% + 45px)
+          background: $cream
+          z-index: 12
+          transition: .6s .2s ease-in-out
+    &.unmasked
+      .products-tabs
+        &__body
+          position: relative
+          &:after
+            width: 0
+          &:before
+            width: 0
+  +breakpoint(laptop)
+    .products-tabs
+      &__body
+        &__tab
+          margin-left: 0
+  +breakpoint(lg-md)
+    .products-tabs__head
+      padding-left: 55px
+    .tabs-selector
+      &__tab
+        margin-right: 10px
+        margin-bottom: 30px
+      .title--tab
+        &__picto
+          margin-right: 0
+  +breakpoint(sm)
+    &__head
+      display: none
+    &__body
+      &__tab
+        margin-top: 50px
+    .selector--mobile
+      display: block
+
+
+.tabs-selector
+  &__tab
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    margin-right: 65rem
+    transition: .5s
+    cursor: pointer
+    font-size: 14px
+    &:after
+      content: ""
+      height: 2px
+      background: $green
+      width: 100%
+      left: 0
+      position: absolute
+      bottom: -14rem
+      transform: scaleX(0)
+      transition: .5s ease-in-out
+    .title--tab__picto
+      width: 40px
+      height: 30px
+      display: inline-block
+      vertical-align: middle
+      margin-right: 12rem
+      font-size: 35px
+      text-align: center
+      margin-top: -8px
+    .title__content
+      display: inline-block
+      vertical-align: middle
+    &:last-child
+      margin-right: 0
+
+    &--active, &.head-selector--active
+      color: $green
+      &:after
+        transform: scaleX(1)
+  &.masked
+    transition-delay: .7s
+    .tabs-selector
+      &__tab
+        opacity: 0
+        @for $i from 1 through 10
+          &:nth-child(#{$i})
+            .title--tab__picto
+              transform: translateY(100%)
+              transition: .4s .05s*$i
+              opacity: 0
+            .title__content
+              transform: translateY(100%)
+              transition: .4s .1s+.05s*$i
+              opacity: 0
+    &.unmasked
+      .tabs-selector
+        &__tab
+          opacity: 1
+          .title--tab__picto
+            transform: translateY(0)
+            opacity: 1
+          .title__content
+            transform: translateY(0)
+            opacity: 1
+
+  +breakpoint(laptop)
+    .tabs-selector
+      &__tab
+        font-size: 12px
+        margin-right: 30px
+        .title--tab__picto
+          //width: 30px
+          //height: 20px
+          //margin-right: 5px
+
+.dual-tab
+  position: relative
+  +after-clear
+  .mask
+    z-index: 30
+  &--active
+    display: block
+  &__left
+    position: relative
+    width: 58%
+    //padding-right: 42%
+    //float: left
+    height: 100%
+    .dual-tab__mask-container
+      position: absolute
+      top: 0
+      right: 0
+      width: calc((100vw - 960rem * 0.35 - 180rem))
+      +breakpoint(laptop)
+        width: calc((100vw - 960px * 0.35 - 180px))
+      bottom: 90rem
+  &__right
+    position: absolute
+    height: 100%
+    left: 58%
+    right: 90rem
+    top: 0
+    bottom: 0
+  &__medias
+    position: relative
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      z-index: 1
+      background: $beige-bg
+      top: 0
+      right: 0
+      height: 100%
+      width: calc((100vw - 960rem * 0.35 - 180rem))
+      +breakpoint(laptop)
+        width: calc((100vw - 960px * 0.35 - 180px))
+    &__slideshow
+      display: none
+      height: 620rem
+      position: relative
+      z-index: 10
+      opacity: 0
+      .images-slideshow
+        overflow: hidden
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: calc((100vw - 960rem * 0.35 - 180rem))
+        +breakpoint(laptop)
+          width: calc((100vw - 960px * 0.35 - 180px))
+        margin: auto
+    &__layout
+      display: block
+      height: 620rem
+      padding: 90rem 60rem 35rem
+      position: relative
+      z-index: 10
+      &__price
+        padding: 0 35rem
+        position: relative
+        z-index: 10
+        font-size: 22rem
+        font-family: $aktiv
+        +after-clear
+        p
+          +green-point
+          float: left
+        span
+          float: right
+      &__image
+        height: 470rem
+        line-height: 470rem
+        text-align: center
+        img
+          max-width: 100%
+          max-height: 100%
+          height: auto
+          width: auto
+          display: inline-block
+          vertical-align: middle
+  &__content
+    padding: 80rem 35rem 80rem 80rem
+    height: 100%
+    &__title
+      margin-bottom: 80rem
+    &__technicals
+      margin-bottom: 40rem
+    &__cta
+      background: $black
+      color: $beige
+      font-size: 21rem
+      font-family: $aktiv
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 100%
+      line-height: 90rem
+      height: 90rem
+      padding-left: 80rem
+      span
+        transition: color .5s
+      &:before
+        position: absolute
+        content: ""
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        background: $beige
+        opacity: .05
+        width: 0
+        transition: width .5s ease-in-out
+      &:hover
+        span
+          color: $green
+        .points-button
+          @extend .points-button--hv
+        &:before
+          left: auto
+          width: 100%
+      .points-button
+        vertical-align: middle
+        margin-left: 60rem
+    &__term
+      margin-bottom: 30rem
+
+  &__navigation
+    position: relative
+    .arrow-button
+      display: none
+      position: absolute
+      top: 33rem
+      z-index: 10
+      opacity: 0
+      &--prev
+        left: 40rem
+      &--next
+        right: 40rem
+
+  &--single
+    .dual-tab
+      &__left
+        width: 55%
+      &__right
+        left: 55%
+      &__medias
+        &__slideshow
+          height: 500rem
+        &__layout
+          padding-top: 20rem
+          padding-left: 100rem
+          height: 500rem
+          &__image
+            height: 400rem
+            line-height: 400rem
+      &__content
+        padding-right: 0
+        &__title
+          margin-bottom: 45rem
+        &__variations
+          .selector
+            display: inline-block
+            vertical-align: middle
+            &:first-child
+              margin-right: 13rem
+        &__price
+          padding-top: 50rem
+
+  +breakpoint(laptop)
+    .dual-tab
+      &__left
+        .dual-tab__mask-container
+          width: 100%
+      &__medias
+        &:after
+          width: 100%
+        &__layout
+          height: 500px
+          padding: 60px 30px 30px
+          &__image
+            height: 420px
+            line-height: 420px
+        &__slideshow
+          height: 500px
+          .images-slideshow
+            width: 100%
+      &__right
+        right: 0
+      &__content
+        padding: 60px
+        &__cta
+          padding-left: 0px
+          text-align: center
+        &__title
+          margin-bottom: 50px
+
+
+  +breakpoint(sm)
+    .dual-tab
+      &__left
+        width: 100%
+      &__right
+        width: 100%
+        left: 0
+        position: relative
+      &__medias
+        height: 350px
+        &:after
+          bottom: 0 !important
+        &__slideshow
+          height: 350px
+        &__layout
+          height: 350px
+          padding-top: 35px
+          &__price
+            padding: 0
+            font-size: 17px
+          &__image
+            height: 300px
+            line-height: 300px
+      &__navigation
+        .arrow-button
+          top: -180px
+          min-width: 30px
+          width: 40px
+          height: 50px
+          line-height: 50px
+          text-align: center
+          background: rgba($beige, 1)
+          color: $green
+          &--prev
+            left: 0
+            border-radius: 0 20px 20px 0
+            .arrow-button__icon
+              margin-right: 3px
+              margin-top: 0
+          &--next
+            border-radius: 20px 0 0 20px
+            right: 0
+            .arrow-button__icon
+              margin-left: 3px
+              margin-top: 0
+
+          small, .points-button
+            display: none
+
+      &__content
+        padding: 50px 0 0
+        &__title
+          margin-bottom: 30px
+          padding: 0 50px 0
+        &__technicals
+          margin-bottom: 30px
+          padding: 0 50px 0
+        .border-box
+          margin: 0 50px 50px
+        &__cta
+          position: relative
+          bottom: auto
+          left: auto
+          right: auto
+          display: block
+
+
+
+.sizes-tabs
+  margin-left: 130rem
+  margin-right: 130rem
+  &__head
+    position: relative
+    +after-clear
+    &:before
+      content: ""
+      position: absolute
+      display: block
+      left: -220rem
+      background: $beige-bg
+      height: 100%
+      right: -130rem
+      z-index: 1
+    &__tab
+      border-radius: 20px 20px 0 0
+      position: relative
+      z-index: 10
+      transition: .5s .2s
+      .layout-card
+        &__top
+          opacity: .15
+          transition: .4s
+        &__title
+          color: $black-text
+          transition: .4s
+          cursor: pointer
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: 2px
+        background: $green
+        z-index: 3
+        transform: scaleX(0)
+        transition: .6s
+      &--active
+        background: rgba($black, .03)
+        .layout-card
+          &__top
+            opacity: 1
+            .points-button
+              @extend .points-button--hv
+          &__title
+            color: $green
+        &:after
+          transform: scaleX(1)
+
+  &__content
+    &--rounded
+      .detail-card
+        &:first-child
+          border-radius: 20px 0 0 20px
+        &:last-child
+          border-radius: 0 20px 20px 0
+  &__tab
+    display: none
+    opacity: 0
+    .detail-card
+      &__title
+        .icon-arrow
+          display: none
+    &:first-child
+      display: block
+      opacity: 1
+  &__mobile-head
+    display: none
+
+  +breakpoint(laptop)
+    margin-left: 90px
+    margin-right: 45px
+
+  +breakpoint(sm)
+    margin-left: 30px
+    margin-right: 30px
+    position: relative
+    &__content--rounded
+      .detail-card
+        &:first-child
+          border-radius: 20px 20px 0 0
+        &:last-child
+          border-radius: 0 0 20px 20px
+    &__mobile-head
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      z-index: 20
+      padding: 30px
+      &__tab
+        float: left
+        width: 50%
+        text-align: left
+        opacity: .15
+        transition: opacity .5s
+        &.active
+          opacity: 1
+          .layout-card__title
+            color: $green
+        .layout-card__title
+          margin-bottom: 0
+          color: $black-text
+        &:last-child
+          text-align: right
+    &__head
+      position: relative
+      height: 430px
+      &__tab
+        padding-top: 100px !important
+        position: absolute
+        height: 100%
+        width: 100%
+        opacity: 0
+        z-index: 10
+        transition: .5s
+        transform: translateY(30px)
+        &--active
+          opacity: 1
+          transition: .5s .2s
+          transform: translateY(0)
+        .layout-card
+          pointer-events: none
+          &__top
+            display: none
+    &__content
+      position: relative
+      z-index: 30
+    &__tab
+      .detail-card
+        padding: 0
+        border-left: 0 !important
+        border-right: 0 !important
+        border-radius: 0 !important
+        &.collapsed
+          .detail-card__title
+            .icon-arrow
+              transform: rotate(90deg)
+        &__title
+          padding: 25px
+          position: relative
+          text-align: left
+          margin-bottom: 0
+          .icon-arrow
+            display: block
+            float: right
+            transform: rotate(270deg)
+            transform-origin: 14px 50%
+            font-size: 30px
+            margin-top: -5px
+            transition: .5s
+        &__picto
+          margin-top: 25px
+          margin-bottom: 20px
+        &__desc
+          padding: 0 50px 50px
+        .collaps-ct
+          position: relative
+          overflow: hidden
+          height: 0
+
+
+
+
+.technics-tabs
+  padding: 0 130px
+  &__tab
+    border: 1px solid rgba($black-text, .12)
+    &:first-child
+      border-right: 0
+      border-radius: 20px 0 0 20px
+      .technics-tabs
+        &__title
+          border-radius: 20px 0 0 0
+        &__details
+          &__container
+            border-left: 2px solid $green
+    &:last-child
+      border-radius: 0 20px 20px 0
+      .technics-tabs
+        &__title
+          border-radius: 0 20px 0 0
+        &__details
+          &__container
+            border-right: 2px solid $red
+  &__title
+    padding: 75px 100px
+    background: $beige-bg
+    overflow: hidden
+    &__icon
+      float: right
+      line-height: 30rem
+      font-size: 45px
+
+  &__layout
+    text-align: center
+    padding: 65px 0
+    position: relative
+    &__main, &__motion
+      height: auto
+      width: auto
+      max-width: 100%
+      max-height: 100%
+      position: relative
+      z-index: 10
+      margin: auto
+      display: block
+    &__main
+      display: none
+    &__motion
+      max-width: 270px
+      height: auto
+    &__zoom
+      position: absolute
+      z-index: 15
+      bottom: 30px
+      right: 130px
+      +box-shadow
+      border-radius: 50%
+      max-width: 50%
+    &__zoom--root
+      position: absolute
+      z-index: 15
+      top: 30%
+      right: 100px
+      +box-shadow
+      max-width: 50%
+      border-radius: 50%
+  &__details
+    padding: 60px 0px 65px
+    position: relative
+    &__container
+      padding: 0 100px
+    &:before
+      content: ""
+      position: absolute
+      display: block
+      background: $beige-bg
+      z-index: -1
+      top: 0
+      bottom: -91rem
+      width: 50vw
+      left: calc(-50vw - 1px)
+    &__title
+      position: relative
+      margin-bottom: 20px
+      height: 40px
+      +green-point
+      &:after
+        position: absolute
+        left: -40rem
+        top: 8rem
+        margin: 0
+      &.red-text
+        &:after
+          background: $red
+  &__or
+    position: absolute
+    text-transform: uppercase
+    font-family: $open-bold
+    font-size: 14rem
+    top: 50%
+    right: -10rem
+    z-index: 1
+    +rotation-circle-xxl
+
+  +breakpoint(laptop)
+    padding-left: 90px
+    padding-right: 45px
+
+    &__tab
+      &:first-child
+
+        .technics-tabs__details
+          border-bottom-left-radius: 20px
+          overflow: hidden
+
+      &:last-child
+
+        .technics-tabs__details
+          border-bottom-right-radius: 20px
+          overflow: hidden
+
+    &__details
+      background: $beige-bg
+
+      &:before
+        display: none
+
+  +breakpoint(sm)
+    padding: 0px 20px
+    &__tab
+      &:first-child, &:last-child
+        border-radius: 20px
+        border: 1px solid rgba($black-text, .12)
+        .technics-tabs
+          &__title
+            border-radius: 20px 20px 0 0
+          &__details
+            &__container
+              border: 0
+
+    &__title
+      padding: 30px 20px
+    &__layout
+      padding: 30px 10px
+      &__main
+        max-width: 100%
+        height: auto
+      &__zoom--root
+        right: auto
+        left: 50%
+      &__zoom
+        right: auto
+        left: 50%
+    &__details
+      padding: 30px
+      border-radius: 0 0 20px 20px
+      &:before
+        display: none
+      &__container
+        padding: 0
+      &__title
+        height: auto
+        &:after
+          display: none
+    &__or
+      display: none
+
+
+.customize-tabs
+  padding-left: 30rem
+  &__tabs
+    min-height: 470rem
+  &__layout
+    position: relative
+    .layout__content
+      position: relative
+      width: 610px
+      height: 515px
+      margin: auto
+    .layout__point
+      position: absolute
+      z-index: 10
+      opacity: .8
+      transform: scale(.75)
+      transition: .4s
+      cursor: pointer
+      +rotation-circle
+      &:after
+        border-color: $black-text
+        opacity: 0
+      &:hover
+        opacity: 1
+      &.active
+        opacity: 1
+        transform: scale(1)
+        &:after
+          opacity: .12
+      &:nth-child(1)
+        top: 170px
+        left: 120px
+      &:nth-child(2)
+        bottom: 80px
+        right: 70px
+      &:nth-child(3)
+        bottom: 70px
+        left: 70px
+      &:nth-child(4)
+        bottom: 60px
+        right: 140px
+      &:nth-child(5)
+        bottom: 90px
+        left: 140px
+      &:nth-child(6)
+        top: 125px
+        left: 230px
+      &:nth-child(7)
+        top: 165px
+        right: 100px
+    &__img
+      max-width: 610px
+      margin: auto
+      img
+        max-width: 100%
+        max-height: 100%
+        width: auto
+        height: auto
+  &__detail-card
+    padding-top: 70rem
+    .card--module
+      display: none
+      &.active
+        display: block
+  &__navigation
+    position: relative
+    margin: 50rem 130rem 0 105rem
+
+  .arrow-button
+    position: absolute
+    top: 33rem
+    z-index: 10
+    opacity: 0
+    transition: .4s
+    &--prev
+      left: 40rem
+      transform: translateX(-10px)
+    &--next
+      right: 40rem
+      transform: translateX(10px)
+    &.active
+      opacity: 1
+      transform: translateX(0px)
+
+
+  &__cards-view
+    //display: none
+    opacity: 0
+    position: absolute
+    .module-details
+      display: none
+    .modules-slideshow__navigation
+      display: none
+  &.masked
+    .customize-tabs
+      &__layout
+        opacity: 0
+        transform: translate3D(-50px,0,0)
+      &__detail-card
+        opacity: 0
+        transform: translate3D(50px,0,0)
+    .navigation-switch
+      opacity: 0
+      transform: translate3D(0,50px,0)
+      transition-delay: .4s
+
+    &.unmasked
+      .customize-tabs__layout, .customize-tabs__detail-card, .navigation-switch
+        opacity: 1
+        transform: translate3D(0, 0, 0)
+        transition: .8s
+
+  +breakpoint(laptop)
+    padding-left: 0
+
+  +breakpoint(sm)
+
+    &__tabs
+      min-height: 0
+    &__layout
+      .layout__content
+        max-width: 100%
+        height: auto
+      .layout__point
+        display: none
+    &__detail-card
+      display: none
+    &__cards-view
+      opacity: 1
+      position: relative
+      .modules-slideshow__navigation
+        display: block
+        .arrow-button
+          opacity: 1
+          transform: none
+    &__navigation
+      display: none
+
+
+
+.contents-tabs
+  &__head
+    margin-bottom: 0
+    .tabs-selector
+      &__tab
+        padding-top: 10rem
+        padding-bottom: 30rem
+        &:after
+          bottom: 0
+  &__body
+    position: relative
+    .back-rect__rect
+      left: -90rem
+      right: 0
+      top: 0
+      bottom: 0
+  &__tab
+    padding: 100rem 80rem
+    display: none
+    &--active
+      display: block
+    .grid-l
+      &__demi
+        padding: 0 50rem
+    &__title
+      margin-bottom: 30rem
+    &__cards
+      text-align: right
+      .card
+        display: inline-block
+        width: 230rem
+        text-align: left
+        padding-right: 20rem
+        margin-bottom: 35rem
+  +breakpoint(sm)
+    .contents-tabs
+      &__tab
+        padding: 30px
+        .grid-l__demi
+          padding: 0
+          margin-bottom: 0
+          margin-top: 30px
+        &__cards
+          text-align: center

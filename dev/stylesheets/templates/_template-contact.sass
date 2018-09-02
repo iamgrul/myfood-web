@@ -1,0 +1,98 @@
+.contact-box
+  margin-bottom: 60rem
+  padding-left: 40rem
+  &__title
+    color: $grey
+    margin-bottom: 30rem
+    @extend .title--sm
+  &__content
+    color: $red
+    @extend .title--m
+    &--l
+      padding: 25rem 0
+      position: relative
+      @extend .title--ml
+      color: $green
+      +rotation-circle-small-dark
+      &:after
+        left: 0
+  +breakpoint(sm)
+    margin-bottom: 50px
+    padding-left: 0
+    &__title
+      margin-bottom: 5px
+
+.contact-main
+  padding-left: 130rem
+  padding-right: 90rem
+  margin-bottom: 30rem
+  +breakpoint(sm)
+    padding-left: 60px
+    padding-right: 30px
+    margin-bottom: 30px
+
+
+.contact-more
+  padding-top: 90rem
+  padding-left: 130rem
+  padding-right: 90rem
+  position: relative
+  .back-rect
+    &__rect
+      top: 0rem
+      bottom: -90rem
+      left: -90rem
+      right: 0
+  +breakpoint(sm)
+    padding-left: 30px
+    padding-right: 30px
+
+.contact-address
+  padding-left: 90rem
+  padding-right: 0
+  position: relative
+  margin-bottom: 0
+  padding-bottom: 0rem
+  .grid-l
+    padding-left: 40rem
+  .back-rect
+    &__rect
+      top: 0rem
+      bottom: 0rem
+      left: -90rem
+      right: 0
+  .title-address
+    @extend .contact-box__title
+  address
+    margin-bottom: 40rem
+    span
+      display: block
+  small
+    color: $black-text
+  .gmap
+    position: relative
+    height: 350rem
+    width: 100%
+  .address-part
+    padding-left: 40rem
+    padding-right: 30rem
+  +breakpoint(sm)
+    padding-left: 30px
+    padding-right: 30px
+    .grid-l
+      padding-left: 0
+    .grid-l__demi
+      padding-bottom: 50px
+      margin-bottom: 0
+    .address-part
+      padding-left: 0
+      padding-right: 0
+      margin-bottom: 50px
+      padding-bottom: 0
+      .title--ml
+        font-size: 18px
+        line-height: 28px
+      address
+        margin-bottom: 20px
+    .gmap
+      height: 280px

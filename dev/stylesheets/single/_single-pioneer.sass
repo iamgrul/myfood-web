@@ -1,0 +1,158 @@
+.pioneer
+  position: relative
+  &__left
+    padding-top: 130rem
+    position: relative
+    float: left
+  &__right
+    padding-left: 110rem
+    float: right
+
+  &__stats
+    position: absolute
+    left: 16rem
+    z-index: 30
+    .card__infos__date,.card__infos__number
+      display: block
+      margin-bottom: 15rem
+  &__content
+    padding-left: 170rem
+  &__title
+    color: $green
+    margin-bottom: 70rem
+    span
+      display: block
+      color: $black-text
+  &__quote
+    margin-bottom: 70rem
+    .icon-quote
+      font-size: 40px
+      display: block
+      margin-bottom: 25rem
+
+  &__portrait
+    padding-top: 110rem
+    background: $beige-bg
+    text-align: center
+    padding-bottom: 140rem
+    &__avatar
+      width: 180rem
+      height: 180rem
+      display: inline-block
+      margin-bottom: 40rem
+    &__mention
+      margin-bottom: 12rem
+      i
+        font-size: 28px
+        vertical-align: middle
+        margin-right: 5rem
+      span
+        padding-top: 4px
+        display: inline-block
+        vertical-align: middle
+
+    .cbutton
+      margin-top: 60rem
+      display: inline-block
+      min-width: 180rem
+      &:after
+        border-color: $black-text
+        opacity: .15
+  .pioneer-infos-mobile
+    display: none
+  +breakpoint(sm)
+    &__right
+      float: none
+      padding-left: 0
+      margin-bottom: 0
+      .pioneer-infos-mobile
+        display: block
+    &__left
+      float: none
+      padding-top: 50px
+
+    &__portrait
+      padding-top: 50px
+      padding-bottom: 80px
+    &__stats
+      position: relative
+      left: auto
+      .card__infos
+        &__number, &__date
+          display: inline-block
+          vertical-align: middle
+        &__number
+          margin-right: 100px
+    &__title
+      margin-bottom: 50px
+    &__left
+      .pioneer__stats, .pioneer__title
+        display: none
+    &__content
+      padding: 0 30px
+    &__quote
+      margin-bottom: 30px
+
+#single-pioneer-interview, #single-pioneer-installation, #single-pioneer-production, #single-pioneer-others
+  padding-top: 90rem
+  margin-bottom: 0
+  padding-bottom: 110rem
+  .title--l
+    margin-bottom: 70rem
+  +breakpoint(sm)
+    padding-top: 50px
+    padding-bottom: 0px
+    .title--l
+      padding: 0 30px
+      margin-bottom: 50px
+
+
+#single-pioneer-installation
+  .single-slideshow
+    margin-left: 130rem
+    margin-right: 130rem
+  .button-container
+    margin-top: 70rem
+    text-align: center
+    .cbutton
+      display: inline-block
+  +breakpoint(sm)
+    padding-bottom: 50px
+    .single-slideshow
+      margin: 0 30px
+
+#single-pioneer-others
+  padding-bottom: 150rem
+  margin-bottom: 0
+  .title--l
+    margin-bottom: 130rem
+  .pioneer-list
+    margin-left: 130rem
+    margin-right: 130rem
+    .grid-l
+      margin-left: -50rem
+      margin-right: -50rem
+  +breakpoint(sm)
+    padding-bottom: 50px
+    .title--l
+      margin-bottom: 50px
+    .pioneer-list
+      margin-left: 10px
+      margin-right: 10px
+      .pioneer-card
+        margin-bottom: 50px
+      .grid-l
+        margin: 0
+
+#single-pioneer
+  .page-c__section
+    position: relative
+    &:nth-child(even)
+      .back-rect
+        display: none
+    .back-rect
+      &__rect
+        left: -90rem
+        right: -90rem
+        top: 0
+        bottom: 0

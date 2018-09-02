@@ -1,0 +1,236 @@
+.sidebar
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  background: $beige
+  width: 90rem
+  z-index: 550
+  .overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 90rem
+    width: 100vw
+    background: $black
+    opacity: 0
+    transition: opacity .5s
+    z-index: -1
+    pointer-events: none
+  &__open-zone
+    position: absolute
+    opacity: 0
+    top: 0
+    bottom: 90rem
+    right: 0
+    width: 90rem
+    cursor: pointer
+    z-index: 40
+  &__mention
+    font-family: $aktiv
+    font-size: 15rem
+    transform: rotate(-90deg)
+    position: absolute
+    left: 0
+    bottom: 135rem
+    width: 300rem
+    line-height: 90rem
+    margin-left: -105rem
+    margin-bottom: 90rem
+    text-align: left
+    z-index: 20
+    color: $red
+    transition: .4s
+
+  &__bottom
+    background: $red
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 90rem
+    line-height: 90rem
+    text-align: center
+    z-index: 40
+    cursor: pointer
+    &:after
+      content: ""
+      position: absolute
+      bottom: 50%
+      left: 50%
+      display: block
+      width: 12px
+      margin: 0 -6px -15px
+      height: 4px
+      border-radius: 50%
+      background: black
+      opacity: 0
+      transform: scaleY(0)
+      transition: .4s
+    &:hover
+      &:after
+        opacity: .1
+        transform: scaleY(1)
+      .sidebar__bottom__icon.icon-contact
+        //animation: bounce-rotate .4s
+        transform: translateY(-5px) rotate(15deg)
+    &__icon
+      font-size: 32px
+      transition: .4s
+      vertical-align: middle
+      display: inline-block
+      &.icon-cross
+        position: absolute
+        top: 50%
+        left: 50%
+        margin: -16px
+        transform: translateY(10px)
+        opacity: 0
+  &__content
+    position: absolute
+    background: $beige
+    top: 0
+    right: 0
+    bottom: 0
+    width: 50vw
+    z-index: 1
+    transform: translateX(100%)
+    transition: 1s
+    line-height: 100vh
+    padding-top: 90rem
+    &__push
+      $root: &
+      display: block
+      margin-bottom: 80rem
+      padding: 0 50rem 0 125rem
+      transition: .5s
+      transition-delay: 0s
+      opacity: 0
+      transform: translateX(100px)
+      &__title
+        margin-top: 30rem
+        opacity: .15
+        transition: .5s
+
+      &__icon
+        position: relative
+        font-size: 34px
+        transform: translate3D(0,0,0)
+        +rotation-circle-xl
+        display: inline-block
+        opacity: .15
+        transition: .5s
+        #{$root}.active &
+          &:after
+            opacity: 1
+        &:after
+          opacity: 0
+          transition: .5s
+      &__mention
+        transition: .5s
+        opacity: .15
+
+  &__vam
+    vertical-align: middle
+    line-height: 1
+    display: inline-block
+    width: 100%
+
+
+  &__red-mask
+    position: absolute
+    width: 100%
+    bottom: 0
+    right: 0
+    background: $red
+    height: 0%
+    z-index: 10
+    transition: .7s .2s
+    +back-ease
+
+
+  &.open
+    .overlay
+      width: 100vw
+      opacity: 0.5
+    .sidebar
+      &__red-mask
+        height: 100%
+        transition: .7s
+      &__mention
+        color: $white
+      &__bottom
+        &__icon
+          opacity: 0
+          transform: translateY(-10px)
+          &.icon-cross
+            opacity: 1
+            transform: translateY(0px)
+      &__content
+        transform: translateX(0)
+        transition: 1s .3s
+        &__push
+          transition-delay: .8s
+          opacity: 1
+          transform: translateX(0px)
+          &.active
+            .sidebar__content__push
+              &__title, &__icon, &__mention
+                opacity: 1
+                transition-delay: 0 !important
+          &:nth-child(2)
+            transition-delay: 1s
+
+
+  +breakpoint(sm)
+    bottom: auto
+    z-index: 650
+    width: 60px
+    height: 60px
+    overflow: hidden
+    transition: height .3s, width .3s .3s
+    &__bottom
+      top: 0
+      bottom: auto
+      height: 60px
+      line-height: 64px
+      width: 60px
+      left: auto
+      right: 0
+    &__mention
+      bottom: auto
+      transform: none
+      left: 0
+      right: 0
+      margin: auto
+      line-height: 60px
+      text-align: left
+      font-size: 18px
+      background: $red
+      width: auto
+      padding-left: 30px
+      top: 0
+      height: 60px
+    &__red-mask
+      opacity: 0
+      display: none
+    &__content
+      width: 100vw
+      padding-top: 60px
+      text-align: center
+      transition: .3s
+      &__push
+        padding: 0
+        .sidebar__content__push
+          &__title, &__icon, &__mention
+            opacity: 1
+          &__icon:after
+            opacity: 1
+
+    &.open
+      transition: width .45s, height .45s .45s
+      width: 100vw !important
+      height: 100vh !important
+      .sidebar
+        &__content
+          transition: .45s .45s

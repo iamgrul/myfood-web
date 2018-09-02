@@ -1,0 +1,281 @@
+.footer
+  background: $beige
+  padding-top: 130rem
+  position: relative
+  #goey-effect-svg
+    position: absolute
+    opacity: 0
+    width: 0
+    height: 0
+    overflow: hidden
+    bottom: 0
+    right: 0
+  &__top
+    margin-bottom: 70rem
+    padding-right: 180rem
+    padding-left: 135rem
+    +after-clear
+    &__right
+      float: right
+      margin-top: 5rem
+  &__logo
+    width: 155px
+    height: 55px
+    float: left
+  &__button
+    display: inline-block
+    vertical-align: middle
+    margin-right: 120rem
+  &__socials
+    display: inline-block
+    vertical-align: middle
+    &__link
+      display: inline-block
+      vertical-align: middle
+      margin-right: 0rem
+      color: $black
+      font-size: 50px
+      &.lkd
+        transform: translateY(-2px)
+      &.yt
+        transform: translateY(1px)
+      &.hv
+        position: relative
+        i
+          display: inline-block
+          transition: .5s
+        &:after
+          content: ""
+          position: absolute
+          bottom: 50%
+          left: 50%
+          display: block
+          width: 12px
+          margin: 0 -6px -15px
+          height: 4px
+          border-radius: 50%
+          background: black
+          opacity: 0
+          transform:
+          transition: .4s
+
+        &:hover
+          &:after
+            opacity: .1
+            transform: scaleY(1)
+          i
+            color: $green
+            transform: translate3D(0, -5px, 0) rotate(15deg)
+
+        //&:hover
+          //animation: bounce-jump .4s
+
+      &:last-child
+        margin-right: 0
+
+
+  &__main
+    padding-bottom: 90rem
+    padding-right: 180rem
+    padding-left: 135rem
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    &__nav
+      margin-right: 40rem
+      &:last-child
+        margin-right: 0
+      &__title
+        font-size: 18rem
+        font-family: $aktiv
+        color: $black
+        +green-point
+        &:after
+          display: block
+          margin: 25rem 0
+        &--no-list
+          &:after
+            display: none
+      &__list
+        li
+          font-size: 13rem
+          color: $black
+          line-height: 30rem
+          a
+            display: inline-block
+            position: relative
+            transition: .4s
+            &:before
+              position: absolute
+              content: ""
+              display: block
+              height: 1px
+              transition: width .2s
+              background: $green
+              width: 0
+              left: auto
+              right: 0
+              bottom: 0
+              
+            &:hover
+              color: $green
+              &:before
+                left: 0
+                width: 100%
+  &__newsletter
+    background: $beige-dark
+    padding: 55rem 180rem 45rem 135rem
+    +after-clear
+    &__labels
+      float: left
+      label
+        text-transform: uppercase
+        font-family: $open-bold
+        font-size: 14rem
+        display: block
+      small
+        font-size: 12rem
+        color: $black
+        opacity: .5
+        margin-top: 10rem
+        display: block
+    &__input
+      float: right
+      position: relative
+      input
+        border: 2px solid $green
+        border-radius: 20px
+        padding: 8rem 23rem
+        width: 370rem
+        +placeholder
+          color: $black
+          font-family: $open
+          font-size: 12rem
+      .valid-newsletter-input
+        position: absolute
+        right: 8rem
+        top: 4rem
+        font-family: $aktiv
+        font-size: 10rem
+        text-transform: uppercase
+        padding: 10rem
+        cursor: pointer
+        transition: color .4s
+        &:hover
+          color: $green
+
+  &__bottom
+    background: $white
+    height: 90rem
+    padding: 40rem 180rem 0 135rem
+    line-height: 1
+    +after-clear
+    &__legals
+      float: left
+      font-size: 10rem
+      opacity: .5
+      padding-top: 2rem
+    &__nav
+      float: right
+      li
+        display: inline-block
+        vertical-align: middle
+        font-family: $aktiv
+        font-size: 18rem
+        margin-right: 110rem
+        position: relative
+        &:before
+          position: absolute
+          content: ""
+          display: block
+          height: 1px
+          transition: width .2s
+          background: $green
+          width: 0
+          left: auto
+          right: 0
+          bottom: 0
+
+          &:hover
+            color: $green
+            &:before
+              left: 0
+              width: 100%
+        &:last-child
+          margin-right: 0
+
+  +breakpoint(laptop)
+    .footer
+      &__top
+        padding-left: 45px
+        padding-right: 130px
+      &__main
+        padding-left: 45px
+        padding-right: 130px
+      &__newsletter, &__bottom
+        padding-left: 45px
+        padding-right: 130px
+
+  +breakpoint(sm)
+    padding-top: 50px
+    .footer
+      text-align: center
+      &__top
+        padding: 0
+        &__right
+          float: none
+      &__logo
+        float: none
+        margin: auto
+      &__button
+        display: table
+        margin: 20px auto
+      &__socials
+        display: table
+        margin: 40px auto
+
+      &__main
+        padding-right: 0
+        padding-left: 0
+        display: table
+        margin: auto
+        display: none
+        &__nav
+          display: none
+          //&:first-child
+          //  display: block
+
+      &__newsletter
+        padding-right: 90px
+        &__input
+          float: none
+          margin-top: 20px
+          input
+            width: 100%
+        &__labels
+          float: none
+          padding-right: 30px
+          small
+            line-height: 20px
+      &__bottom
+        padding: 30px 0
+        text-align: center
+        &__legals
+          float: none
+          padding-top: 30px
+          margin-bottom: 30px
+          display: block
+          border-top: 1px solid rgba($black, .12)
+        &__nav
+          float: none
+          display: table
+          margin: 0 auto 30px
+          li
+            margin: 0 15px
+
+
+  +breakpoint(md)
+    +minbreakpoint(xs)
+      .footer
+        &__newsletter
+          padding-right: 45px

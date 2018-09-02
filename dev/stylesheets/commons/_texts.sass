@@ -1,0 +1,363 @@
+.title
+  color: $black-text
+  &--xxl
+    font-size: 65rem
+    line-height: 70rem
+    font-family: $aktiv
+    +breakpoint(sm)
+      font-size: 24px
+      line-height: 34px
+  &--xl
+    font-size: 45rem
+    line-height: 55rem
+    font-family: $aktiv
+    +breakpoint(sm)
+      font-size: 34px
+      line-height: 44px
+  &--l
+    font-size: 40rem
+    line-height: 45rem
+    font-family: $aktiv
+    padding-top: 20rem
+    margin-bottom: 100rem
+    position: relative
+    z-index: 20
+    +breakpoint(sm)
+      font-size: 24px
+      line-height: 30px
+      margin-bottom: 50px
+  &--ml
+    font-size: 28rem
+    line-height: 45rem
+    font-family: $aktiv
+    +breakpoint(sm)
+      font-size: 22px
+      line-height: 35px
+  &--m
+    font-size: 22rem
+    line-height: 30rem
+    font-family: $aktiv
+    +breakpoint(sm)
+      font-size: 18px
+  &--sm
+    font-size: 19rem
+    line-height: 23rem
+    font-family: $aktiv
+
+  &-xs
+    font-family: $open-bold
+    text-transform: uppercase
+    font-size: 16rem
+    line-height: 20rem
+    letter-spacing: .025em
+
+  &-xs-aktiv
+    font-family: $aktiv
+    font-size: 16rem
+    line-height: 16rem
+
+  &-xxs
+    font-family: $open-bold
+    font-size: 12rem
+    line-height: 12rem
+    letter-spacing: .025em
+    color: $grey
+    text-transform: uppercase
+
+  &--tab
+    font-size: 14rem
+    letter-spacing: .025em
+    line-height: 20rem
+    text-transform: uppercase
+    font-family: $open-bold
+
+  &--tab-m
+    font-size: 17rem
+    font-family: $aktiv
+    line-height: 27rem
+
+  &--tab-l
+    font-size: 25rem
+    text-transform: uppercase
+    font-family: $aktiv
+
+  &--card-sm
+    font-size: 16rem
+    font-family: $aktiv
+
+  &--center
+    text-align: center
+    .title__content--prefixed
+      padding-right: 135rem
+    +breakpoint(sm)
+      text-align: left
+      .title__content--prefixed
+        padding-right: 20rem
+
+
+  &--beige
+    color: $beige
+
+  &__content
+    &--prefixed
+      padding-left: 135rem
+      position: relative
+    &__number
+      color: $green
+      font-family: $open
+      font-size: 24rem
+      text-align: center
+      padding-left: 30rem
+      position: absolute
+      left: 0
+      top: 0
+      margin-top: -4rem
+      +green-point
+    +breakpoint(sm)
+      &--prefixed
+        padding-left: 86px
+        padding-right: 20px
+      &__number
+        padding-left: 24rem
+        margin-top: -2rem
+
+  &--white
+    color: $white
+    .title
+      &__content
+        &__number
+          color: $white
+          &:after
+            background: $white
+
+  &--masked
+    position: relative
+    overflow: hidden
+    .title__content
+      transition: transform .8s
+      transform: translateY(100%)
+      .title__content__number
+        transform: translateY(100%)
+        transition: transform .8s .2s
+    .line-mention
+      opacity: 0
+      transition: .5s
+      transform: translateX(30px)
+    &.unmasked
+      .title__content
+        transform: translateY(0%)
+        .title__content__number
+          transform: translateY(0%)
+      .line-mention
+        opacity: 1
+        transform: translateX(0)
+    &__mask
+      position: absolute
+      z-index: 10
+      background: $green
+      top: -10rem
+      left: 0rem
+      bottom: -10rem
+      right: 0
+      &.open
+
+  +breakpoint(sm)
+    .line-mention
+      margin: 30px 30px 50px 66px
+
+.mention, .corps
+  font-size: 13rem
+  line-height: 25rem
+  letter-spacing: .025em
+  color: $grey
+  &--light
+    text-transform: uppercase
+    font-size: 9rem
+    font-family: $aktiv
+    letter-spacing: .1em
+  &--small
+    font-size: 11rem
+    font-family: $open
+    letter-spacing: .025em
+    line-height: 22rem
+    color: $black
+    +breakpoint(sm)
+      font-size: 13px
+  i
+    font-size: 28px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 3px
+  &--term
+    font-family: $open-bold
+    text-transform: uppercase
+    font-size: 10rem
+    letter-spacing: .025em
+    line-height: 20rem
+    +breakpoint(sm)
+      font-size: 13px
+  &--job
+    text-transform: uppercase
+    font-size: 12rem
+    font-family: $open-bold
+    +breakpoint(sm)
+      font-size: 12px
+      line-height: 13px
+  &--l
+    font-size: 12rem
+    text-transform: uppercase
+    color: $grey
+    font-family: $aktiv
+    letter-spacing: .1em
+
+.common-text
+  font-size: 13rem
+  line-height: 25rem
+  letter-spacing: .025em
+  color: $grey
+  &--light
+    font-size: 11rem
+  p
+    margin-bottom: 25rem
+    &:last-child
+      margin-bottom: 0
+  h2
+    @extend .title--m
+    color: $black-text
+    margin-bottom: 30rem
+    +green-point-before
+    strong
+      color: $black-text
+  h3
+    @extend .title--ml
+    color: $green
+    margin-bottom: 25rem
+    strong
+      color: $green
+  h4
+    @extend .title--tab-m
+    color: $green
+    margin-bottom: 25rem
+    strong
+      color: $green
+
+  b, strong
+    font-weight: 700
+  i, em
+    font-style: italic
+  a
+    display: inline-block
+    position: relative
+    color: $green
+    font-family: $open-bold
+    &:after, &:before
+      content: ""
+      display: block
+      height: 1px
+      background: $white
+      left: 0px
+      right: 0px
+      bottom: 3px
+      opacity: .3
+      position: absolute
+    &:before
+      transition: width .2s
+      background: $green
+      width: 0
+      left: auto
+      right: 0
+      z-index: 2
+      opacity: 1
+
+    &:hover
+      &:before
+        left: 0
+        width: 100%
+  strong
+    @extend .grey-text
+    line-height: 25rem
+  img, iframe, video
+    max-width: 100%
+    height: auto
+    width: auto
+  ul
+    margin-top: 20rem
+    margin-bottom: 15rem
+    li
+      margin-bottom: 15rem
+      padding-left: 25rem
+      position: relative
+      +green-point-before
+      &:before
+        position: absolute
+        left: 0
+        top: 14rem
+
+  +breakpoint(sm)
+    font-size: 14px
+    line-height: 28px
+    h3
+      margin-bottom: 25px
+
+
+.text-right
+  text-align: right
+  .btn
+    display: inline-block
+
+.h-text-center
+  text-align: center
+
+.white-text
+  color: $white
+
+.black-text
+  // TODO : différence ??
+  //color: $black
+  color: $black-text
+
+.grey-text
+  color: $grey
+
+.red-text
+  color: $red
+
+.green-text
+  color: $green
+  
+.beige-text
+  color: $beige
+
+a
+  color: inherit
+  text-decoration: inherit
+
+.mention-med
+  font-size: 11rem
+  letter-spacing: .1em
+  text-transform: uppercase
+
+.small
+  font-size: 12rem
+
+.lang-switch
+  text-transform: uppercase
+  font-size: 10rem
+  font-family: $open-bold
+  text-align: center
+  a
+    opacity: 0.4
+    display: inline-block
+    vertical-align: middle
+    margin: 0 3px
+    position: relative
+    &.active
+      opacity: 1
+      &:after
+        content: ""
+        height: 1px
+        background: $green
+        width: 100%
+        display: block
+        position: absolute
+        bottom: -4rem

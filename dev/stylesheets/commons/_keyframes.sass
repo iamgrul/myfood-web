@@ -1,0 +1,133 @@
+
+
+
+/* ##################### KEYFRAMES ##################### */
+
+@keyframes infinite-rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes drop-animation
+  0%
+    transform: translateY(-10px) translateX(0) scaleX(0) scaleY(.1)
+  50%
+    transform: translateY(0) translateX(0) scaleX(1) scaleY(1)
+  60%
+    transform: translateY(0) translateX(0) scaleX(1) scaleY(1) rotate(10deg)
+  65%
+    transform: translateY(0) translateX(0) scaleX(1) scaleY(1) rotate(-10deg)
+  70%
+    transform: translateY(0) translateX(0) scaleX(1) scaleY(1)
+  100%
+    transform: translateY(80px) translateX(2px) scaleX(0) scaleY(.2)
+
+
+@keyframes points-button-hover-before
+  0%
+    transform: translate3D(10px,0,0) scale(1)
+  50%
+    transform: translate3D(0,0,0) scaleX(1.1)
+  100%
+    transform: translate3D(0,10px,0) scaleY(1.1)
+
+
+@keyframes points-button-hover-after
+  0%
+    transform: translate3D(-10px,0,0)
+  50%
+    transform: translate3D(0,0,0)
+  100%
+    transform: translate3D(0,-10px,0)
+
+@keyframes points-button-unhover-before
+  0%
+    transform: translate3D(0,10px,0)
+  50%
+    transform: translate3D(0,0,0)
+  100%
+    transform: translate3D(10px,0,0)
+
+
+@keyframes points-button-unhover-after
+  0%
+    transform: translate3D(0,-10px,0)
+  50%
+    transform: translate3D(0,0,0)
+  100%
+    transform: translate3D(-10px,0,0)
+
+@keyframes scale-bump
+  0%
+    opacity: 0
+    transform: scale(.5)
+  50%
+    opacity: .3
+    transform: scale(1.4)
+  65%
+    opacity: .3
+  100%
+    opacity: .2
+    transform: scale(1)
+
+
+
+@keyframes translate-on-y
+  0%
+   transform: translateY(0px) rotate(5deg)
+  40%
+    transform: translateY(30px) rotate(-5deg)
+  100%
+    transform: translateY(100px) rotate(-5deg)
+
+
+@keyframes side-move
+  0%
+    transform: translateX(-50px)
+  100%
+    transform: translateX(50px)
+
+@keyframes bounce-jump
+  0%
+    transform: translateY(0) scaleY(1)
+  30%
+    transform: translateY(2px) scaleY(.8)
+  50%
+    transform: translateY(-5px) scaleY(1.1)
+  70%
+    transform: translateY(5px) scaleY(1)
+  100%
+    transform: translateY(0) scaleY(1)
+
+@keyframes bounce-rotate
+  0%
+    transform: translateY(0) rotate(0deg)
+  30%
+    transform: translateY(-5px)  rotate(-20deg)
+  50%
+    transform: translateY(-5px) rotate(20deg)
+  70%
+    transform: translateY(-5px) rotate(-10deg)
+  100%
+    transform: translateY(0) rotate(0deg)
+
+@keyframes bounce-rotate-down
+  0%
+    transform: translateY(0) rotate(0deg)
+  30%
+    transform: translateY(5px)  rotate(-20deg)
+  50%
+    transform: translateY(5px) rotate(20deg)
+  70%
+    transform: translateY(5px) rotate(-10deg)
+  100%
+    transform: translateY(0) rotate(0deg)
+
+@keyframes slide-down
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(5px)
+  100%
+    transform: translateY(0)

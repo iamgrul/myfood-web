@@ -1,0 +1,31 @@
+.page-partners-medias
+  &__section
+    padding: 0 130rem 140rem 130rem
+
+    +breakpoint(sm)
+      padding: 0 30px 140rem 30px
+  &__nav
+    &--desk
+      text-align: center
+      padding: 0 130rem
+      +breakpoint(sm)
+        display: none
+    &--mobile
+      display: none
+      +breakpoint(sm)
+        display: block
+        margin-bottom: 50rem
+    &--medias
+      .tabs-selector
+        &__tab
+          width: auto
+          margin-right: 110rem
+          &:last-child
+            margin-right: 0
+
+  &__container
+    height: auto
+    margin-top: 14rem
+    display: none
+    &--active
+      display: block

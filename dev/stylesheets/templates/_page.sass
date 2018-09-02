@@ -1,0 +1,21 @@
+.page-simple
+  &__section
+    padding-bottom: 130rem
+  &__title
+    margin-bottom: 70rem
+  &__content
+    padding-left: 135rem
+  &__texts
+    p
+      padding-left: calc(25rem + 2px)
+      +breakpoint(laptop)
+        padding-left: 27px
+  .woocommerce-page &
+    +breakpoint(lg-md)
+      &__content
+        padding-left: 90px
+        padding-right: 0px
+    +breakpoint(sm)
+      &__content
+        padding-left: 30px
+        padding-right: 0px

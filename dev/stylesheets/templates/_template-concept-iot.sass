@@ -1,0 +1,194 @@
+#concept-iot-introduction
+  margin-bottom: 0
+  padding-bottom: 90rem
+  position: relative
+
+  .title--l
+    max-width: 600rem
+
+  .back-rect
+    &__rect
+      top: 50%
+      bottom: 0
+      left: 50%
+      right: 0
+
+  .right-part
+    padding-top: 124rem
+    padding-bottom: 90rem
+    position: absolute
+    right: 0
+    bottom: 0
+
+    .back-rect
+      &__rect
+        top: -1rem
+        bottom: 0
+        left: 0
+        right: 0
+
+  .layout
+    position: relative
+
+    &__point
+      z-index: 30
+      &:nth-child(1)
+        bottom: 35rem
+        right: 110rem
+      &:nth-child(2)
+        top: 290rem
+        left: -35rem
+      &:nth-child(3)
+        top: -35rem
+        right: 130rem
+      &:nth-child(4)
+        top: 200rem
+        right: 0
+    img
+      max-width: 80%
+      margin: auto
+      height: auto
+      width: auto
+    &__img
+      position: relative
+      z-index: 10
+    &__zoom
+      position: absolute
+      z-index: 12
+      top: 130rem
+      right: 15rem
+      border-radius: 50%
+      max-width: 50% !important
+      +box-shadow
+    &__bubble
+      position: absolute
+      z-index: 12
+      bottom: -50rem
+      right: 0
+      max-width: 75% !important
+
+  +breakpoint(laptop)
+    padding-bottom: 0
+
+    .back-rect__rect
+      left: 60%
+    .grid-l
+      .left-part
+        width: 60%
+        .common-text
+          max-width: none
+          padding-right: 60px
+        .card--points-list
+          max-width: none
+          margin-right: 30px
+          margin-left: 90px
+          padding-left: 30px
+          margin-bottom: 30px
+
+      .right-part
+        padding-top: 100px
+        padding-left: 30px
+        width: 40%
+        padding-bottom: 30px
+
+        .layout
+          max-width: 80%
+          img
+            max-width: 100%
+            height: auto
+            width: auto
+
+  +breakpoint(sm)
+    .back-rect__rect
+      display: none
+    .grid-l
+      .left-part
+        width: auto
+        .common-text
+          padding-right: 0
+        .card--points-list
+          margin-left: 0
+          margin-bottom: 50px
+          margin-right: 0
+      .right-part
+        position: relative
+        width: auto
+        padding-top: 50px
+        margin-bottom: 0
+        padding-bottom: 0
+        .back-rect__rect
+          display: block
+        img
+          max-height: 500px
+
+
+
+#concept-iot-contributions
+  position: relative
+  padding-top: 90rem
+  padding-bottom: 90rem
+  margin-bottom: 0
+  .back-rect
+    &__rect
+      bottom: 0
+      left: -90rem
+      right: -90rem
+      top: -1rem
+  .green-push
+    position: relative
+    z-index: 30
+  +breakpoint(sm)
+    padding-top: 50px
+    padding-bottom: 50px
+
+
+#concept-iot-bottom
+  position: relative
+  margin-bottom: 0
+  padding-bottom: 0
+  .back-rect
+    &__rect
+      top: 0
+      bottom: 0
+      left: -90rem
+      right: 0
+
+
+#concept-iot-hub
+  position: relative
+  margin-top: 155rem
+
+  .img-part
+    text-align: right
+    .crop-img
+      display: inline-block
+      width: 420rem
+      height: 540rem
+
+  .content-part
+    padding-left: 60rem
+    padding-right: 130rem
+    padding-bottom: 60rem
+    position: relative
+    .title
+      position: relative
+      z-index: 10
+      margin-bottom: 55rem
+    .common-text
+      position: relative
+      z-index: 10
+  +breakpoint(laptop)
+    .pictos-list
+      padding-right: 0
+
+  +breakpoint(sm)
+    margin-top: 0
+    .back-rect
+      display: none
+    .img-part
+      margin-bottom: 0
+      .crop-img
+        width: 100vw
+        height: 80vw
+    .content-part
+      padding: 50px 30px

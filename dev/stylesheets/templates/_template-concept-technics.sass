@@ -1,0 +1,299 @@
+#technics-requirements
+  .detail-card
+    padding-top: 90rem
+    padding-bottom: 20rem
+  +breakpoint(sm)
+    .detail-card
+      padding: 40px 15px 10px
+      &__title
+        &__number
+          margin-bottom: 30px
+          margin-top: 50px
+
+#technics-introduction
+  margin-bottom: 0
+  padding-bottom: 0
+  position: relative
+  .title--l
+    max-width: 600rem
+  .back-rect
+    &__rect
+      top: 50%
+      bottom: 0
+      left: 50%
+      right: 0
+  .right-part
+    padding-top: 230rem
+    .back-rect
+      &__rect
+        top: -1rem
+        bottom: 0rem
+        left: 0rem
+        right: 0
+  .layout
+    position: relative
+
+    &__point
+      z-index: 30
+      &:nth-child(1)
+        bottom: 35rem
+        right: 110rem
+      &:nth-child(2)
+        top: 290rem
+        left: -35rem
+      &:nth-child(3)
+        top: -35rem
+        right: 130rem
+      &:nth-child(4)
+        top: 200rem
+        right: 0rem
+    img
+      max-width: 80%
+      margin: auto
+      height: auto
+      width: auto
+    &__img
+      position: relative
+      z-index: 10
+    &__zoom
+      position: absolute
+      z-index: 12
+      top: 130rem
+      right: 15rem
+      border-radius: 50%
+      max-width: 50% !important
+      +box-shadow
+    &__bubble
+      position: absolute
+      z-index: 12
+      bottom: -50rem
+      right: 0px
+      max-width: 75% !important
+  +breakpoint(laptop)
+    .back-rect__rect
+      left: 60%
+    .grid-l
+      .left-part
+        width: 60%
+        .common-text
+          max-width: none
+          padding-right: 60px
+        .card--points-list
+          max-width: none
+          margin-right: 30px
+          margin-left: 90px
+          padding-left: 30px
+          margin-bottom: 90px
+      .right-part
+        padding-top: 100px
+        padding-left: 30px
+        width: 40%
+        .layout
+          max-width: 80%
+          img
+            max-width: 100%
+            height: auto
+            width: auto
+
+  +breakpoint(sm)
+    .back-rect__rect
+      display: none
+    .grid-l
+      .left-part
+        width: auto
+        .common-text
+          padding-right: 0
+        .card--points-list
+          margin-left: 0
+          margin-bottom: 0
+          margin-right: 0
+      .right-part
+        width: auto
+        padding-top: 50px
+        margin-bottom: 0
+        .back-rect__rect
+          display: block
+        img
+          max-height: 500px
+
+
+#technics-permaculture
+  position: relative
+  padding-top: 90rem
+  padding-bottom: 0
+  margin-bottom: 0
+  .title--l
+    padding-right: 60rem
+  .back-rect
+    &__rect
+      top: 0rem
+      bottom: -90rem
+      left: -90rem
+      right: 50%
+  .layout
+    &__point
+      z-index: 30
+      &:nth-child(1)
+        bottom: 60rem
+        left: 110rem
+      &:nth-child(2)
+        bottom: 120rem
+        right: 45rem
+      &:nth-child(3)
+        top: 0rem
+        right: 145rem
+    &__img
+      max-width: 70%
+    &__zoom
+      position: absolute
+      bottom: 30px
+      left: -40px
+    &__motion
+      width: 300rem
+      height: 320rem
+      max-width: 100%
+      max-height: 100%
+    &__points
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+  +breakpoint(laptop)
+    .back-rect__rect
+      right: 40%
+    .grid-l
+      .left-part
+        width: 60%
+        .common-text
+          max-width: none
+          padding-right: 60px
+        .card--points-list
+          max-width: none
+          margin-right: 30px
+          margin-left: 90px
+          padding-left: 30px
+          margin-bottom: 90px
+      .right-part
+        padding-top: 100px
+        padding-left: 30px
+        width: 40%
+        .layout
+          max-width: 80%
+          &__main
+            max-width: 100%
+            height: auto
+            width: auto
+  +breakpoint(sm)
+    padding-top: 0
+    .back-rect__rect
+      display: none
+    .grid-l
+      .left-part
+        width: auto
+        .common-text
+          padding-right: 0
+        .card--points-list
+          margin-left: 0
+          margin-bottom: 0
+          margin-right: 0
+      .right-part
+        width: auto
+        padding-top: 50px
+        margin-bottom: 0
+        .back-rect__rect
+          display: block
+        .layout
+          &__point
+            z-index: 30
+            &:nth-child(1)
+              bottom: 30rem
+              left: 10%
+            &:nth-child(2)
+              bottom: 20%
+              right: 10%
+            &:nth-child(3)
+              top: 0rem
+              left: 50%
+          &__img
+            max-width: 100%
+            max-height: 400px
+          &__zoom
+            position: absolute
+            bottom: 50px
+            //left: 10px
+            width: 80px
+
+
+#technics-vertical-farming
+  position: relative
+  .grid-l
+    max-width: 1000px
+    margin: auto
+
+#technics-studies
+  padding-top: 130rem
+  margin-bottom: 0
+  padding-bottom: 20rem
+  position: relative
+  .back-rect
+    &__rect
+      top: 0rem
+      bottom: -90rem
+      left: -90rem
+      right: 0
+  .study
+    margin-left: 140rem
+    margin-right: 90rem
+    max-width: 1000px
+    margin-left: auto
+    margin-right: auto
+  +breakpoint(sm)
+    padding-top: 50px
+    .study
+      margin-left: 30px
+      margin-right: 30px
+
+
+#technics-bottom
+  position: relative
+  margin-bottom: 0
+  padding-bottom: 0
+  .back-rect
+    &__rect
+      top: 0rem
+      bottom: 0rem
+      left: -90rem
+      right: 0
+
+.concept-bottom
+  position: relative
+  z-index: 20
+  &__part
+    position: relative
+  &__bg
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 1
+    +black-overlay
+  &__content
+    display: block
+    position: relative
+    z-index: 10
+    padding: 100rem
+    &__title
+      margin-bottom: 70rem
+      padding-top: 0
+
+  +breakpoint(sm)
+    &__part
+      margin-bottom: 0
+    &__content
+      padding: 50px 30px
+      text-align: center
+      .cbutton
+        display: table
+        margin: auto

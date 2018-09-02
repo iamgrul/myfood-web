@@ -1,0 +1,80 @@
+#aero-introduction
+  .layout
+    &__point
+      z-index: 30
+      &:nth-child(1)
+        bottom: 45rem
+        right: 75rem
+      &:nth-child(2)
+        top: 280rem
+        left: -35rem
+      &:nth-child(3)
+        top: 30rem
+        right: 100rem
+      &:nth-child(4)
+        top: 230rem
+        right: 60rem
+    &__img
+      position: relative
+      z-index: 10
+    &__zoom
+      position: absolute
+      z-index: 12
+      top: 200rem
+      left: 65rem
+      border-radius: 50%
+      +box-shadow
+  +breakpoint(sm)
+    .layout
+      width: 250px
+      &__zoom
+        width: 120px
+        height: 120px
+      &__point
+        &:nth-child(3)
+          right: 60rem
+        &:nth-child(4)
+          right: 30rem
+
+#aero-prerequisites
+  padding-bottom: 90rem
+  +breakpoint(sm)
+    padding-bottom: 0px
+
+
+#aero-push
+  padding-bottom: 90rem
+  position: relative
+  .back-rect
+    &__rect
+      top: 50%
+      bottom: -90rem
+      left: -90rem
+      right: 0
+  +breakpoint(sm)
+    padding-bottom: 0
+    .large-push
+      padding: 70px 0px
+
+#aero-slideshow
+  position: relative
+  .back-rect
+    &__rect
+      top: -1rem
+      bottom: -90rem
+      left: -90rem
+      right: 0
+  .medias-slideshow
+    z-index: 10
+
+#aero-tutorial
+  position: relative
+  margin-bottom: 130rem
+  .back-rect
+    &__rect
+      top: 0
+      bottom: 50%
+      left: -90rem
+      right: 0
+  +breakpoint(sm)
+    margin-bottom: 50px

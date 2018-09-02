@@ -1,0 +1,606 @@
+.main-loader
+  position: fixed
+  background: $beige
+  right: 0
+  left: auto
+  bottom: 0
+  width: 100%
+  height: 100%
+  z-index: 800
+  overflow: hidden
+  transition: width .8s ease-in-out, background .8s .7s linear, height .8s .9s ease-in-out
+  //display: none
+  &__picto
+    width: 80px
+    height: 200px
+    right: 50vw
+    bottom: 50vh
+    margin: -40px
+    position: absolute
+    z-index: 20
+    img
+      width: 80px !important
+      height: 80px !important
+      max-width: 100% !important
+      max-height: 100% !important
+      height: auto
+      width: auto
+      position: absolute
+      left: 0
+      bottom: 0
+      transition: .5s cubic-bezier(0.6, -0.28, 0.735, 0.045)
+  &__waves
+    position: absolute
+    top: 10%
+    left: 0
+    right: 0
+    bottom: 0
+    filter: url("#fancy-goo")
+    z-index: 1
+    background: $beige
+    span
+      position: absolute
+      width: 8.3333%
+      height: 250px
+      background: $beige
+      display: block
+      top: -125px
+      border-radius: 20px
+      @for $i from -2 through 20
+        &:nth-child(#{$i+3})
+          left: 6.3333% * $i
+          animation: translate-on-y 1s .04s*($i+3) infinite alternate
+
+  &.closed
+    background: $red
+    width: 90rem
+    height: 0
+    .main-loader
+      &__picto
+        img
+          transform: translateX(50px)
+          opacity: 0
+  +breakpoint(sm)
+    &.closed
+      width: 60px
+
+.line-mention
+  border-left: 2px solid $green
+  padding-left: 30px
+  &__content
+    color: $beige
+    font-family: $open
+    font-size: 13rem
+    line-height: 25rem
+    letter-spacing: .025em
+    padding-right: 20rem
+    &--black
+      color: $black
+  +breakpoint(sm)
+    padding-left: 20px
+    &__content
+      padding-right: 10px
+.bullets-nav
+  &__bullet
+    display: inline-block
+    vertical-align: middle
+    font-family: $aktiv
+    color: $green
+    font-size: 12rem
+    margin-right: 6px
+    cursor: pointer
+    &:last-child
+      margin-right: 0
+    span
+      opacity: .3
+      line-height: 1
+      display: block
+      width: 20px
+      text-align: center
+      transition: .5s
+      &:after
+        content: ""
+        background: $green
+        width: 12px
+        height: 1px
+        display: block
+        margin: 6px auto 0
+        transform: scaleX(0)
+        transition: .3s
+    &:hover
+      span
+        opacity: 1
+    &--active
+      span
+        opacity: 1
+        &:after
+          transform: scaleX(1)
+
+.navigation-switch
+  background: $green
+  color: $white
+  text-align: center
+  line-height: 90rem
+  height: 90rem
+  position: relative
+  overflow: hidden
+  &__button
+    display: inline-block
+    vertical-align: middle
+    font-size: 21rem
+    font-family: $aktiv
+    margin: 0 30rem
+    opacity: .55
+    position: relative
+    cursor: pointer
+    transition: .5s
+    mix-blend-mode: overlay
+    i, span
+      display: inline-block
+      vertical-align: middle
+    span
+      margin: 0 4rem
+    i
+      font-size: 35px
+      position: relative
+      +rotation-circle
+      padding-bottom: 3px
+      &:after
+        opacity: 0
+        transition: .5s
+    &--active
+      opacity: 1
+      mix-blend-mode: normal
+      i:after
+        opacity: 1
+
+  &--vertical
+    @media (min-width: 840px)
+      width: 90rem
+      text-align: center
+      height: 100%
+      &__buttons-c
+        transform: rotate(-90deg)
+        transform-origin: 0 50%
+        line-height: 1
+        white-space: nowrap
+        position: absolute
+        bottom: 50%
+        left: 50%
+        text-align: center
+        width: 400rem
+        margin-bottom: -215rem
+        background: $green
+
+
+  +breakpoint(sm)
+    height: 70px
+    line-height: 70px
+    &__button
+      margin: 0 20px
+      font-size: 17px
+      i
+        font-size: 26px
+
+
+
+.points-line
+  position: absolute
+  top: 0
+  bottom: 0
+  z-index: 10
+  width: 1px
+  border-left: 4px dotted $beige
+  left: 135rem
+  opacity: .8
+  z-index: 0
+  +breakpoint(laptop)
+    left: 45px
+  +breakpoint(sm)
+    display: none
+
+.video-container
+  position: relative
+  &__back
+    z-index: 10
+    position: absolute
+    +black-overlay
+  &__front
+    padding: 130rem
+    position: relative
+    z-index: 20
+    &__title
+      margin-bottom: 250rem
+
+    &__button
+      text-align: right
+      .cbutton
+        display: inline-block
+  +breakpoint(sm)
+    &__front
+      padding: 50px 30px 50px 0
+      &__title
+        margin-bottom: 150px
+        text-align: left
+
+.points-list
+  &__li
+    margin-bottom: 40rem
+    &__number
+      display: inline-block
+      vertical-align: middle
+      position: relative
+      padding: 29px
+      +rotation-circle-dark
+    &__content
+      display: inline-block
+      vertical-align: middle
+      max-width: calc(100% - 112rem)
+      +breakpoint(laptop)
+        max-width: calc(100% - 112px)
+      padding-left: 44rem
+      &__title
+        margin-bottom: 20rem
+      &__desc
+        font-family: $open-bold
+        color: $grey-text
+        font-size: 13rem
+        letter-spacing: .025em
+        line-height: 25rem
+  &--light
+    .points-list
+      &__li
+        &:last-child
+          margin-bottom: 0
+        &__number
+          padding: 0
+          border: 0
+        &__content
+          padding-left: 30rem
+          max-width: calc(100% - 80rem)
+          +breakpoint(laptop)
+            max-width: calc(100% - 80px)
+
+  &.masked
+    .points-list
+      &__li
+        opacity: 0
+        transform: translateX(-10px)
+    &.unmasked
+      .points-list
+        &__li
+          opacity: 1
+          transition: .5s
+          transform: translateX(0)
+          @for $i from 1 through 5
+            &:nth-child(#{$i})
+              transition-delay: .15s * $i
+
+
+
+  +breakpoint(sm)
+    padding-left: 0
+    padding-right: 0
+    text-align: center
+    &__li
+      &__number
+        display: table
+        margin: 0 auto 20px
+      &__content
+        padding-left: 0
+        max-width: none
+
+    &--light
+      .points-list
+        &__li
+          &__content
+            padding-left: 0
+            max-width: none
+.bullet-point
+  span
+    border-radius: 50%
+    border: 2px solid $green
+    color: $green
+    font-size: 14rem
+    font-family: $aktiv
+    background: $white
+    width: 50px
+    height: 50px
+    line-height: 50px
+    text-align: center
+    display: block
+    +box-shadow
+  &--social
+    span
+      background: $black-text
+      border-color: $black-text
+      box-shadow: none
+      color: $beige
+      position: relative
+      i
+        font-size: 45px
+      +rotation-circle-dark
+      +breakpoint(sm)
+        width: 50px !important
+        height: 50px !important
+        i
+          font-size: 45px
+  +breakpoint(sm)
+    span
+      width: 35px
+      height: 35px
+      line-height: 35px
+
+
+
+.author
+  margin-bottom: 20rem
+  &__avatar
+    width: 48px
+    height: 48px
+    display: inline-block
+    vertical-align: middle
+    &.h-rounded
+      background: $cream
+  &__details
+    display: inline-block
+    vertical-align: middle
+    padding-left: 13px
+  &__date
+    display: block
+    font-family: $open-bold
+    font-size: 12rem
+    letter-spacing: .025em
+    line-height: 18rem
+  &__name
+    text-transform: uppercase
+    font-size: 9px
+    font-family: $aktiv
+    letter-spacing: .1em
+    color: $black-text
+  &__category
+    text-transform: uppercase
+    font-size: 9px
+    font-family: $aktiv
+    letter-spacing: .1em
+    color: $black-text
+    display: block
+    margin-top: 3px
+
+.mask
+  position: absolute
+  z-index: 20
+  background: $black
+  top: 0
+  bottom: 0
+  &--white
+    background: $white
+  &--beige
+    background: $beige
+  &--beige-bg
+    background: $beige-bg
+  &--green
+    background: $green
+  &.lf
+    left: 0
+    right: auto
+  &.rg
+    right: 0
+    left: auto
+
+.back-rect
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: -1
+  &__rect
+    position: absolute
+    background: $beige-bg
+
+
+.pictos-list
+  padding: 50rem 0rem 50rem 70rem
+  +after-clear
+  &__title
+    color: $green
+    margin-bottom: 30rem
+  &__picto
+    text-align: center
+    margin-right: 30rem
+    display: inline-block
+    vertical-align: bottom
+    &:last-child
+      margin-right: 0
+    .mention
+      margin-top: 0rem
+    .icon-desk
+      font-size: 110px
+    .icon-tablet
+      display: block
+      font-size: 90px
+    .icon-mobile
+      display: block
+      font-size: 70px
+
+  +breakpoint(sm)
+    text-align: center
+    padding: 30px 10px
+    &__picto
+      margin-right: 0px
+
+.share-box
+  position: relative
+  &--fixed
+    position: fixed
+    z-index: 40
+    bottom: 40px
+    left: 45rem
+    +breakpoint(laptop)
+      left: 70px
+    &.hooked
+      position: absolute
+      top: 0
+      bottom: auto
+  &__list
+    &__item
+      margin: 5rem 0
+      text-align: center
+      position: relative
+      overflow: hidden
+      iframe
+        min-width: 100%
+        min-height: 100%
+
+      &.hv:hover
+        i
+          color: $green
+      i
+        transition: .5s
+        font-size: 40px
+      +breakpoint(sm)
+        i
+          font-size: 60px
+
+  &__link
+    position: absolute
+    opacity: 0
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+
+
+.products-nav
+  position: relative
+  z-index: 10
+  background: $beige-bg
+  margin-left: -90rem
+  &__link
+    padding: 100rem 130rem
+    display: block
+    position: relative
+    z-index: 20
+    +black-overlay
+    &:after
+      opacity: .03
+      z-index: 1
+      width: 0
+      transition: width .5s linear
+    &:first-child
+      border-right: 2px solid rgba($black, .12)
+    &__title
+      position: relative
+      z-index: 20
+    &__label
+      position: relative
+      z-index: 20
+      transition: .4s
+      .points-button
+        position: absolute
+        right: 0
+    &:hover
+      &:after
+        width: 100%
+        transition: width 4s linear
+      .products-nav
+        &__link
+          &__label
+            color: $green
+            .points-button
+              @extend .points-button--hv
+  +breakpoint(sm)
+    margin-left: 0
+    .products-nav
+      &__link
+        padding: 50px
+        margin-bottom: 0
+        &:first-child
+          border-bottom: 1px solid rgba($black, .14)
+          border-right: 0px
+
+.circle
+  position: absolute
+  width: 10px
+  height: 10px
+  display: block
+  &--m
+    +rotation-circle
+    &:after
+      border: 5px dotted rgba($black-text, .12)
+      opacity: 1
+  &--xxl
+    +rotation-circle-xxl
+  &--xl
+    +rotation-circle-xl
+  &--l
+    +rotation-circle-xl
+  +breakpoint(sm)
+    display: none
+
+.pagination
+  display: table
+  margin: auto
+  text-transform: uppercase
+  @extend .title-xxs
+  font-size: 13rem
+  color: $black-text
+  .page-numbers
+    display: inline-block
+    vertical-align: middle
+    padding: 5px
+    margin: 5px
+    margin-top: 10px
+    &.current
+      color: $green
+    &.next, &.prev
+      margin-top: 12px
+    &.prev
+      margin-right: 15px
+    &.next
+      margin-left: 15px
+
+
+.scale-in
+  &.masked
+    opacity: 0
+    transform: scale(.7)
+    &.unmasked
+      opacity: 1
+      transform: scale(1)
+      transition: .5s .5s ease-in-out
+
+.scale-in-1
+  &.masked
+    opacity: 0
+    transform: scale(.7)
+    &.unmasked
+      opacity: 1
+      transform: scale(1)
+      transition: .5s .75s ease-in-out
+
+.fade-in-bottom, .fade-in-bottom-0
+  &.masked
+    +from-bottom-fade-out
+    &.unmasked
+      +from-bottom-fade-in
+
+
+.fade-in-bottom-1
+  &.masked
+    +from-bottom-fade-out
+    &.unmasked
+      +from-bottom-fade-in(.2s)
+
+.fade-in-bottom-2
+  &.masked
+    +from-bottom-fade-out
+    &.unmasked
+      +from-bottom-fade-in(.4s)
+
+.fade-in-bottom-3
+  &.masked
+    +from-bottom-fade-out
+    &.unmasked
+      +from-bottom-fade-in(.6s)

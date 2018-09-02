@@ -1,0 +1,209 @@
+
+.large-push
+  height: 300rem
+  line-height: 300rem
+  position: relative
+  margin-right: 90rem
+  &__background
+    position: absolute
+    +black-overlay
+  &__content
+    padding: 0 128rem
+    +after-clear
+    .title
+      color: $beige
+      max-width: 330rem
+      float: left
+    .float-right
+      float: right
+      margin-top: 10rem
+    .h-text-center
+      .cbutton
+        display: inline-block
+
+  &--light
+    margin: 0 130rem
+    height: 260rem
+    line-height: 260rem
+
+  &--large
+    height: auto
+    line-height: 1
+    padding: 100rem 100rem 110rem
+    margin-right: 0
+    .large-push
+      &__background
+        &:after
+          opacity: .92
+      &__content
+        padding: 0
+        max-width: 600rem
+        &__text
+          padding-left: 135rem
+          padding-right: 120rem
+      &__title
+        max-width: none
+        float: none
+        margin-bottom: 45rem
+  &.masked
+    .large-push
+      &__content
+        &__text
+          opacity: 0
+          transform: translate3D(0,50px,0)
+        .title
+          overflow: hidden
+          &__content
+            transform: translateY(100%)
+        .cbutton
+          opacity: 0
+          transform: translateY(50px)
+    &.unmasked
+      .large-push
+        &__content
+          &__text
+            opacity: 1
+            transform: translate3D(0,0,0)
+            transition: .5s .4s ease-in-out
+          .title
+            &__content
+              transform: translateY(0)
+              transition: .8s ease-in-out
+          .cbutton
+            opacity: 1
+            transform: translateY(0)
+            transition: .8s .2s ease-in-out
+
+
+  +breakpoint(sm)
+    margin-right: 0
+    height: auto
+    line-height: 1
+    padding: 50px
+    &--light
+      margin: 0
+    &--large
+      padding-left: 0px
+      padding-right: 0px
+      .large-push__content
+        &__text
+          padding-left: 30px
+          padding-right: 30px
+    &__content
+      padding: 0
+      .title
+        max-width: none
+        float: none
+      .float-right
+        margin-top: 130px
+        float: none
+
+
+
+
+
+.green-push
+  background: $green
+  padding: 115rem 100rem 130rem
+  position: relative
+  overflow: hidden
+  &__title
+    margin-bottom: 50rem
+    position: relative
+    z-index: 10
+  &__content
+    padding-left: 140rem
+    position: relative
+    z-index: 10
+    .common-text
+      color: $white
+      max-width: 380rem
+    &__ctas
+      margin-top: 150rem
+      .cbutton
+        display: inline-block
+        vertical-align: middle
+        &:first-child
+          margin-right: 130rem
+  .circles
+    span
+      position: absolute
+      +rotation-circle
+      z-index: 1
+      &:nth-child(1)
+        left: 0
+        top: 0
+        &:after
+          width: 330px
+          height: 330px
+          margin: -165px
+          background-image: url('../img/misc/circle/circle-cream-338.svg')
+      &:nth-child(2)
+        left: 0
+        bottom: 0
+        &:after
+          width: 220px
+          height: 220px
+          margin: -110px
+          background-image: url('../img/misc/circle/circle-cream-228.svg')
+      &:nth-child(3)
+        top: -80rem
+        right: 380rem
+        &:after
+          width: 220px
+          height: 220px
+          margin: -110px
+          background-image: url('../img/misc/circle/circle-cream-228.svg')
+
+      &:nth-child(4)
+        top: 50rem
+        right: 80rem
+        &:after
+          width: 240px
+          height: 240px
+          margin: -120px
+          background-image: url('../img/misc/circle/circle-cream-248.svg')
+
+      &:nth-child(5)
+        bottom: 150rem
+        right: 150rem
+        &:after
+          width: 770px
+          height: 770px
+          margin: -385px
+          background-image: url('../img/misc/circle/circle-cream-778.svg')
+          animation: infinite-rotate 100s infinite linear
+
+      &:nth-child(6)
+        right: 0
+        bottom: 0
+        &:after
+          width: 260px
+          height: 260px
+          margin: -130px
+          background-image: url('../img/misc/circle/circle-cream-268.svg')
+  &.masked
+    .green-push__content
+      +from-bottom-fade-out
+    &.unmasked
+      .green-push__content
+        +from-bottom-fade-in(1s)
+
+  +breakpoint(laptop)
+    padding-left: 0px
+
+  +breakpoint(sm)
+    padding: 50px 0px
+    .circles
+      display: none
+    &__content
+      padding: 0 30px
+      &__ctas
+        margin-top: 50px
+      .cbutton
+        display: table
+        margin: 0 auto 30px
+        &:after
+          display: none
+        &:first-child
+          margin-right: auto

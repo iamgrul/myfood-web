@@ -1,0 +1,211 @@
+
+/* ##################### MIXINS ##################### */
+
+//MIXINS
+=beige-text
+  color: $beige-text
+
+
+=after-clear
+  &:after
+    content: ""
+    clear: both
+    display: block
+    position: relative
+
+=black-overlay
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: $black
+    opacity: .55
+    mix-blend-mode: multiply
+    z-index: 10
+
+=back-ease
+  transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000)
+
+=back-ease-2
+  transition-timing-function: cubic-bezier(0.800, 0.065, 0.620, 0.880)
+
+=vertical-align
+  vertical-align: middle
+  display: inline-block
+  width: 100%
+
+=box-shadow
+  box-shadow: rgba($black, .12) 0 5px 43px
+
+=green-point
+  &:after
+    content: ""
+    border-radius: 50%
+    background: $green
+    width: 4px
+    height: 4px
+    display: inline-block
+    vertical-align: middle
+    margin: -3rem 32rem 0
+  +breakpoint(sm)
+    &:after
+      margin: -3px 15px 0
+
+=green-point-before
+  &:before
+    content: ""
+    border-radius: 50%
+    background: $green
+    width: 4px
+    height: 4px
+    display: inline-block
+    vertical-align: middle
+    margin: -3rem 32rem 0 0
+  +breakpoint(sm)
+    &:before
+      margin: -3px 15px 0
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+=rotation-animation
+  animation: infinite-rotate 15s infinite linear
+
+=drop-animation
+  animation: drop-animation 1.7s infinite ease-in-out
+
+=rotation-circle
+  &:after
+    content: ""
+    position: absolute
+    display: block
+    left: 50%
+    top: 50%
+    width: 90px
+    height: 90px
+    margin: -45px
+    border-radius: 50%
+    background-image: url('../img/misc/circle/circle-cream-98.svg')
+    +rotation-animation
+
+=rotation-circle-dark
+  +rotation-circle
+  &:after
+    background-image: url('../img/misc/circle/circle-dark-98.svg')
+
+
+=rotation-circle-small
+  +rotation-circle
+  &:after
+    width: 66px
+    height: 66px
+    margin: -33px -33px
+    background-image: url('../img/misc/circle/circle-cream-74.svg')
+=rotation-circle-small-dark
+  +rotation-circle-small
+  &:after
+    background-image: url('../img/misc/circle/circle-dark-74.svg')
+
+
+=rotation-circle-xl
+  +rotation-circle
+  &:after
+    width: 120px
+    height: 120px
+    margin: -60px
+    background-image: url('../img/misc/circle/circle-dark-128.svg')
+=rotation-circle-xl-cream
+  +rotation-circle-xl
+  &:after
+    background-image: url('../img/misc/circle/circle-cream-128.svg')
+
+
+
+=rotation-circle-xxl
+  +rotation-circle-xl
+  &:after
+    width: 280px
+    height: 280px
+    margin: -140px
+    background-image: url('../img/misc/circle/circle-dark-288.svg')
+
+=rotation-circle-xxl-cream
+  +rotation-circle-xxl
+  &:after
+    background-image: url('../img/misc/circle/circle-cream-288.svg')
+
+
+=rotation-circle-xxxl
+  +rotation-circle-xl
+  &:after
+    width: 360px
+    height: 360px
+    margin: -180px
+    background-image: url('../img/misc/circle/circle-dark-368.svg')
+    animation: infinite-rotate 30s infinite linear
+
+
+=breakpoint($point)
+  @if $point == lg
+    @media (min-width: 1200px)
+      @content
+
+  @if $point == laptop
+    @media (max-width: 1260px)
+      @content
+
+  @if $point == lg-md
+    @media (max-width: 1200px)
+      @content
+
+  @else if $point == md
+    @media (max-width: 1080px)
+      @content
+
+  @else if $point == sm
+    @media screen and (max-width: 840px), screen and (max-height: 500px)
+      @content
+
+  @else if $point == xs
+    @media (max-width: 767px)
+      @content
+
+  @else if $point == xxs
+    @media (max-width: 640px)
+      @content
+
+  @else if $point == xxxs
+    @media  (max-width: 480px)
+      @content
+
+=minbreakpoint($point)
+  @if $point == sm
+    @media (min-width: 840px)
+      @content
+  @if $point == xs
+    @media (min-width: 767px)
+      @content
+  @else if $point == xxs
+    @media (min-width: 640px)
+      @content
+
+
+=from-bottom-fade-out
+  opacity: 0
+  transform: translateY(30px)
+
+=from-bottom-fade-in($delay: 0s)
+  opacity: 1
+  transform: translateY(0)
+  transition: .5s $delay

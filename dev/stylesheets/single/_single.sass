@@ -1,0 +1,168 @@
+.single-quote
+  background: $white
+  +box-shadow
+  padding: 80rem 80rem 70rem
+  &__container
+    position: relative
+  &__icon
+    left: 0
+    top: 4rem
+    position: absolute
+    font-size: 22rem
+  &__content
+    padding-left: 60rem
+
+.single-body
+  padding-right: 80rem
+  .common-text
+    img, video, iframe
+      max-width: calc(100% + 80rem)
+      +breakpoint(laptop)
+        max-width: calc(100% + 80px)
+  p
+    padding-right: 80rem
+    +after-clear
+    > img
+      margin-top: 40rem
+      margin-bottom: 40rem
+      &:last-child
+        margin-right: -80rem
+  +breakpoint(sm)
+    padding-right: 0
+    p
+      padding-right: 30px
+      +after-clear
+      > img
+        margin-top: 20rem
+        margin-bottom: 20rem
+        &:last-child
+          margin-right: -30rem
+    .common-text
+      img, video, iframe
+        max-width: calc(100% + 30px)
+
+
+.module
+  margin-bottom: 70rem
+  margin-right: 80rem
+  &--calendar
+    background: $beige-bg
+    padding: 85rem
+    text-align: center
+    .cbutton
+      display: inline-block
+  &--simple-image
+    img
+      max-width: 100%
+      height: auto
+      width: auto
+
+.single-bottom
+  position: relative
+  padding: 0rem 45rem
+  margin-bottom: 0
+  .back-rect
+    &__rect
+      left: -90rem
+      right: 0rem
+      top: 0
+      bottom: 0
+      +black-overlay
+      &:after
+        opacity: .03
+  &__share
+    text-align: center
+    position: relative
+    display: block
+    padding: 110rem 0
+    height: 100%
+    .share-box
+      display: none
+    .cbutton
+      display: inline-block
+  &__author
+    border-left: 1px solid rgba($black, .12)
+    padding: 70rem 30rem 70rem 115rem
+    &__infos
+      margin-bottom: 28rem
+    .author__avatar
+      margin-right: 20rem
+      vertical-align: middle
+    .author__title
+      display: inline-block
+      vertical-align: middle
+    &__quote
+      position: relative
+      padding-left: 75rem
+      .icon-quote
+        position: absolute
+        left: 11rem
+        top: 50%
+        font-size: 35px
+        margin-top: -14rem
+  +breakpoint(sm)
+    padding: 0
+    &__share
+      padding: 70px 30px 30px
+      background: rgba($black, .03)
+      margin-bottom: 0
+      .share-box
+        display: block
+        margin-top: 20px
+        &__list
+          &__item
+            display: inline-block
+            vertical-align: middle
+            margin: 20px 10px 0
+    &__author
+      padding: 30px
+      border-left: 0
+      margin-bottom: 0
+      &__infos
+        margin-bottom: 20px
+
+      .author
+        text-align: center
+        &__avatar
+          display: block
+          margin: 0 auto 20px
+        &__title
+          text-align: center
+          display: block
+      &__quote
+        padding-left: 0
+        text-align: center
+        .icon-quote
+          left: auto
+          position: relative
+          display: block
+          margin: 0 auto 10px
+
+
+.single-others
+  position: relative
+  padding-top: 90rem
+  margin-bottom: 0
+  .grid-l-news
+    display: table
+    margin: auto
+  .back-rect
+    &__rect
+      left: -90rem
+      right: 0rem
+      top: 0
+      bottom: 0
+  +breakpoint(sm)
+    padding: 50px 30px
+    .grid-l-news
+      display: block
+
+
+.single-content
+  max-width: 1200px
+  margin: auto
+
++breakpoint(sm)
+  #single-blog
+    .share-box--fixed
+      display: none
