@@ -931,3 +931,25 @@
           margin-top: 30px
         &__cards
           text-align: center
+.tabs-selector__tab
+  .title--tab__picto
+    height: 36px
+  .icon-aerospring
+    margin-top: -3px
+    background: url("../img/icons/icon-aerospring.svg") no-repeat center center
+  &.head-selector--active
+    .icon-aerospring
+      background: url("../img/icons/icon-aerospring-hover.svg") no-repeat center center
+    .icon-city
+      background: url("../img/icons/icon-city-hover.svg") no-repeat center center
+    .icon-greenhouse
+      background: url("../img/icons/icon-greenhouse-hover.svg") no-repeat center center
+  .icon-city
+    margin-top: -3px
+    background: url("../img/icons/icon-city.svg") no-repeat center center
+  .icon-greenhouse
+    background: url("../img/icons/icon-greenhouse.svg") no-repeat center center
+.tabs-selector__tab .icon-aerospring:before,
+.tabs-selector__tab .icon-city:before,
+.tabs-selector__tab .icon-greenhouse:before
+  display: none
