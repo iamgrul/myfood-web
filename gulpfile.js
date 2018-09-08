@@ -43,6 +43,46 @@ gulp.task('styles',  () =>
         .pipe(livereload())
 )
 
+// ####################### JS-BUILDER-QUERY #######################
+
+const jsbuilderquery =  [
+    path.inputs.js + 'app/animations/scrollAnimations.js',
+    path.inputs.js + 'app/animations/Motion.js',
+    path.inputs.js + 'app/map/Map.js',
+    path.inputs.js + 'app/misc_components/blog.js',
+    path.inputs.js + 'app/misc_components/buttons.js',
+    path.inputs.js + 'app/misc_components/collapsible.js',
+    path.inputs.js + 'app/misc_components/followOnScroll.js',
+    path.inputs.js + 'app/misc_components/myfoodHubApi.js',
+    path.inputs.js + 'app/misc_components/newsletter.js',
+    path.inputs.js + 'app/misc_components/selector.js',
+    path.inputs.js + 'app/misc_components/socialShare.js',
+    path.inputs.js + 'app/misc_components/woocommerce.js',
+    path.inputs.js + 'app/popin/GlobalPopin.js',
+    path.inputs.js + 'app/slideshows/Slideshow.js',
+    path.inputs.js + 'app/slideshows/CardsSlideshow.js',
+    path.inputs.js + 'app/slideshows/fullSlideshow.js',
+    path.inputs.js + 'app/slideshows/homeSlideshow.js',
+    path.inputs.js + 'app/slideshows/LargeSlideshow.js',
+    path.inputs.js + 'app/slideshows/lightSlideshow.js',
+    path.inputs.js + 'app/slideshows/ModulesSlideshow.js',
+    path.inputs.js + 'app/slideshows/ModulesSlideshowCustom.js',
+    path.inputs.js + 'app/slideshows/SeedSlideshow.js',
+    path.inputs.js + 'app/tabs/Tabs.js',
+    path.inputs.js + 'app/tabs/productsTabs.js',
+    path.inputs.js + 'app/tabs/seedsTabs.js',
+    path.inputs.js + 'app/tabs/sizeTabs.js',
+    path.inputs.js + 'app/tabs/CustomizableTabs.js',
+    path.inputs.js + 'app/const.js' ,
+    path.inputs.js + 'app/utils.js',
+    path.inputs.js + 'app/_Website.js',
+    path.inputs.js + 'app/Header.js',
+    path.inputs.js + 'app/MyFood.js',
+    path.inputs.js + 'app/app.js'
+];
+
+
+
 gulp.task('styles-norem',  () =>
   gulp.src(path.inputs.styles)
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -71,16 +111,16 @@ gulp.task('vendors-js', () =>
 )
 
 gulp.task('dev-js', () =>
-    gulp.src(path.inputs.js + 'app/**/*.js')
-        .on('error', swallowError)
-        .pipe(concat('app.min.js'))
-        .on('error', swallowError)
-        .pipe(gulp.dest(path.outputs.js))
-        .pipe(livereload())
+        gulp.src(jsbuilderquery)
+            .on('error', swallowError)
+            .pipe(concat('app.min.js'))
+            .on('error', swallowError)
+            .pipe(gulp.dest(path.outputs.js))
+            .pipe(livereload())
 )
 
 gulp.task('prod-js', ()=>{
-    gulp.src(path.inputs.js + 'app/**/*.js')
+        gulp.src(jsbuilderquery)
         .pipe(babel({presets: ['es2015']}))
         .on('error', swallowError)
         .pipe(concat('app.min.js'))
@@ -105,7 +145,6 @@ gulp.task('watch', () => {
     livereload.listen()
 
     gulp.watch(path.theme + '/**/*.php', ['reloadTheme'])
-
     gulp.watch(path.inputs.styles, ['styles'])
     gulp.watch(path.inputs.styles, ['styles-norem'])
     // gulp.watch(path.inputs.js + 'app/**/*.js', ['dev-js'])
