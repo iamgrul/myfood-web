@@ -8,9 +8,9 @@ class FullSlideshow extends Slideshow{
         if(typeof idx != 'number')
             idx = parseInt(idx)
 
-        TM.set(t.$slides.eq(t.idx),{opacity:0})
+        TM.set(t.$slides.eq(t.idx),{opacity:0, zIndex: 0});
 
-        TM.set(t.$slides.eq(idx),{opacity:1})
+        TM.set(t.$slides.eq(idx),{opacity:1, zIndex: 753});
         t.idx = idx
         t.updateNav()
         t.setAuto()

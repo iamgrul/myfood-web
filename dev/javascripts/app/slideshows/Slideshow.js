@@ -47,9 +47,9 @@ class Slideshow{
     resetSlsh(){
         const t=this
 
-        TM.set(t.$slides,{opacity:0})
+        TM.set(t.$slides,{opacity:0, zIndex:0})
 
-        TM.set(t.$slides.eq(0), {opacity:1})
+        TM.set(t.$slides.eq(0), {opacity:1, zIndex:753})
 
     }
     bindEvents(){
@@ -118,9 +118,9 @@ class Slideshow{
 
         t.trans=true
 
-        TM.to(t.$slides.eq(t.idx), .5,{opacity:0})
+        TM.to(t.$slides.eq(t.idx), .5,{opacity:0, zIndex:0})
 
-        TM.to(t.$slides.eq(idx), .5,{opacity:1, onComplete:()=>{
+        TM.to(t.$slides.eq(idx), .5,{opacity:1, zIndex:753, onComplete:()=>{
             t.idx = idx
             t.updateNav()
             t.setAuto()
