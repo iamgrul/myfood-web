@@ -2,11 +2,58 @@ class MyFood extends Website {
     constructor() {
         super()
     }
+////TESTPLACE - start
+    GDRPcheck() {
+        if(this.getCookie('GDRPaccepted') !== 'true')
+            setTimeout(this.GDRPcreate, 3000);
+    }
+    GDRPcreate() {
+        var GDRPnode = document.createElement("div");
+        GDRPnode.className = 'gdrp-popup';
+        GDRPnode.id = 'gdrp-popup';
+        GDRPnode.innerHTML =
+            `<div class=" gdrp-popup-container">
+                    <div class="gdrp-popup-title">Myfood updated Privacy Policy. We use cookies to improve user experience with our site. By continuing to use the service, you have to agree to our use of cookies according to our Cookie Policy.</div>
+                    <div id="" class="gdrp-popup-button gdrp-popup-button-close">OK</div>
+                </div>
+                `;
+        document.body.appendChild(GDRPnode);
+        $('.gdrp-popup-button-close').on('keyup', this.GDRPclose);
 
+    }
+    GDRPclose() {
+        this.setCookie('GDRPaccepted', 'true', 365);
+         document.getElementById('gdrp-popup').remove();
+    }
+    setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+// //TESTPLACE - end
     init() {
         super.init()
 
         const t = this
+
 
         $window.on('resize', t.resize.bind(t))
 
@@ -19,6 +66,8 @@ class MyFood extends Website {
         t.closeLoader()
 
         t.setupLoader()
+
+        t.GDRPcheck();        //TUTACHKI
 
     }
 
