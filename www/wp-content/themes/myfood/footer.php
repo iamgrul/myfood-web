@@ -1,4 +1,6 @@
 </div>
+<?php get_gdrpbox(); ?>
+
 <footer id="footer" class="footer">
 
   <div class="footer__top">

@@ -2,11 +2,11 @@ class MyFood extends Website {
     constructor() {
         super()
     }
-
     init() {
         super.init()
 
         const t = this
+
 
         $window.on('resize', t.resize.bind(t))
 
@@ -19,6 +19,7 @@ class MyFood extends Website {
         t.closeLoader()
 
         t.setupLoader()
+
 
     }
 

@@ -1,0 +1,48 @@
+.gdrp-popup
+  position: fixed
+  overflow: hidden
+  z-index: 799
+  bottom: 0
+  left: -100%
+  background: rgb(248, 245, 241)
+  color: black
+  padding: 12px 0
+  width: 100%
+  line-height: 20px
+
+  .gdrp-popup-container
+    padding-right: 15px
+    padding-left: 15px
+    margin: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .gdrp-popup-title
+      width: 80%
+      font-size: 13px
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      a
+        color: #2ea636
+    .cbutton
+      line-height: 1
+
+
+
+@keyframes gdrp-show
+  from
+    left: -100%
+  to
+    left: 0
+@media (min-width: 576px)
+  .gdrp-popup-container
+    max-width: 540px
+@media (min-width: 768px)
+  .gdrp-popup-container
+    max-width: 720px
+@media (min-width: 992px)
+  .gdrp-popup-container
+    max-width: 960px
+@media (min-width: 1200px)
+  .gdrp-popup-container
+    max-width: 1140px
