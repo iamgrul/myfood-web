@@ -19,7 +19,7 @@
     define('DB_USER', 'root');
     define('DB_PASSWORD', '');
     define('DB_HOST', 'localhost');
-    define ('WP_DEBUG', true);
+//    define ('WP_DEBUG', true);
     define( 'WP_CACHE', false );
     define('DB_COLLATE', '');
 define('DB_CHARSET', 'utf8');

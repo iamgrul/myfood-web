@@ -63,6 +63,7 @@ function ax_enqueue_scripts(){
 add_action('wp_enqueue_scripts', 'ax_enqueue_scripts');
 
 
+
 function acf_img_echo($img, $size ='', $class='') {
 
     if(!$img){
@@ -87,7 +88,13 @@ function acf_img_echo($img, $size ='', $class='') {
     echo '<img class="lzld '.$class.'" data-src-medium="'.$img['sizes']['medium_large'].'" data-src="'.$url.'"  src="'.img.'misc/pixel.gif" alt="'.$alt.'" width="'.$width.'" height="'.$height.'">';
 }
 
+function get_gdrpbox()
+{
+    $templates = array();
+    $templates[]    = 'partials/gdrp-box.php';
 
+    locate_template( $templates, true );
+}
 function get_img($path, $echo=true){
     if($echo){
         echo img.$path;

@@ -1,4 +1,5 @@
 <?php get_header(); the_post(); ?>
+
 <main class="page-c" id="single-blog">
 
     <div class="points-line"></div>
