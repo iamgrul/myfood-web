@@ -48,10 +48,10 @@ class GlobalPopin{
             Website.cropImg()
 
             t.$popCt.removeClass('scroll')
+            $body.addClass('pop-opened')
 
             TM.to(t.$, .7,{opacity:1, onComplete:()=>{
                 // t.originalYPos = $window.scrollTop()
-                $body.addClass('pop-opened')
                 // $body.css({marginTop:-t.originalYPos})
             }})
 
@@ -79,9 +79,9 @@ class GlobalPopin{
 
             t.$.css({display:"none"})
         }})
+        $body.removeClass('pop-opened')
 
         // $body.css({marginTop:'0'})
-        $body.removeClass('pop-opened')
         // $window.scrollTop(t.originalYPos)
     }
     initClickOpenPopin(){
