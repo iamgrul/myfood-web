@@ -104,7 +104,7 @@
 
 <!--    HOME PRODUCTS START   -->
 
-    <section class="page-c__section" id="home-products">
+    <section class="page-c__section" id="home-products" >
 
         <div class="title title--l title--masked">
             <h2 class="title__content title__content--prefixed">
@@ -112,8 +112,45 @@
                 <?php the_field('rowsection_1_title'); ?>
             </h2>
         </div>
+        <style>
+            /*>841*/
+            @media (min-width: 841px) {
+                #home-products .video-player:before {
+                    content: '';
+                    width: 100%;
+                    height: 135%;
+                    position: absolute;
+                    background: #f7f5ed;
+                    left: -100%;
+                    z-index: -1;
+                    top: -35%;
+                }
+            }
+            #home-products .cbutton--border:after{
+                background-image: url(/wp-content/themes/myfood/assets/img/misc/circle/circle-dark-128.svg);
+            }
+            #home-products .custom_button_container {
+                padding: 72px;
+            }
+            #home-products .custom_button_container .cbutton {
+                margin:auto;
+                color:#2ea636;
+            }
+            #home-products .custom_button_container .cbutton:hover {
+                color:white;
+            }
+        </style>
+        <div class="video-player">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FdVPzJt3uK0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+        <div class="custom_button_container">
+            <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="https://myfood.eu/community/meet-our-pioneers/">
+                <p>Discover</p>
+            </a>
+        </div>
 
-        <?php get_products_tabs(get_field('rowsection_1_products')); ?>
+<!--        --><?php //get_products_tabs(get_field('rowsection_1_products')); ?>
+
 
     </section>
 
@@ -251,7 +288,71 @@
         </div>
 
        <?php get_instagram_token_slideshow(); ?>
+<style>
+    #home-lifestyle .points-list__li__content {
+    }
+    #home-lifestyle .title-xs {
+         text-transform: none;
+        margin-bottom: 10rem;
+        font-size: 24rem;
+    }
+    #home-lifestyle .title-xs,
+    #home-lifestyle .points-list__li__content__desc {
+        font-family: "Open Sans";
+    }
+    #home-lifestyle .points-list__li__content__desc {
+        font-size: 11rem;
+    }
 
+    #home-lifestyle .ctc_container {
+        width: 840rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+
+    }
+    #home-lifestyle .custom_button_container {
+        margin: auto;
+        animation: test 1s infinite alternate ;
+        border-radius: 100px;
+    }
+    #home-lifestyle .cbutton {
+        color:black;
+    }
+
+
+
+    #home-lifestyle .cbutton--mask .cbutton__mask i:before {
+        color:white;
+    }
+@keyframes test{
+    from {
+        /*background: white;*/
+        box-shadow: none;
+    }
+    to {
+        /*background: lightgrey;*/
+        box-shadow: 0 0 20px 0 #bee176;
+    }
+}
+    </style>
+        <div class="ctc_container">
+                <div class="points-list__li__content">
+                    <div class="points-list__li__content__title title title-xs">
+                        <p class="title__content "> Vous voulez contribuer des maintenant?</p>
+                    </div>
+
+                    <div class="points-list__li__content__desc">
+                        <p>Nous cherchons des volontaries pour tester nos prototypes avant leur commerialistation</p>
+                    </div>
+                </div>
+            <div class="custom_button_container">
+                <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="https://myfood.eu/community/meet-our-pioneers/">
+                    <p>Devenez un Citoyen Pionnier </p>
+                </a>
+            </div>
+        </div>
     </section>
 <!--    HOME LIFESTYLE END     -->
 
