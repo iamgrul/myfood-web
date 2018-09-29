@@ -104,7 +104,7 @@
 
 <!--    HOME PRODUCTS START   -->
 
-    <section class="page-c__section" id="home-products">
+    <section class="page-c__section" id="home-products" >
 
         <div class="title title--l title--masked">
             <h2 class="title__content title__content--prefixed">
@@ -113,7 +113,17 @@
             </h2>
         </div>
 
-        <?php get_products_tabs(get_field('rowsection_1_products')); ?>
+        <div class="video-player">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FdVPzJt3uK0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+        <div class="custom_button_container">
+            <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="#">
+                <p>Discover</p>
+            </a>
+        </div>
+
+<!--        --><?php //get_products_tabs(get_field('rowsection_1_products')); ?>
+
 
     </section>
 
@@ -252,6 +262,22 @@
 
        <?php get_instagram_token_slideshow(); ?>
 
+        <div class="ctc_container">
+                <div class="points-list__li__content">
+                    <div class="points-list__li__content__title title title-xs">
+                        <p class="title__content "> Vous voulez contribuer des maintenant?</p>
+                    </div>
+
+                    <div class="points-list__li__content__desc">
+                        <p>Nous cherchons des volontaries pour tester nos prototypes avant leur commerialistation</p>
+                    </div>
+                </div>
+            <div class="custom_button_container">
+                <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="#">
+                    <p>Devenez un Citoyen Pionnier </p>
+                </a>
+            </div>
+        </div>
     </section>
 <!--    HOME LIFESTYLE END     -->
 
