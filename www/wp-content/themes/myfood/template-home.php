@@ -114,11 +114,11 @@
         </div>
 
         <div class="video-player">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FdVPzJt3uK0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/b3OeEhWQz-I?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
         </div>
         <div class="custom_button_container">
-            <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="#">
-                <p>Discover</p>
+            <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="https://www.youtube.com/embed/b3OeEhWQz-I?rel=0&amp;controls=0&amp;showinfo=0" target="_blank">
+                <p><?php _e('Watch the Full Documentary','myfood'); ?></p>
             </a>
         </div>
 
@@ -265,16 +265,17 @@
         <div class="ctc_container">
                 <div class="points-list__li__content">
                     <div class="points-list__li__content__title title title-xs">
-                        <p class="title__content "> Vous voulez contribuer des maintenant?</p>
+                        <p class="title__content "><?php _e('You want to be a part of the Community right now?','myfood'); ?>
+						</p>
                     </div>
 
                     <div class="points-list__li__content__desc">
-                        <p>Nous cherchons des volontaries pour tester nos prototypes avant leur commerialistation</p>
+                        <p><?php _e('We grow day after day thanks to our contributors across the World','myfood'); ?></p>
                     </div>
                 </div>
             <div class="custom_button_container">
-                <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="#">
-                    <p>Devenez un Citoyen Pionnier </p>
+                <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="<?php the_field('become_a_pioneer_url', 'option') ?>" target="_blank">
+                    <p><?php _e('Become a Pioneer Citizen','myfood'); ?></p>
                 </a>
             </div>
         </div>
