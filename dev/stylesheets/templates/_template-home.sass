@@ -136,29 +136,34 @@
   .title-xs
     text-transform: none
     margin-bottom: 10rem
-    font-size: 24rem
+    font-size: 29rem
   .points-list__li__content__desc
     font-family: "Open Sans"
-    font-size: 11rem
+    font-size: 14rem
   .ctc_container
-    width: 840rem
+    width: 965rem
     max-width: 100%
     margin: auto
     display: flex
     flex-direction: row
     align-items: center
     text-align: center
-    @media (max-width: 930px)
+    @media (max-width: 1009px)
       flex-direction: column
       justify-content: center
       .custom_button_container
         margin-top: 20rem
+      .cbutton
+    @media (max-width: 475px)
+      .title-xs
+        font-size: 23rem
   .custom_button_container
     margin: auto
     animation: home-lifestyle-blicking 1s infinite alternate
     border-radius: 100px
   .cbutton
     color: black
+    font-size: 12rem
   .cbutton--mask .cbutton__mask i:before
       color: white
   +breakpoint(sm)
