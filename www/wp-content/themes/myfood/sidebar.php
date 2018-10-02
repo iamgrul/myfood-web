@@ -32,9 +32,9 @@
 
     </div>
 
-<!--    <div class="sidebar__bottom sidebar__button">-->
-<!---->
-<!--    </div>-->
+    <div class="sidebar__bottom sidebar__button">
+
+    </div>
 <!---->
 <!--    <div class="sidebar__content">-->
 <!---->
