@@ -137,6 +137,11 @@
     text-transform: none
     margin-bottom: 10rem
     font-size: 29rem
+  .points-list__li__content
+    max-width: 74%
+    padding-left: 0
+    padding-right: 35rem
+
   .points-list__li__content__desc
     font-family: "Open Sans"
     font-size: 14rem
@@ -148,15 +153,16 @@
     flex-direction: row
     align-items: center
     text-align: center
+    .title-xs
+      line-height: 35rem
+      @media (max-width: 475px)
+        font-size: 23rem
+
     @media (max-width: 1009px)
       flex-direction: column
       justify-content: center
       .custom_button_container
         margin-top: 20rem
-      .cbutton
-    @media (max-width: 475px)
-      .title-xs
-        font-size: 23rem
   .custom_button_container
     margin: auto
     animation: home-lifestyle-blicking 1s infinite alternate

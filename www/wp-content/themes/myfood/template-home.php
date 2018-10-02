@@ -262,7 +262,7 @@
 
        <?php get_instagram_token_slideshow(); ?>
 
-        <div class="ctc_container">
+        <div class="ctc_container fade-in-bottom-0">
                 <div class="points-list__li__content">
                     <div class="points-list__li__content__title title title-xs">
                         <p class="title__content "><?php _e('You want to be a part of the Community right now?','myfood'); ?>
