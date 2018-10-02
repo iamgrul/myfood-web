@@ -192,7 +192,7 @@ class Header{
     t.$sidebarButton = t.$sidebar.find('.sidebar__button')
 
     t.$sidebarButton.on('click', ()=>{
-        t.$sidebar.toggleClass('open')
+        // t.$sidebar.toggleClass('open')
     })
 
     t.$sidebar.find('.overlay').on('click', ()=>{
