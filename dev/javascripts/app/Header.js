@@ -192,7 +192,7 @@ class Header{
     t.$sidebarButton = t.$sidebar.find('.sidebar__button')
 
     t.$sidebarButton.on('click', ()=>{
-      t.$sidebar.toggleClass('open')
+        t.$sidebar.toggleClass('open')
     })
 
     t.$sidebar.find('.overlay').on('click', ()=>{
@@ -200,7 +200,7 @@ class Header{
     })
 
     t.$sidebar.find('.sidebar__open-zone').on('click', ()=>{
-      t.$sidebar.toggleClass('open')
+      // t.$sidebar.toggleClass('open')
     })
     t.$sidebar.find('.sidebar__content__push').on('mouseenter', function(){
       $(this).addClass('active').siblings().removeClass('active')
@@ -230,7 +230,7 @@ class Header{
     }
     GDRPclose() {
         this.setCookie('GDRPaccepted', 'true', 365);
-        TM.to($('#gdrp-popup'), .5, {left: '100%'});
+        TM.to($('#gdrp-popup'), .5, {top: '100%'});
     }
     setCookie(cname, cvalue, exdays) {
         var d = new Date();
