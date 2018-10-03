@@ -29,11 +29,9 @@ class ScrollAnimation {
 
   unmaskEls(all = false) {
     const t = this
-      console.log(t);
 
     t.maskClasses.forEach((klass) => {
       $(klass).not('.mask-ended').each(function () {
-        console.log($(this));
         if ($(this).offset().top < t.sy + wh * .8 || all) {
           $(this).addClass('unmasked mask-ended')
           setTimeout(()=>{
