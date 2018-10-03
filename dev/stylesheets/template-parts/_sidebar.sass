@@ -52,24 +52,8 @@
     text-align: center
     z-index: 43
     //cursor: pointer
-    &:after
-      content: ""
-      position: absolute
-      bottom: 50%
-      left: 50%
-      display: block
-      width: 12px
-      margin: 0 -6px -15px
-      height: 4px
-      border-radius: 50%
-      background: black
-      opacity: 0
-      transform: scaleY(0)
-      transition: .4s
     &:hover
-      &:after
-        opacity: .1
-        transform: scaleY(1)
+
       .sidebar__bottom__icon.icon-contact
         //animation: bounce-rotate .4s
         transform: translateY(-5px) rotate(15deg)
@@ -240,6 +224,11 @@
     width: 100%
     z-index: 41
     font-size: 12rem
+    transition: all .5s
+    &.masked
+      -webkit-transform: translateY(-90rem)
+      -ms-transform: translateY(-90rem)
+      transform: translateY(-90rem)
     .sb_element
       display: flex
       flex-direction: column

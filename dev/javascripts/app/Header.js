@@ -68,6 +68,7 @@ class Header{
     t.sc = $window.scrollTop()
 
     if(t.sc > t.maxTop ) {
+      t.$sidebarTopButton.addClass('masked')
       t.$.addClass('masked fx')
     }  else {
       t.$.removeClass('masked fx')
@@ -75,7 +76,9 @@ class Header{
 
     if(t.lastSc - t.sc > 0 && t.$.addClass('masked'))  t.$.removeClass('masked')
 
-    t.lastSc = t.sc
+    if(t.lastSc - t.sc > 0 )  t.$sidebarTopButton.removeClass('masked');
+
+      t.lastSc = t.sc
   }
   initMobileMenu(){
     const t=this
@@ -190,6 +193,9 @@ class Header{
     t.$sidebar = $('#main-sidebar')
 
     t.$sidebarButton = t.$sidebar.find('.sidebar__button')
+
+    t.$sidebarTopButton = t.$sidebar.find('.sb_top_btns')
+
 
     t.$sidebarButton.on('click', ()=>{
         if (window.innerWidth <= 840)
