@@ -35,10 +35,39 @@
     <div class="sidebar__bottom sidebar__button">
 
     </div>
-<!---->
-<!--    <div class="sidebar__content">-->
-<!---->
-<!--    </div>	-->
+
+	<div class="sidebar__content">
+         <div class="sidebar__vam">
+             <a class="sidebar__content__push active" onclick='gtag_report_conversion()' href="<?php the_field('become_a_pioneer_url', 'option') ?>" target="_blank">
+                 <i class="sidebar__content__push__icon icon-contact"></i>
+                 <div class="sidebar__content__push__title title--xl">
+                     <?php _e('Become a Pioneer','myfood'); ?>
+                 </div>
+                 <small class="sidebar__content__push__mention mention">
+                     <?php _e('Join the Community','myfood'); ?>
+                 </small>
+             </a>
+			 <a class="sidebar__content__push active" onclick='gtag_report_conversion()' href="<?php the_field('schedule_a_visit_url', 'option') ?>" target="_blank">
+                 <i class="sidebar__content__push__icon icon-contact"></i>
+                 <div class="sidebar__content__push__title title--xl">
+                     <?php _e('Schedule a visit','myfood'); ?>
+                 </div>
+                 <small class="sidebar__content__push__mention mention">
+                     <?php _e('Meet a Pioneer','myfood'); ?>
+                 </small>
+             </a>
+             <a class="sidebar__content__push" onclick='gtag_report_conversion()' href="<?php the_field('contact_page', 'option')['url'] ?>">
+                 <i class="sidebar__content__push__icon icon-contact"></i>
+                 <div class="sidebar__content__push__title title--xl">
+                     <?php _e('Contact Us','myfood'); ?>
+                 </div>
+                 <small class="sidebar__content__push__mention mention">
+                     <?php _e('For any informations or suggestions','myfood'); ?>
+                 </small>
+             </a>
+         </div>
+ 
+     </div>
 	
 		<script type="text/javascript">
 		function gtag_report_conversion(url) {
