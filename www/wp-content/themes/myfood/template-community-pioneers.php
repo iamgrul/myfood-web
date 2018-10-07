@@ -152,52 +152,6 @@
 
   </section>
 
-  <section class="page-c__section" id="community-pioneers-contributions">
-
-    <div class="back-rect">
-      <div class="back-rect__rect"></div>
-    </div>
-
-    <div class="green-push">
-      <div class="green-push__title title title--white title--l title--masked">
-        <h2 class="title__content title__content--prefixed">
-          <span class="title__content__number">04</span>
-          <?php the_field('rowsection_5_title'); ?>
-        </h2>
-      </div>
-      <div class="green-push__content">
-        <div class="common-text fade-in-bottom">
-          <?php the_field('rowsection_5_subtitle'); ?>
-        </div>
-
-        <div class="green-push__content__ctas fade-in-bottom-1">
-          <a href="<?php the_field('rowsection_5_left_link'); ?>" target="_blank" rel="noopener"
-             class="cbutton cbutton--border cbutton--border--white">
-            <p>
-              <?php the_field('rowsection_5_left_text'); ?>
-            </p>
-          </a>
-
-          <a href="<?php the_field('rowsection_5_right_link'); ?>" target="_blank" rel="noopener"
-             class="cbutton cbutton--border cbutton--border--white">
-            <p>
-              <?php the_field('rowsection_5_right_text'); ?>
-            </p>
-          </a>
-        </div>
-      </div>
-
-      <div class="circles">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </section>
-
   <section class="page-c__section page-c__section--bottom" id="community-pioneers-bottom">
     <div class="back-rect">
       <div class="back-rect__rect"></div>
@@ -225,7 +179,7 @@
       </div>
 
       <div class="grid-l__demi">
-        <div class="push-card border-box fade-in-bottom-1">
+        <div class="push-card border-box fade-in-bottom">
           <div class="push-card__desc">
             <i class="push-card__desc__icon icon-profile red-text"></i>
             <p class="push-card__desc__title">

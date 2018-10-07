@@ -256,7 +256,7 @@
                             <?php acf_img_echo(get_field('rowsection_left_image'), 'medium'); ?>
                         </div>
                         <a class="concept-bottom__content fade-in-bottom"
-                           href="<?php the_field('prefooter_left_link'); ?>">
+                           href="<?php get_field('prefooter_left_link')['url']; ?>">
                             <h3 class="concept-bottom__content__title title--l white-text">
                                 <?php the_field('rowsection_left'); ?>
                             </h3>
@@ -272,7 +272,7 @@
                             <?php acf_img_echo(get_field('rowsection_right_image'), 'medium'); ?>
                         </div>
                         <a class="concept-bottom__content fade-in-bottom-1"
-                           href="<?php the_field('prefooter_right_link'); ?>">
+                           href="<?php get_field('prefooter_right_link')['url']; ?>">
                             <h3 class="concept-bottom__content__title title--l white-text">
                                 <?php the_field('rowsection_right'); ?>
                             </h3>
