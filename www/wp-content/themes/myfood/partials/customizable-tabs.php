@@ -25,7 +25,7 @@
                 </div>
                 <div class="grid-l__medium customize-tabs__detail-card">
                     <?php foreach($modules as $i=>$module): ?>
-                        <?php get_module_card($module, $i==0 ? 'active': '', ($i+1)); ?>
+                        <?php get_customizeble_module_card($module, $i==0 ? 'active': '', ($i+1)); ?>
                     <?php endforeach; ?>
                 </div>
             </div>

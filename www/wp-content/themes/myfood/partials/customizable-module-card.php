@@ -1,7 +1,7 @@
-<?php function get_module_card($module, $class = "", $bullet = null){ ?>
+<?php function get_customizeble_module_card($module, $class = "", $bullet = null){ ?>
 
     <div class="card card--module <?php echo $class; ?> popin-content-container">
-        <div class="card__container" >
+        <div class="card__container" data-open-popin="module-popin">
             <div class="card__module"   >
                 <?php if($bullet): ?>
                 <div class="card__module__point bullet-point">
@@ -20,7 +20,7 @@
             </div>
 
             <div class="card__button card__button--module">
-                <div class="card__button__link" data-open-popin="module-popin">
+                <div class="card__button__link" >
                     <span><?php _e('Learn more','myfood'); ?></span>
                     <div class="points-button"><span></span></div>
                 </div>
