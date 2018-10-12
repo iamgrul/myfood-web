@@ -21,31 +21,31 @@
 
         <div class="slideshow__container">
           <div class="slideshow__container__slide">
+              <a href="<?php echo get_field('subtitle_link')['url']; ?>">
+                  <div class="slideshow__container__slide__image img-c crop-img h-back h-back--full">
+                      <?php acf_img_echo(get_field('headerimage'), 'large'); ?>
+                    </div>
 
-            <div class="slideshow__container__slide__image img-c crop-img h-back h-back--full">
-              <?php acf_img_echo(get_field('headerimage'), 'large'); ?>
-            </div>
+                  <div class="slideshow__container__slide__content">
 
-            <div class="slideshow__container__slide__content">
+                      <div class="slideshow__container__slide__content__title title title--xxl title--beige title--center">
+                          <div class="slideshow__container__slide__content__title__content">
+                              <div class="title-mask mask mask--green"></div>
+                              <h1 class="title__content">
+                                  <?php the_field('headertitle'); ?>
+                              </h1>
+                          </div>
+                      </div>
 
-              <div class="slideshow__container__slide__content__title title title--xxl title--beige title--center">
-                <div class="slideshow__container__slide__content__title__content">
-                  <div class="title-mask mask mask--green"></div>
-                  <h1 class="title__content">
-                        <?php the_field('headertitle'); ?>
-                  </h1>
-                </div>
-              </div>
-
-              <div class="slideshow__container__slide__content__button-container">
-                <a class="cbutton cbutton--border cbutton--border--green"
-                   href="<?php echo get_field('subtitle_link')['url']; ?>">
-                  <p>
-                    <?php the_field('subtitle'); ?>
-                  </p>
-                </a>
-              </div>
-            </div>
+                      <div class="slideshow__container__slide__content__button-container">
+                          <div class="cbutton cbutton--border cbutton--border--green">
+                              <p>
+                                  <?php the_field('subtitle'); ?>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </a>
           </div>
         </div>
       </div>
@@ -331,17 +331,17 @@
         <div class="large-push__background img-c crop-img h-back h-back--full">
           <?php acf_img_echo(get_field('rowsection_5_image'), 'large'); ?>
         </div>
-
-        <div class="large-push__content h-front">
-          <div class="h-vertical-mid h-text-center">
-            <a class="cbutton cbutton--border cbutton--border--green" target="_blank"
-               href="<?php the_field('rowsection_5_buttonlink'); ?>">
-              <p>
-                <?php _e('Download our Cultivation Calendar', 'myfood'); ?>
-              </p>
-            </a>
-          </div>
-        </div>
+        <a  href="<?php the_field('rowsection_5_buttonlink'); ?>">
+            <div class="large-push__content h-front">
+              <div class="h-vertical-mid h-text-center">
+                <div class="cbutton cbutton--border cbutton--border--green" target="_blank">
+                  <p>
+                    <?php _e('Download our Cultivation Calendar', 'myfood'); ?>
+                  </p>
+                </div>
+              </div>
+            </div>
+        </a>
       </div>
     </section>
     <!--    CONCEPT SGH PUSH END   -->

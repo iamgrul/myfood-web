@@ -27,25 +27,25 @@
                         </div>
 
                         <div class="slideshow__container__slide__content">
-
-                            <div class="slideshow__container__slide__content__title title title--xxl title--beige title--center">
-                                <div class="slideshow__container__slide__content__title__content">
-                                    <div class="title-mask mask mask--green"></div>
-                                    <h1 class="title__content">
-                                        <?php the_field('headertitle'); ?>
-                                    </h1>
+                            <a href="<?php echo get_field('subtitle_link')['url']; ?>">
+                                <div class="slideshow__container__slide__content__title title title--xxl title--beige title--center">
+                                    <div class="slideshow__container__slide__content__title__content">
+                                        <div class="title-mask mask mask--green"></div>
+                                        <h1 class="title__content">
+                                            <?php the_field('headertitle'); ?>
+                                        </h1>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="slideshow__container__slide__content__button-container">
-                                <a class="cbutton cbutton--border cbutton--border--green"
-                                   href="<?php echo get_field('subtitle_link')['url']; ?>">
+                                <div class="slideshow__container__slide__content__button-container">
+                                    <div class="cbutton cbutton--border cbutton--border--green"
                                     <p>
                                         <?php the_field('subtitle'); ?>
                                     </p>
-                                </a>
-                            </div>
+                                </div>
                         </div>
+                        </a>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -243,18 +243,19 @@
             <div class="large-push large-push--light">
                 <div class="large-push__background img-c crop-img h-back h-back--full">
                     <?php acf_img_echo(get_field('rowsection_5_image'), 'large'); ?>
-                </div>
-
-                <div class="large-push__content h-front">
-                    <div class="h-vertical-mid h-text-center">
-                        <a class="cbutton cbutton--border cbutton--border--green" target="_blank"
-                           href="<?php the_field('rowsection_5_buttonlink'); ?>">
-                            <p>
-                                <?php _e('Download our Cultivation Calendar', 'myfood'); ?>
-                            </p>
-                        </a>
+                </div>card__container
+                <a   href="<?php the_field('rowsection_5_buttonlink'); ?>">
+                    <div class="large-push__content h-front">
+                        <div class="h-vertical-mid h-text-center">
+                            <div class="cbutton cbutton--border cbutton--border--green" target="_blank"
+                            >
+                                <p>
+                                    <?php _e('Download our Cultivation Calendar', 'myfood'); ?>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         <!--    CONCEPT SGH PUSH END   -->
@@ -373,43 +374,45 @@
 
             <div class="grid-l page-c__section--bottom__content">
                 <div class="grid-l__demi">
-                    <div class="push-card border-box fade-in-bottom">
-                        <div class="push-card__background img-c crop-img">
+                    <a  href="<?php echo get_field('rowsection_8_left_link')['url']; ?>">
+                        <div class="push-card border-box fade-in-bottom">
+                            <div class="push-card__background img-c crop-img">
                             <?php acf_img_echo(get_field('rowsection_8_left_image'), 'large'); ?>
                         </div>
-                        <div class="push-card__desc">
-                            <i class="push-card__desc__icon icon-contact green-text"></i>
-                            <p class="push-card__desc__title beige-text">
-                                <?php the_field('rowsection_8_left_title'); ?>
-                            </p>
+                            <div class="push-card__desc">
+                                <i class="push-card__desc__icon icon-contact green-text"></i>
+                                <p class="push-card__desc__title beige-text">
+                                    <?php the_field('rowsection_8_left_title'); ?>
+                                </p>
+                            </div>
+                            <div class="push-card__button card__button">
+                                <div class="card__button__link">
+                                    <span class="beige-text"><?php _e('Learn more', 'myfood'); ?></span>
+                                    <div class="points-button points-button--beige"><span></span></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="push-card__button card__button">
-                            <a class="card__button__link"
-                               href="<?php echo get_field('rowsection_8_left_link')['url']; ?>">
-                                <span class="beige-text"><?php _e('Learn more', 'myfood'); ?></span>
-                                <div class="points-button points-button--beige"><span></span></div>
-                            </a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="grid-l__demi">
-                    <div class="push-card border-box push-card--shop fade-in-bottom-1">
-                        <div class="push-card__desc">
-                            <i class="push-card__desc__icon icon-bag red-text dark-circle"></i>
-                            <p class="push-card__desc__title">
-                                <span class="red-text"><?php _e('Book', 'myfood'); ?></span>
-                                <?php the_field('rowsection_8_right_title'); ?>
-                            </p>
+                    <a href="<?php echo get_field('rowsection_8_right_link')['url']; ?>">
+                        <div class="push-card border-box push-card--shop fade-in-bottom-1">
+                            <div class="push-card__desc">
+                                <i class="push-card__desc__icon icon-bag red-text dark-circle"></i>
+                                <p class="push-card__desc__title">
+                                    <span class="red-text"><?php _e('Book', 'myfood'); ?></span>
+                                    <?php the_field('rowsection_8_right_title'); ?>
+                                </p>
+                            </div>
+                            <div class="push-card__button card__button push-card__button--black">
+                                <div class="push-card__button__link card__button__link">
+                                    <span><?php _e('Book', 'myfood'); ?></span>
+                                    <div class="points-button"><span></span></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="push-card__button card__button push-card__button--black">
-                            <a class="push-card__button__link card__button__link"
-                               href="<?php echo get_field('rowsection_8_right_link')['url']; ?>">
-                                <span><?php _e('Book', 'myfood'); ?></span>
-                                <div class="points-button"><span></span></div>
-                            </a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
             </div>

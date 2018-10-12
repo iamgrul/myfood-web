@@ -190,28 +190,30 @@
 
     </section>
 
-    <section class="page-c__section" id="aero-push">
+      <section class="page-c__section" id="aero-push">
+          <div class="back-rect"><div class="back-rect__rect"></div></div>
+          <div class="large-push large-push--light">
 
-      <div class="back-rect"><div class="back-rect__rect"></div></div>
-
-      <div class="large-push large-push--light">
-        <div class="large-push__background img-c crop-img h-back h-back--full">
-          <?php acf_img_echo(get_field('rowsection_4_image'), 'medium'); ?>
+              <div class="large-push__background img-c crop-img h-back h-back--full">
+            <?php acf_img_echo(get_field('rowsection_4_image'), 'medium'); ?>
         </div>
+              <a class="" target="_blank" href="<?php the_field('rowsection_4_buttonlink'); ?>">
 
-        <div class="large-push__content h-front">
-          <div class="h-vertical-mid h-text-center">
-            <a class="cbutton cbutton--border cbutton--border--green" target="_blank" href="<?php the_field('rowsection_4_buttonlink'); ?>">
-              <p>
-                <?php _e('Download our Cultivation Calendar','myfood'); ?>
-              </p>
-            </a>
+                  <div class="large-push__content h-front">
+
+                      <div class="h-vertical-mid h-text-center">
+                          <div class="cbutton cbutton--border cbutton--border--green" target="_blank" href="<?php the_field('rowsection_4_buttonlink'); ?>">
+                              <p>
+                                  <?php _e('Download our Cultivation Calendar','myfood'); ?>
+                              </p>
+                          </div>
+                      </div>
+
+                  </div>
+              </a>
           </div>
-        </div>
-      </div>
-    </section>
 
-
+      </section>
     <section class="page-c__section" id="aero-slideshow">
 
       <div class="back-rect"><div class="back-rect__rect"></div></div>
@@ -264,33 +266,29 @@
       </div>
     </section>
 
-    <section class="page-c__section page-c__section--bottom" id="aero-bottom">
+      <section class="page-c__section page-c__section--bottom" id="aero-bottom">
 
-      <div class="page-c__section--bottom__content">
+          <div class="page-c__section--bottom__content">
+              <a href="<?php echo get_field('rowsection_7_link')['url']; ?>">
+                  <div class="push-card border-box push-card--large push-card--shop fade-in-bottom">
+                      <div class="push-card__desc">
+                          <i class="push-card__desc__icon icon-bag red-text dark-circle"></i>
+                          <p class="push-card__desc__title">
+                              <span class="red-text"><?php _e('Shop','myfood'); ?></span>
+                              <span><?php the_field('rowsection_7_subtitle'); ?></span>
+                          </p>
+                      </div>
 
-        <div class="push-card border-box push-card--large push-card--shop fade-in-bottom">
-          <div class="push-card__desc">
-            <i class="push-card__desc__icon icon-bag red-text dark-circle"></i>
-            <p class="push-card__desc__title">
-              <span class="red-text"><?php _e('Shop','myfood'); ?></span>
-              <span><?php the_field('rowsection_7_subtitle'); ?></span>
-            </p>
+                      <div class="push-card__button card__button push-card__button--black fade-in-bottom-1">
+                          <div class="push-card__button__link card__button__link">
+                              <span><?php _e('Buy','myfood'); ?></span>
+                              <div class="points-button"><span></span></div>
+                          </div>
+                      </div>
+                  </div>
+              </a>
           </div>
-
-          <div class="push-card__button card__button push-card__button--black fade-in-bottom-1">
-            <a href="<?php echo get_field('rowsection_7_link')['url']; ?>" class="push-card__button__link card__button__link">
-              <span><?php _e('Buy','myfood'); ?></span>
-              <div class="points-button"><span></span></div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-	
+      </section>
 	<?php get_seo_footer(); ?>
-
   </main>
-
-
 <?php get_footer(); ?>

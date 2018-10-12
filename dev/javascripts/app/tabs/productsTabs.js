@@ -22,16 +22,23 @@ class ProductsTabs extends Tabs{
             tabsClass:'switch-tab',
             headsClass:'navigation-switch__button',
             onSwitch: function(){
-                if(tab.slideshow && this.idx == 1){
-                    TM.to(tab.slideshow.$arrows, .5,{opacity:1, display:"block"})
-                    Website.cropImg()
-                }else{
-                    TM.to(tab.slideshow.$arrows, .5,{opacity:0, onComplete:()=>{
-                        TM.set(tab.slideshow.$arrows, {display:"none"})
-                    }})
+                if(tab.slideshow !== undefined)
+                {
+                    if( this.idx == 1){
+                        TM.to(tab.slideshow.$arrows, .5,{opacity:1, display:"block"})
+                        Website.cropImg()
+                    }
+                    else{
+                        TM.to(tab.slideshow.$arrows, .5, {
+                            opacity: 0, onComplete: () => {
+                                TM.set(tab.slideshow.$arrows, {display: "none"})
+                            }
+                        })
+                    }
                 }
             }
         })
+
 
         if($tab.find('.images-slideshow__image').length > 1){
 

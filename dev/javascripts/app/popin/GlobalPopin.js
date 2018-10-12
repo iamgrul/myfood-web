@@ -88,7 +88,6 @@ class GlobalPopin{
         let t=this
 
         $body.on('click', '[data-open-popin]', function(){
-
             t.$content = $(this).parents('.popin-content-container').find('.' + $(this).attr('data-open-popin'))
 
             if(t.$content.hasClass('no-clone')){
