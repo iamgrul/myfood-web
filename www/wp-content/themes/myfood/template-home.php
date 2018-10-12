@@ -26,41 +26,37 @@
 
                 foreach($header_gallery as $slide): ?>
                     <div class="slideshow__container__slide slide">
+                        <a href="<?php echo $slide['link']['url']; ?>">
+                            <div class="slideshow__container__slide__image img-c crop-img h-back h-back--full">
+                                <div class="mask mask"></div>
+                                <?php acf_img_echo($slide['image'], 'large'); ?>
+                            </div>
+                            <div class="slideshow__container__slide__content">
+                                <div class="slideshow__container__slide__content__title title title--xxl title--beige">
+                                    <div class="slideshow__container__slide__content__title__content">
+                                        <div class="title-mask mask mask--green"></div>
 
-                        <div class="slideshow__container__slide__image img-c crop-img h-back h-back--full">
-                            <div class="mask mask"></div>
-                            <?php acf_img_echo($slide['image'], 'large'); ?>
-                        </div>
-
-                        <div class="slideshow__container__slide__content">
-
-                            <div class="slideshow__container__slide__content__title title title--xxl title--beige">
-                                <div class="slideshow__container__slide__content__title__content">
-                                    <div class="title-mask mask mask--green"></div>
-
-                                    <h2 class="title__content">
-                                        <?php echo $slide['title']; ?>
-                                    </h2>
+                                        <h2 class="title__content">
+                                            <?php echo $slide['title']; ?>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="slideshow__container__slide__content__subtitle-container"  >
+                                    <h3 class="line-mention">
+                                        <p class="line-mention__content">
+                                            <?php echo $slide['subtitle']; ?>
+                                        </p>
+                                    </h3>
+                                </div>
+                                <div class="slideshow__container__slide__content__button-container">
+                                    <div class=" cbutton cbutton--border cbutton--border--green " href="<?php echo $slide['link']['url']; ?>">
+                                        <p>
+                                            <?php echo $slide['linktext']; ?>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="slideshow__container__slide__content__subtitle-container">
-                                <h3 class="line-mention">
-                                    <p class="line-mention__content">
-                                        <?php echo $slide['subtitle']; ?>
-                                    </p>
-                                </h3>
-                            </div>
-
-                            <div class="slideshow__container__slide__content__button-container">
-                                <a class="cbutton cbutton--border cbutton--border--green" href="<?php echo $slide['link']['url']; ?>">
-                                    <p>
-                                        <?php echo $slide['linktext']; ?>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-
+                        </a>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -167,26 +163,27 @@
 
 <!--    HOME COMMUNITY START   -->
     <section class="page-c__section" id="home-community">
-        <div class="large-push">
-            <div class="large-push__background img-c crop-img h-back h-back--full">
-                <?php acf_img_echo(get_field('rowsection_2_image'), 'large'); ?>
-            </div>
-
-            <div class="large-push__content h-front">
-                <div class="h-vertical-mid">
-                    <div class="title title--m">
-                        <h2 class="title__content">
-                            <?php the_field('rowsection_2_subtext'); ?>
-                        </h2>
-                    </div>
-
-                    <a class="cbutton cbutton--border cbutton--border--green float-right" href="<?php echo get_field('rowsection_2_subtext_link')['url']; ?>">
-                        <p>
-                            <?php _e('Discover','myfood'); ?>
-                        </p>
-                    </a>
+        <div class="large-push ">
+            <a href="<?php echo get_field('rowsection_2_subtext_link')['url']; ?>">
+                <div class="large-push__background img-c crop-img h-back h-back--full">
+                    <?php acf_img_echo(get_field('rowsection_2_image'), 'large');  ?>
                 </div>
-            </div>
+                <div class="large-push__content h-front">
+                    <div class="h-vertical-mid">
+                        <div class="title title--m">
+                            <h2 class="title__content">
+                                <?php the_field('rowsection_2_subtext'); ?>
+                            </h2>
+                        </div>
+
+                        <div class="cbutton cbutton--border cbutton--border--green float-right">
+                            <p>
+                                <?php _e('Discover','myfood'); ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 <!--    HOME COMMUNITY END   -->

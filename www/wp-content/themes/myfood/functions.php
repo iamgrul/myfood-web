@@ -12,6 +12,7 @@ include('partials/news-card.php');
 include('partials/share-list.php');
 include('partials/shop-variations.php');
 include('partials/module-card.php');
+include('partials/customizable-module-card.php');
 include('partials/medias-slideshow.php');
 include('partials/seo-footer.php');
 include('partials/collapsible.php');
