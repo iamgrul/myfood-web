@@ -243,8 +243,8 @@
             <div class="large-push large-push--light">
                 <div class="large-push__background img-c crop-img h-back h-back--full">
                     <?php acf_img_echo(get_field('rowsection_5_image'), 'large'); ?>
-                </div>card__container
-                <a   href="<?php the_field('rowsection_5_buttonlink'); ?>">
+                </div>
+                <a href="<?php the_field('rowsection_5_buttonlink'); ?>" target="_blank">
                     <div class="large-push__content h-front">
                         <div class="h-vertical-mid h-text-center">
                             <div class="cbutton cbutton--border cbutton--border--green" target="_blank"
