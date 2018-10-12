@@ -305,6 +305,28 @@ if( function_exists('acf_add_local_field_group') ):
                 'allow_archives' => 1,
                 'multiple' => 0,
             ),
+			array(
+                'key' => 'field_5aa933399',
+                'label' => 'Schedule a Visit Url',
+                'name' => 'schedule_a_visit_url',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'page',
+                ),
+                'taxonomy' => array(
+                ),
+                'allow_null' => 0,
+                'allow_archives' => 1,
+                'multiple' => 0,
+            ),
             array(
                 'key' => 'field_5ab928247579d',
                 'label' => 'Socials',
