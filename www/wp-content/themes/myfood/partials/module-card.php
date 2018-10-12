@@ -1,28 +1,22 @@
 <?php function get_module_card($module, $class = "", $bullet = null){ ?>
 
     <div class="card card--module <?php echo $class; ?> popin-content-container">
-        <div class="card__container">
-
-            <div class="card__module">
-
+        <div class="card__container" >
+            <div class="card__module"   >
                 <?php if($bullet): ?>
                 <div class="card__module__point bullet-point">
                     <span><?php echo $bullet; ?></span>
                 </div>
                 <?php endif; ?>
-
-                <div class="card__module__img">
+                <div class="card__module__img" data-open-popin="module-popin">
                     <?php acf_img_echo(get_field('image', $module), 'medium'); ?>
                 </div>
-
                 <h4 class="card__module__title title title--tab-m">
                     <span class="green-text"><?php _e('Module','myfood'); ?></span> <?php the_field('name', $module); ?>
                 </h4>
-
                 <div class="card__module__mention mention mention--small">
                     <?php the_field('description', $module); ?>
                 </div>
-
             </div>
 
             <div class="card__button card__button--module">
@@ -32,8 +26,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="module-popin">
             <div class="module-popin__content">
 

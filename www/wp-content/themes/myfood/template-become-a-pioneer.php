@@ -199,45 +199,40 @@
       </div>
 
       <div class="grid-l page-c__section--bottom__content">
-        <div class="grid-l__demi">
-
-
-          <a class="push-card green-card border-box fade-in-bottom" href="<?php the_field('rowsection_3_leftlink'); ?>" target="_blank"
-             rel="noopener">
-
-            <div class="push-card__background img-c crop-img">
+          <div class="grid-l__demi">
+              <a class="push-card green-card border-box fade-in-bottom" href="<?php the_field('rowsection_3_leftlink'); ?>" target="_blank"
+                 rel="noopener">
+                  <div class="push-card__background img-c crop-img">
               <?php acf_img_echo(get_field('rowsection_3_leftimage'), 'medium'); ?>
             </div>
-
-            <div class="download-button download-button--white">
-              <span class="download-button__points"></span>
-              <i class="download-button__icon icon-download"></i>
-            </div>
-
-            <p class="border-box--quote__content white-text">
-              <?php the_field('rowsection_3_lefttext'); ?>
-            </p>
-          </a>
-
-        </div>
-
-        <div class="grid-l__demi">
-          <div class="push-card border-box push-card--shop fade-in-bottom-1">
-            <div class="push-card__desc">
-              <i class="push-card__desc__icon icon-bag red-text dark-circle"></i>
-              <p class="push-card__desc__title">
-                <span class="red-text"><?php _e('Book', 'myfood'); ?></span>
-                <?php the_field('rowsection_3_righttext'); ?>
-              </p>
-            </div>
-            <div class="push-card__button card__button push-card__button--black">
-              <a href="<?php the_field('rowsection_3_rightlink'); ?>" class="push-card__button__link card__button__link">
-                <span><?php _e('Book', 'myfood'); ?></span>
-                <div class="points-button"><span></span></div>
+                  <div class="download-button download-button--white">
+                      <span class="download-button__points"></span>
+                      <i class="download-button__icon icon-download"></i>
+                  </div>
+                  <p class="border-box--quote__content white-text">
+                      <?php the_field('rowsection_3_lefttext'); ?>
+                  </p>
               </a>
-            </div>
           </div>
-        </div>
+          <div class="grid-l__demi">
+              <a href="<?php the_field('rowsection_3_rightlink'); ?>">
+                  <div class="push-card border-box push-card--shop fade-in-bottom-1">
+                      <div class="push-card__desc">
+                          <i class="push-card__desc__icon icon-bag red-text dark-circle"></i>
+                          <p class="push-card__desc__title">
+                              <span class="red-text"><?php _e('Book', 'myfood'); ?></span>
+                              <?php the_field('rowsection_3_righttext'); ?>
+                          </p>
+                      </div>
+                      <div class="push-card__button card__button push-card__button--black">
+                          <div class="push-card__button__link card__button__link">
+                              <span><?php _e('Book', 'myfood'); ?></span>
+                              <div class="points-button"><span></span></div>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
 
       </div>
     </section>
