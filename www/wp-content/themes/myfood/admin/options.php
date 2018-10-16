@@ -218,6 +218,28 @@ if( function_exists('acf_add_local_field_group') ):
                 'multiple' => 0,
             ),
 			array(
+                'key' => 'field_5ab776cf68d87',
+                'label' => 'RGPD page',
+                'name' => 'rgpd_page',
+                'type' => 'page_link',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'page',
+                ),
+                'taxonomy' => array(
+                ),
+                'allow_null' => 0,
+                'allow_archives' => 1,
+                'multiple' => 0,
+            ),
+			array(
                 'key' => 'field_5ab926cf6d247',
                 'label' => 'Footer Title',
                 'name' => 'footer_title',

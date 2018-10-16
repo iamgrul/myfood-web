@@ -135,7 +135,7 @@
     </ul>
 
     <small class="footer__bottom__legals">
-      <a href=""><?php _e('CGV','myfood'); ?></a> - <a href=""><?php _e('Legal','myfood'); ?></a> - <?php echo date('Y'); ?>. <?php _e('myfood France SAS All Rights reserved.','myfood'); ?>
+      <a href=""><?php _e('CGV','myfood'); ?></a> - <a href="<?php the_field('rgpd_page', 'option'); ?>"><?php _e('GDPR','myfood'); ?></a> - <?php echo date('Y'); ?>. <?php _e('myfood France SAS All Rights reserved.','myfood'); ?>
     </small>
   </div>
 

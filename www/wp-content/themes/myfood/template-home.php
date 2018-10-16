@@ -110,7 +110,7 @@
         </div>
 
         <div class="video-player">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kbdID4MQ4KE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            <iframe width="100%" height="100%" src="<?php the_field('rowsection1_youtubeurl'); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
         </div>
         <div class="custom_button_container">
             <a class="cbutton cbutton--border cbutton--border--green float-right cbutton--mask hv" href="https://pastelfluo.com/visionner/maraichers-2-0/ " target="_blank">
