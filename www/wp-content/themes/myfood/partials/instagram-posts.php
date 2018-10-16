@@ -46,18 +46,51 @@ function get_instagram_with_token_posts(){
 
 function get_instagram_token_slideshow(){
     $last = intval(get_option('ax_last_instagram_date'));
-    if (time() - $last > 60*24) {
+//    if (time() - $last > 60*24) {
         echo get_instagram_with_token_posts();
-    } else {
-        echo get_option('ax_last_instagram_content');
-    }
+//    } else {
+//        echo get_option('ax_last_instagram_content');
+//    }
 }
 
 
 function get_instagram_slideshow($posts){
 
     ?>
-    <div class="large-slideshow">
+    <style>
+        @media (max-width: 414px) {
+            .no-display-mobile {
+                display: none;
+            }
+            .large-slideshow__container__insta_custom {
+                display: flex;
+                overflow-x: auto;
+                padding-bottom: 90px;
+            }
+        }
+        @media (min-width: 415px) {
+            .display-mobile {
+                display: none;
+            }
+        }
+    </style>
+    <div class="display-mobile">
+        <div class="large-slideshow__container__insta_custom">
+            <?php foreach($posts as $post): ?>
+                <div class="large-slideshow__slide slide <?php if($post['likes'] || $post['comments']) echo 'black-hv'; ?>">
+                    <a class="img-c crop-img" href="<?php echo $post['url']; ?>" target="_blank" rel="noopener">
+                        <img src="<?php echo $post['src']; ?>" alt="">
+                        <?php if($post['likes']): ?>
+                            <span class="likes"><i class="icon-heart"></i><?php echo $post['likes']; ?></span>
+                        <?php endif; if($post['comments']): ?>
+                            <span class="comments"><?php echo $post['comments']; ?><i class="icon-contact"></i></span>
+                        <?php endif; ?>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="large-slideshow no-display-mobile">
 
         <div class="large-slideshow__container">
             <div class="circle circle--xxl"></div>
