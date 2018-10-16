@@ -321,45 +321,49 @@ $cats = get_the_terms($post, 'product_cat');
 
       <div class="grid-l page-c__section--bottom__content">
         <div class="grid-l__demi">
-          <div class="push-card border-box fade-in-bottom">
+            <a href="<?php echo get_field('supportednetwork_link')['url']; ?>">
+                <div class="push-card border-box fade-in-bottom">
 
-            <div class="push-card__background img-c crop-img">
-              <img src="<?php get_img('misc/MyFood-Hub-1010-APP.jpg'); ?>" alt="">
-            </div>
+                    <div class="push-card__background img-c crop-img">
+                        <img src="<?php get_img('misc/MyFood-Hub-1010-APP.jpg'); ?>" alt="">
+                    </div>
 
-            <div class="push-card__desc">
-              <i class="push-card__desc__icon icon-contact red-text"></i>
-              <p class="push-card__desc__title beige-text">
-                <span class="red-text"><?php _e('myfood Hub', 'myfood'); ?></span>
-                <?php _e('to manage your Smart Greenhouses', 'myfood'); ?>
-              </p>
-            </div>
-            <div class="push-card__button card__button">
-              <a href="<?php echo get_field('supportednetwork_link')['url']; ?>" class="card__button__link">
-                <span class="beige-text"><?php _e('Learn more', 'myfood'); ?></span>
-                <div class="points-button points-button--beige"><span></span></div>
-              </a>
-            </div>
+                    <div class="push-card__desc">
+                        <i class="push-card__desc__icon icon-contact red-text"></i>
+                        <p class="push-card__desc__title beige-text">
+                            <span class="red-text"><?php _e('myfood Hub', 'myfood'); ?></span>
+                            <?php _e('to manage your Smart Greenhouses', 'myfood'); ?>
+                        </p>
+                    </div>
+                    <div class="push-card__button card__button">
+                        <div  class="card__button__link">
+                            <span class="beige-text"><?php _e('Learn more', 'myfood'); ?></span>
+                            <div class="points-button points-button--beige"><span></span></div>
+                        </div>
+                    </div>
 
-          </div>
+                </div>
+            </a>
         </div>
 
         <div class="grid-l__demi">
-          <div class="push-card border-box fade-in-bottom-1">
-            <div class="push-card__desc">
-              <i class="push-card__desc__icon icon-contact green-text dark-circle"></i>
-              <p class="push-card__desc__title">
-                <span class="green-text"><?php _e('An helpful', 'myfood'); ?></span>
-                <?php _e('Community of Pioneer Citizen to support you', 'myfood'); ?>
-              </p>
-            </div>
-            <div class="push-card__button card__button">
-              <a href="<?php echo get_field('meetthepioneer_link')['url']; ?>" class="card__button__link">
-                <span><?php _e('Learn more', 'myfood'); ?></span>
-                <div class="points-button"><span></span></div>
-              </a>
-            </div>
-          </div>
+            <a  href="<?php echo get_field('meetthepioneer_link')['url']; ?>">
+                <div class="push-card border-box fade-in-bottom-1">
+                    <div class="push-card__desc">
+                        <i class="push-card__desc__icon icon-contact green-text dark-circle"></i>
+                        <p class="push-card__desc__title">
+                            <span class="green-text"><?php _e('An helpful', 'myfood'); ?></span>
+                            <?php _e('Community of Pioneer Citizen to support you', 'myfood'); ?>
+                        </p>
+                    </div>
+                    <div class="push-card__button card__button">
+                        <div class="card__button__link">
+                            <span><?php _e('Learn more', 'myfood'); ?></span>
+                            <div class="points-button"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
       </div>
     </section>
