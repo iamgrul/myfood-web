@@ -1,6 +1,5 @@
 <?php
 
-
 function get_instagram_with_token_posts(){
     $token = "2884691214.c03edf9.60a609eb014844b0883f4c9dcde64ff6";
     $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=".$token;
@@ -45,7 +44,7 @@ function get_instagram_with_token_posts(){
 }
 
 function get_instagram_token_slideshow(){
-    $last = intval(get_option('ax_last_instagram_date'));
+//    $last = intval(get_option('ax_last_instagram_date'));
 //    if (time() - $last > 60*24) {
         echo get_instagram_with_token_posts();
 //    } else {
@@ -53,29 +52,11 @@ function get_instagram_token_slideshow(){
 //    }
 }
 
-
 function get_instagram_slideshow($posts){
 
     ?>
-    <style>
-        @media (max-width: 414px) {
-            .no-display-mobile {
-                display: none;
-            }
-            .large-slideshow__container__insta_custom {
-                display: flex;
-                overflow-x: auto;
-                padding-bottom: 90px;
-            }
-        }
-        @media (min-width: 415px) {
-            .display-mobile {
-                display: none;
-            }
-        }
-    </style>
     <div class="display-mobile">
-        <div class="large-slideshow__container__insta_custom">
+        <div class="large-slideshow__container__instagramm_mobile">
             <?php foreach($posts as $post): ?>
                 <div class="large-slideshow__slide slide <?php if($post['likes'] || $post['comments']) echo 'black-hv'; ?>">
                     <a class="img-c crop-img" href="<?php echo $post['url']; ?>" target="_blank" rel="noopener">
@@ -129,4 +110,3 @@ function get_instagram_slideshow($posts){
 
     <?php
 }
-
