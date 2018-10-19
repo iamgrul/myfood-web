@@ -144,13 +144,13 @@ class LargeSlideshow{
         let dir = getDirection(t.idx, idx, t.nbSlides)
 
         if(dir== -1){
-            t.slWidth = (t.$.find('.slide').eq(1).offset().left - t.$.find('.slide').eq(0).offset().left)
+            t.slWidth = (t.$list.find('.slide').eq(1).offset().left - t.$list.find('.slide').eq(0).offset().left)
         }else{
-            t.slWidth = (t.$.find('.slide').eq(2).offset().left - t.$.find('.slide').eq(1).offset().left)
+            t.slWidth = (t.$list.find('.slide').eq(2).offset().left - t.$list.find('.slide').eq(1).offset().left)
         }
 
         if(dir == -1){
-            TM.to(t.$list,.8,{x: -t.slWidth, ease: Power2.easeInOut, onComplete:()=>{
+            TM.to(t.$list, .8, {x: -t.slWidth, ease: Power2.easeInOut, onComplete:()=>{
                 TM.set(t.$list,{x:0})
                 t.$list.find('.slide:last').after(t.$list.find('.slide:first'))
                 t.trans=false
@@ -158,7 +158,7 @@ class LargeSlideshow{
         }else{
             TM.set(t.$list, {x:-t.slWidth});
             t.$list.find('.slide:first').before(t.$list.find('.slide:last'));
-            TM.to(t.$list,.8,{x: 0,  ease: Power3.easeInOut, onComplete:()=>{
+            TM.to(t.$list, .8, {x: 0,  ease: Power3.easeInOut, onComplete:()=>{
                 t.trans=false
             }})
         }
@@ -181,11 +181,10 @@ class LargeSlideshow{
 
         t.$.addClass('touch')
 
-        t.$.swipe({
+        t.$list.swipe({
             swipeRight: t.slidePrev.bind(t),
             swipeLeft: t.slideNext.bind(t)
         })
-
     }
     size(){
         const t=this
