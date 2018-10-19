@@ -842,8 +842,11 @@
     position: relative
     height: 300rem
     &__list
+      position: absolute
       margin-left: -200rem
       min-width: 500px
+      @media (max-width: 414px)
+        position: inherit
       +after-clear
   &__slide
     width: 400rem
