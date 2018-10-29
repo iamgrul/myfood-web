@@ -719,6 +719,7 @@ function woocommerce_list_pages( $pages ) {
 /**
  * @deprecated 3.0
  */
+
 function woocommerce_product_dropdown_categories( $args = array(), $deprecated_hierarchical = 1, $deprecated_show_uncategorized = 1, $deprecated_orderby = '' ) {
 	wc_deprecated_function( __FUNCTION__, '3.0', 'wc_product_dropdown_categories' );
 	return wc_product_dropdown_categories( $args, $deprecated_hierarchical, $deprecated_show_uncategorized, $deprecated_orderby );

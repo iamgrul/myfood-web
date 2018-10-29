@@ -19,7 +19,38 @@ $cateID = $cate->term_id;
       <h1 class="simple-top__title title--xxl fade-in-bottom-1"><?php echo $cate->name ?></h1>
     </div>
   </section>
+    <?php
+        if($cateID=== 110 || $cateID === 164 || $cateID=== 169)
+        {
+            echo "<div class='filter-product-cat-container'>";
+            echo "<div class='filter-product-cat-option' data-product_cat=''> $child->name </div>";
 
+            $cate_childs = wc_category_childs($cateID);
+            foreach ($cate_childs as $child) {
+                echo "<div class='filter-product-cat-option' data-product_cat='.$child->slug'> $child->name </div>";
+
+            }
+            echo "</div>";
+
+        }
+    ?>
+    <style>
+        .filter-product-cat-container {
+            display: flex;
+        }
+        .filter-product-cat-option {
+
+        }
+    </style>
+    <script>
+$('.filter-product-cat-option').on('click',   function() {
+    const product_cat = (this.getAttribute('data-product_cat'));
+
+    $('.grid-l__third').css('display', 'none');
+    $('.grid-l__third' + product_cat).css('display', 'block');
+
+});
+    </script>
   <section class="page-c__section" id="shop-products-list">
     <div class="back-rect">
       <div class="back-rect__rect"></div>
@@ -43,10 +74,17 @@ $cateID = $cate->term_id;
 
         ?>
 
-        <?php foreach ($products as $idx=>$product):
-          $idx = $idx%3
-          ?>
-          <div class="grid-l__third <?php echo "fade-in-bottom-$idx"; ?>">
+        <?php
+          foreach ($products as $idx=>$product):
+            $idx = $idx%3;
+
+          $prod_cats_slug_str = '';
+          $prod_cats = wc_get_product_terms($product->ID, 'product_cat');
+          foreach ($prod_cats as $pc)
+             $prod_cats_slug_str = $prod_cats_slug_str . ' '. $pc->slug;
+        ?>
+
+          <div class="grid-l__third <?php echo "fade-in-bottom-$idx $prod_cats_slug_str"; ?>">
             <?php get_product_box($product); ?>
           </div>
         <?php endforeach; ?>
