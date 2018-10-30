@@ -175,6 +175,17 @@ function _wc_get_product_terms_parent_usort_callback( $a, $b ) {
 	return ( $a->parent < $b->parent ) ? 1 : -1;
 }
 
+function wc_category_childs( $id = 110) {
+    $args = array(
+        'taxonomy'           => 'product_cat',
+        'child_of'          => $id,
+    );
+    $r = wp_parse_args( '', $args );
+    unset( $r['name'] );
+    $categories = get_terms( $r['taxonomy'], $r );
+
+    return( $categories);
+}
 /**
  * WooCommerce Dropdown categories.
  *

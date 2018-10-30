@@ -18,6 +18,19 @@ $cateID = $cate->term_id;
       <p class="title--m green-text simple-top__subtitle fade-in-bottom"><?php _e('Shop', 'myfood'); ?></p>
       <h1 class="simple-top__title title--xxl fade-in-bottom-1"><?php echo $cate->name ?></h1>
     </div>
+      <br>
+      <?php
+          if ($cateID=== 110 || $cateID === 164 || $cateID=== 169) {
+              echo "<div class='filter-product-cat-container'>";
+              echo "<div class='filter-product-cat-option active' data-product_cat=''> All </div>";
+
+              $cate_childs = wc_category_childs($cateID);
+              foreach ($cate_childs as $child) {
+                  echo "<div class='filter-product-cat-option' data-product_cat='.$child->slug'> $child->name </div>";
+              }
+              echo "</div>";
+          }
+      ?>
   </section>
 
   <section class="page-c__section" id="shop-products-list">
@@ -43,10 +56,17 @@ $cateID = $cate->term_id;
 
         ?>
 
-        <?php foreach ($products as $idx=>$product):
-          $idx = $idx%3
-          ?>
-          <div class="grid-l__third <?php echo "fade-in-bottom-$idx"; ?>">
+        <?php
+          foreach ($products as $idx=>$product):
+            $idx = $idx%3;
+
+          $prod_cats_slug_str = '';
+          $prod_cats = wc_get_product_terms($product->ID, 'product_cat');
+          foreach ($prod_cats as $pc)
+             $prod_cats_slug_str = $prod_cats_slug_str . ' '. $pc->slug;
+        ?>
+
+          <div class="grid-l__third <?php echo "fade-in-bottom-$idx $prod_cats_slug_str"; ?>">
             <?php get_product_box($product); ?>
           </div>
         <?php endforeach; ?>
