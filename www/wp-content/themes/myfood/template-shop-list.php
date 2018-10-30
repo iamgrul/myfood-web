@@ -18,39 +18,21 @@ $cateID = $cate->term_id;
       <p class="title--m green-text simple-top__subtitle fade-in-bottom"><?php _e('Shop', 'myfood'); ?></p>
       <h1 class="simple-top__title title--xxl fade-in-bottom-1"><?php echo $cate->name ?></h1>
     </div>
+      <br>
+      <?php
+          if ($cateID=== 110 || $cateID === 164 || $cateID=== 169) {
+              echo "<div class='filter-product-cat-container'>";
+              echo "<div class='filter-product-cat-option active' data-product_cat=''> All </div>";
+
+              $cate_childs = wc_category_childs($cateID);
+              foreach ($cate_childs as $child) {
+                  echo "<div class='filter-product-cat-option' data-product_cat='.$child->slug'> $child->name </div>";
+              }
+              echo "</div>";
+          }
+      ?>
   </section>
-    <?php
-        if($cateID=== 110 || $cateID === 164 || $cateID=== 169)
-        {
-            echo "<div class='filter-product-cat-container'>";
-            echo "<div class='filter-product-cat-option' data-product_cat=''> $child->name </div>";
 
-            $cate_childs = wc_category_childs($cateID);
-            foreach ($cate_childs as $child) {
-                echo "<div class='filter-product-cat-option' data-product_cat='.$child->slug'> $child->name </div>";
-
-            }
-            echo "</div>";
-
-        }
-    ?>
-    <style>
-        .filter-product-cat-container {
-            display: flex;
-        }
-        .filter-product-cat-option {
-
-        }
-    </style>
-    <script>
-$('.filter-product-cat-option').on('click',   function() {
-    const product_cat = (this.getAttribute('data-product_cat'));
-
-    $('.grid-l__third').css('display', 'none');
-    $('.grid-l__third' + product_cat).css('display', 'block');
-
-});
-    </script>
   <section class="page-c__section" id="shop-products-list">
     <div class="back-rect">
       <div class="back-rect__rect"></div>

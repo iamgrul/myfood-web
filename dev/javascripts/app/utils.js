@@ -362,3 +362,11 @@ String.prototype.trimSlash = function () {
 function convertRemToPixels(rem) {
     return rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
 }
+
+$('.filter-product-cat-option').on('click',   function() {
+    const product_cat = (this.getAttribute('data-product_cat'));
+    $('.filter-product-cat-option').removeClass('active');
+    $(this).addClass('active');
+    $('.grid-l__third').css('display', 'none');
+    $('.grid-l__third' + product_cat).css('display', 'block');
+});

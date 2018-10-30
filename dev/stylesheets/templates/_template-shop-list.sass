@@ -29,3 +29,31 @@
         .title--m
           padding-top: 0
           padding-bottom: 10px
+
+
+.filter-product-cat-container
+
+  @media (min-width: 841px)
+    display: flex
+    justify-content: flex-end
+    margin-bottom: -140rem
+    margin-top: 90rem
+  .filter-product-cat-option
+    padding: 15px
+    @media (min-width: 841px)
+      margin-right: 10px
+    border: 1px solid #2ea636
+    border-radius: 5px
+    font-size: 10px
+    font-family: "AktivGroteskBold"
+    letter-spacing: .1em
+    background: transparent linear-gradient(to left, transparent, transparent 50%, #2ea636 50%, #2ea636) 100% 0
+    background-size: 200% 100%
+    transition: all .25s ease-in
+    &.active
+      background: #2ea636
+      color: #ffffff
+    &:hover
+      cursor: pointer
+      background-position: 0 0
+      color: #ffffff
