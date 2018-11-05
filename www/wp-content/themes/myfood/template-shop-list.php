@@ -19,20 +19,37 @@ $cateID = $cate->term_id;
       <h1 class="simple-top__title title--xxl fade-in-bottom-1"><?php echo $cate->name ?></h1>
     </div>
       <br>
-      <?php
-          if ($cateID=== 110 || $cateID === 164 || $cateID=== 169) {
-              echo "<div class='filter-product-cat-container'>";
-              echo "<div class='filter-product-cat-option active' data-product_cat=''> All </div>";
 
-              $cate_childs = wc_category_childs($cateID);
-              foreach ($cate_childs as $child) {
-                  echo "<div class='filter-product-cat-option' data-product_cat='.$child->slug'> $child->name </div>";
-              }
-              echo "</div>";
-          }
-      ?>
   </section>
+    <?php
+    if ($cateID=== 110 || $cateID === 164 || $cateID=== 169) {
+        //        For desktop version
 
+        echo "<div class='filter-product-cat-container no-display-mobile'>";
+        echo    "<div class='filter-product-cat-option active' data-product_cat=''> All </div>";
+
+        $cate_childs = wc_category_childs($cateID);
+        foreach ($cate_childs as $child) {
+            echo "<div class='filter-product-cat-option' data-product_cat='.$child->slug'> $child->name </div>";
+        }
+        echo "</div>";
+
+
+        //        For mobile version
+
+        echo "<div class='filter-product-cat-container display-mobile'>";
+        echo    "<select class='filter-product-cat-option '>";
+        echo        "<option value=''> All </option>";
+
+        $cate_childs = wc_category_childs($cateID);
+        foreach ($cate_childs as $child) {
+            echo    "<option value='.$child->slug'> $child->name </option>";
+        }
+        echo    "</select>";
+        echo "</div>";
+
+    }
+    ?>
   <section class="page-c__section" id="shop-products-list">
     <div class="back-rect">
       <div class="back-rect__rect"></div>
