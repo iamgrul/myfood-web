@@ -32,12 +32,20 @@
 
 
 .filter-product-cat-container
-
+  &.no-display-mobile
+    @media (max-width: 840px)
+      display: none
+  &.display-mobile
+    display: none
+    @media (max-width: 840px)
+      display: flex
+      justify-content: center
+      margin-bottom: 25rem
   @media (min-width: 841px)
     display: flex
-    justify-content: flex-end
-    margin-bottom: -50px
-    margin-top: 10px
+    margin-bottom: 28rem
+    margin-top: -10rem
+    justify-content: center
   .filter-product-cat-option
     @media (min-width: 841px)
       margin-right: 10px
@@ -51,6 +59,9 @@
     font-size: 14px
     font-family: "AktivGroteskBold"
     background: transparent
+    @media (max-width: 840px)
+      padding: 12px 32%
+
     &.active
       border-color: #00B771
       color: #000000
