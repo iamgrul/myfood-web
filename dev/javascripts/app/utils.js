@@ -373,8 +373,6 @@ $('div.filter-product-cat-option').on('click',   function() {
 
 $('select.filter-product-cat-option').on('change',   function() {
     const product_cat = $(this).val();
-    console.log(product_cat);
     $('.grid-l__third').css('display', 'none');
     $('.grid-l__third' + product_cat).css('display', 'block');
-
 });
