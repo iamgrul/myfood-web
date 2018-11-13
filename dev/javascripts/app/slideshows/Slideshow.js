@@ -49,7 +49,7 @@ class Slideshow{
 
         TM.set(t.$slides,{opacity:0, zIndex:0})
 
-        TM.set(t.$slides.eq(0), {opacity:1, zIndex:753})
+        TM.set(t.$slides.eq(0), {opacity:1, zIndex:0})
 
     }
     bindEvents(){

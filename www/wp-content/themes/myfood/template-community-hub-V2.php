@@ -226,21 +226,18 @@
             </div>
         </section>
         <!--    COMMUNITY VISUALIZE END   -->
-
-
+    </main>
         <!--    COMMUNITY IFRAME START   -->
-        <section class="page-c__section" id="community-hub-iframe">
-
+        <section  class="page-c__section" id="community-hub-iframe">
             <div class="back-rect">
                 <div class="back-rect__rect"></div>
             </div>
-
             <div class="grid">
-                <iframe style="width:100%;height:1100px;" src="<?php the_field('iframepath'); ?>"></iframe>
+                <iframe class="mapframe" src="<?php the_field('iframepath'); ?>"></iframe>
             </div>
         </section>
         <!--    COMMUNITY IFRAME END   -->
-
+    <main class="page-f" >
         <?php get_seo_footer(); ?>
     </main>
 

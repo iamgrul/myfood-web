@@ -62,7 +62,11 @@ class ProductsTabs extends Tabs{
                 t.$mask.removeClass('lf').addClass('rg')
 
                 TM.set(t.$tabs.eq(t.idx), {display:"none", opacity:0})
-                TM.set(t.$tabs.eq(idx), {opacity:1, display:"block"})
+                TM.set(t.$tabs.eq(idx), {opacity:1, display:"block",
+                    onComplete: () => {
+                        Website.cropImg()
+                    }
+                });
                 TM.set(t.$tabs.eq(idx).find('.title, .mention, .border-box'), {opacity:0, y:-20})
                 t.idx = idx
                 t.updateNav()
