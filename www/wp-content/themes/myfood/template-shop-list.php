@@ -24,9 +24,10 @@ $cateID = $cate->term_id;
     <?php
     if ($cateID=== 110 || $cateID === 164 || $cateID=== 169) {
         //        For desktop version
-
+		$all = __('All', 'myfood');
+		
         echo "<div class='filter-product-cat-container no-display-mobile'>";
-        echo    "<div class='filter-product-cat-option active' data-product_cat=''> All </div>";
+        echo    "<div class='filter-product-cat-option active' data-product_cat=''>$all</div>";
 
         $cate_childs = wc_category_childs($cateID);
         foreach ($cate_childs as $child) {
@@ -34,12 +35,11 @@ $cateID = $cate->term_id;
         }
         echo "</div>";
 
-
         //        For mobile version
 
         echo "<div class='filter-product-cat-container display-mobile'>";
         echo    "<select class='filter-product-cat-option '>";
-        echo        "<option value=''> All </option>";
+        echo        "<option value=''>$all</option>";
 
         $cate_childs = wc_category_childs($cateID);
         foreach ($cate_childs as $child) {
@@ -47,7 +47,6 @@ $cateID = $cate->term_id;
         }
         echo    "</select>";
         echo "</div>";
-
     }
     ?>
   <section class="page-c__section" id="shop-products-list">

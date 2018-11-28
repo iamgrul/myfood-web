@@ -39,7 +39,16 @@
             <section class="page-simple__section">
                 <div class="page-simple__title title title--l grid-l">
                     <h2 class="title__content title__content--prefixed grid-l__large">
-                        <span class="title__content__number"><?php echo '0'.($i) ?></span>
+                        <span class="title__content__number">
+						<?php 
+						if ($i < 10) {
+							echo '0'.($i);
+						}
+						else {
+							echo $i;
+						} 
+						?>
+						</span>
                         <?php echo $item['title'] ?>
                     </h2>
                 </div>
