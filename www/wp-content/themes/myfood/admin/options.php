@@ -154,6 +154,28 @@ if( function_exists('acf_add_local_field_group') ):
                 'allow_archives' => 1,
                 'multiple' => 0,
             ),
+			array(
+                'key' => 'field_5ab97777afc0b',
+                'label' => 'Wiki page',
+                'name' => 'wiki_page',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'page',
+                ),
+                'taxonomy' => array(
+                ),
+                'allow_null' => 0,
+                'allow_archives' => 1,
+                'multiple' => 0,
+            ),
             array(
                 'key' => 'field_5ab9265aafc0c',
                 'label' => 'Press Kit',
